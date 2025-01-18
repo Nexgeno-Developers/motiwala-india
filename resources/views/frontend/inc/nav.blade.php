@@ -116,132 +116,25 @@
         <!-- Search Bar -->
         <div class="position-relative logo-bar-area z-1025">
             <div class="container">
-                <div class="d-flex align-items-center">
-                    <!-- top menu sidebar button -->
-                    <button type="button" class="btn d-lg-none mr-sm-4 p-0 active" data-toggle="class-toggle"
-                        data-target=".aiz-top-menu-sidebar">
-                        <svg id="Component_43_1" data-name="Component 43 – 1" xmlns="http://www.w3.org/2000/svg"
-                            width="22" height="22" viewBox="0 0 22 22">
-                            <rect id="Rectangle_19062" data-name="Rectangle 19062" width="122" height="2"
-                                transform="translate(0 8)" fill="#1D1A15" />
-                            <rect id="Rectangle_19063" data-name="Rectangle 19063" width="122" height="2"
-                                fill="#1D1A15" />
-                            <rect id="Rectangle_19064" data-name="Rectangle 19064" width="122" height="2"
-                                transform="translate(0 16)" fill="#1D1A15" />
-                        </svg>
 
-                    </button>
-                    <!-- Header Logo -->
-
-
-                    <div class="col-lg-5 col-md-4 col-0">
-                               <!-- Menu Bar -->
-        <div class="d-none d-lg-block position-relative">
-             @php
-                        $nav_txt_color = ((get_setting('header_nav_menu_text') == 'light') ||  (get_setting('header_nav_menu_text') == null)) ? 'text-white' : 'text-dark';
-                    @endphp
-                    <div class="">
-                        <div class="d-flex align-items-center justify-content-center justify-content-xl-start h-100">
-                            <ul class="list-inline mb-0 pl-0">
-                                @if (get_setting('header_menu_labels') != null)
-                                    @foreach (json_decode(get_setting('header_menu_labels'), true) as $key => $value)
-                                        <li class="list-inline-item mr-0 animate-underline-white">
-                                            <a href="{{ json_decode(get_setting('header_menu_links'), true)[$key] }}"
-                                                class="fs-18 px-3 py-1 dt_text d-inline-block fw-400 {{ $nav_txt_color }} header_menu_links
-                                            @if (url()->current() == json_decode(get_setting('header_menu_links'), true)[$key]) active @endif">
-                                                {{ translate($value) }}
+            <div class="row position-relative z-2">
+                <div class="col-md-6">
+                    <ul class="list-inline mb-0 pl-0 top_baar_icons mt-2">
+                              
+                                        <li class="list-inline-item mr-0">
+                                            <a href="">
+                                                 <img src="{{ static_asset('assets/img/location_icons.svg') }}" class="w-100">
                                             </a>
                                         </li>
-                                    @endforeach
-                                @endif
+                                          <li class="list-inline-item mr-0">
+                                            <a href="">
+                                                 <img src="{{ static_asset('assets/img/email_icons1.svg') }}" class="w-100">
+                                            </a>
+                                        </li>
                             </ul>
-                        </div>
-                    </div>
-
-                    
-            <!-- <div class="container h-100">
-                <div class="d-flex h-100">
-                    <div class="d-none d-xl-block all-category has-transition bg-black-10" id="category-menu-bar">
-                        <div class="px-3 h-100"
-                            style="padding-top: 12px;padding-bottom: 12px; width:270px; cursor: pointer;">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div>
-                                    <span class="fw-700 fs-16 text-white mr-3">{{ translate('Categories') }}</span>
-                                    <a href="{{ route('categories.all') }}" class="text-reset categoriesAll">
-                                        <span
-                                            class="d-none d-lg-inline-block text-white animate-underline-white">({{ translate('See All') }})</span>
-                                    </a>
-                                </div>
-                                <i class="las la-angle-down text-white has-transition" id="category-menu-bar-icon"
-                                    style="font-size: 1.2rem !important"></i>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div> -->
-            <!-- Categoty Menus -->
-            <!-- <div class="hover-category-menu position-absolute w-100 top-100 left-0 right-0 z-3 d-none"
-                id="click-category-menu">
-                <div class="container">
-                    <div class="d-flex position-relative">
-                        <div class="position-static">
-                            @include('frontend.'.get_setting("homepage_select").'.partials.category_menu')
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-2 col-md-3 col-6 pr-md-0 pl-md-0">
-                        <a class="d-block py-md-20px py-10px ml-0" href="{{ route('home') }}">
-                            @php
-                                $header_logo = get_setting('header_logo');
-                            @endphp
-                            @if ($header_logo != null)
-                                <img src="{{ uploaded_asset($header_logo) }}" alt="{{ env('APP_NAME') }}"
-                                    class="logo_width">
-                            @else
-                                <img src="{{ static_asset('assets/img/logo.png') }}" alt="{{ env('APP_NAME') }}"
-                                    class="logo_width">
-                            @endif
-                        </a>
-                    </div>
-
-
-                    <div class="col-lg-5 col-md-4 col-3 pdd-0">
-
-                   
-                    <div class="d-flex gap-2 justify-content-end">
-                        <div class="d-flex align-items-center justify-content-center justify-content-xl-start h-100 ">
-                           
-                            
-                            <ul class="list-inline mb-0 pl-0 d-none d-lg-block">
-                                
-                                          <li class="list-inline-item mr-0 animate-underline-white">
-                                            <a href="/search" class="fs-18 px-3 py-1 d-inline-block fw-400 header_menu_links dt_text">
-                                               Shop
-                                            </a>
-                                        </li>
-
-                                          <li class="list-inline-item mr-0 animate-underline-white">
-                                            <a href="/about-us" class="fs-18 px-3 py-1 d-inline-block fw-400 header_menu_links dt_text">
-                                               About
-                                            </a>
-                                        </li>
-                               
-                                          <li class="list-inline-item mr-0 animate-underline-white">
-                                            <a href="/contact-us" class="fs-18 px-3 py-1 d-inline-block fw-400 header_menu_links dt_text">
-                                               Contact Us
-                                            </a>
-                                        </li>
-
-                            </ul>
-                        </div>
-
-
+                <div class="col-md-6">
+                    <div class="d-flex gap-2 justify-content-end mt-2">
                          <!-- Search Icon for small device -->
                     <div class="mr-md-2 ml-2 mt-19 header_searchs">
                         <a class="d-block text-reset" href="javascript:void(0);" data-toggle="class-toggle"
@@ -303,8 +196,101 @@
 
                 
                     </div>
+                </div>
+            </div>
+                <div class="align-items-center">
+                    <!-- top menu sidebar button -->
+                    <button type="button" class="btn d-lg-none mr-sm-4 p-0 active" data-toggle="class-toggle"
+                        data-target=".aiz-top-menu-sidebar">
+                        <svg id="Component_43_1" data-name="Component 43 – 1" xmlns="http://www.w3.org/2000/svg"
+                            width="22" height="22" viewBox="0 0 22 22">
+                            <rect id="Rectangle_19062" data-name="Rectangle 19062" width="122" height="2"
+                                transform="translate(0 8)" fill="#1D1A15" />
+                            <rect id="Rectangle_19063" data-name="Rectangle 19063" width="122" height="2"
+                                fill="#1D1A15" />
+                            <rect id="Rectangle_19064" data-name="Rectangle 19064" width="122" height="2"
+                                transform="translate(0 16)" fill="#1D1A15" />
+                        </svg>
+
+                    </button>
+                    <!-- Header Logo -->
 
 
+                       <div class="col-lg-12 col-md-12 col-12 pr-md-0 pl-md-0 mt_20">
+                        <a class="d-block py-10px ml-0" href="{{ route('home') }}">
+                            @php
+                                $header_logo = get_setting('header_logo');
+                            @endphp
+                            @if ($header_logo != null)
+                                <img src="{{ uploaded_asset($header_logo) }}" alt="{{ env('APP_NAME') }}"
+                                    class="logo_width">
+                            @else
+                                <img src="{{ static_asset('assets/img/logo.png') }}" alt="{{ env('APP_NAME') }}"
+                                    class="logo_width">
+                            @endif
+                        </a>
+                    </div>
+
+
+
+
+                    <div class="col-lg-12 col-md-12 col-0">
+                               <!-- Menu Bar -->
+        <div class="d-none d-lg-block position-relative">
+             @php
+                        $nav_txt_color = ((get_setting('header_nav_menu_text') == 'light') ||  (get_setting('header_nav_menu_text') == null)) ? 'text-white' : 'text-dark';
+                    @endphp
+                    <div class="">
+                        <div class="d-flex align-items-center justify-content-center justify-content-center h-100 pb-3">
+                            <ul class="list-inline mb-0 pl-0">
+                                @if (get_setting('header_menu_labels') != null)
+                                    @foreach (json_decode(get_setting('header_menu_labels'), true) as $key => $value)
+                                        <li class="list-inline-item mr-0 animate-underline-white">
+                                            <a href="{{ json_decode(get_setting('header_menu_links'), true)[$key] }}"
+                                                class="fs-18 px-3 py-1 dt_text d-inline-block fw-400 {{ $nav_txt_color }} header_menu_links
+                                            @if (url()->current() == json_decode(get_setting('header_menu_links'), true)[$key]) active @endif">
+                                                {{ translate($value) }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+            <!-- <div class="container h-100">
+                <div class="d-flex h-100">
+                    <div class="d-none d-xl-block all-category has-transition bg-black-10" id="category-menu-bar">
+                        <div class="px-3 h-100"
+                            style="padding-top: 12px;padding-bottom: 12px; width:270px; cursor: pointer;">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="fw-700 fs-16 text-white mr-3">{{ translate('Categories') }}</span>
+                                    <a href="{{ route('categories.all') }}" class="text-reset categoriesAll">
+                                        <span
+                                            class="d-none d-lg-inline-block text-white animate-underline-white">({{ translate('See All') }})</span>
+                                    </a>
+                                </div>
+                                <i class="las la-angle-down text-white has-transition" id="category-menu-bar-icon"
+                                    style="font-size: 1.2rem !important"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Categoty Menus -->
+            <!-- <div class="hover-category-menu position-absolute w-100 top-100 left-0 right-0 z-3 d-none"
+                id="click-category-menu">
+                <div class="container">
+                    <div class="d-flex position-relative">
+                        <div class="position-static">
+                            @include('frontend.'.get_setting("homepage_select").'.partials.category_menu')
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
                     </div>
 
                 

@@ -370,21 +370,6 @@
     </section>
 
 
-    
-
-
-     <div class="discovery_section position-relative mb-md-5 mb-4">
-   <img class="w-100" src="{{ static_asset('assets/img/product_listing.webp') }}" />
-   <div class="discovery_content w-100">
-    <h4>Discover expertly crafted jewelry, inspired <span class="d-lg-block"></span>by Australia's natural beauty</h4>
-   </div>
-</div>
-
-
-
-
-
-
 @endsection
 
 @section('script')

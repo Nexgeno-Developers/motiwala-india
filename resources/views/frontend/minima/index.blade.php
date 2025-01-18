@@ -65,6 +65,9 @@ img.logo_width {
 header svg path {
     fill: #fff !important;
 }
+.top_baar_icons img {
+    filter: invert(100%) brightness(100%);
+}
     </style>
 
     <!-- Sliders -->
@@ -157,27 +160,197 @@ header svg path {
 
 
     <div class="banner_video position-relative">
-    <video class="embed-responsive embed-responsive-16by9" autoplay="" muted="" loop="" id="myVideo2">
-                        <source src="{{ static_asset('assets/img/video/video_1.mp4') }}" type="video/mp4">
-                    </video>
+         <img src="{{ static_asset('assets/img/video/home_banner_video.gif') }}" class="w-100">
 
-    <div class="banner_content">
-        <h4>Discover the Beauty of <span class="d-lg-block">Australian Craftsmanship</span></h4>
-        <p class="text-white pt-md-3 pt-2">Handcrafted Jewelry, Inspired by Nature</p>
-        <div class="shop_now_button"><a href="/search" class="text-white">Shop Now</a></div>
+         <div class="container position-relative">
+            <div class="banner_content">
+                <h4>Elegance That Lasts a Lifetime</h4>
+                <p class="text-white pt-md-3 pt-2">Shop the Finest Collection of Diamonds & Precious Gems</p>
+                <div class="shop_now_button"><a href="/search" class="text-white">Shop Now</a></div>
+            </div>
+        </div>
     </div>
 
+        <section class="aniversary_section pt-4 pt-md-5 pb-md-5 pb-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-1 order-2 pr-md-5">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h3 class="main_heading text_clr_green ">Celebrating Over 100 Years of Timeless Craftsmanship</h3>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="aniversary_logo">
+                                        <img class="w-100" src="{{ static_asset('assets/img/aniversary_logo.png') }}" />
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="about_content_sec pt-4">
+                            <p class="">For over a century, we've been creating stunning jewelry that blends tradition with a fresh, modern touch. Each piece is made with care, quality, and a passion for perfection—whether it's a treasured heirloom or a contemporary design.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-md-2 order-1 ">
+                        <div class="mb-md-0 mb-3">
+                            <img class="w-100" src="{{ static_asset('assets/img/celebrate_image.webp') }}" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </section>
+
+
+       <section class="spots_lights about_bg1 pt-5 pb-5">
+    <div class="container">
+        <div class="row align-items-center">
+              <div class="col-md-3">
+                <div class="">
+                    <h4 class="main_heading text-white pb-2">Our <span class="d-md-block">Spotlight</span></h4> 
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="swiper-container gallery-thumbs">
+		<div class="swiper-wrapper">
+		
+			<div class="swiper-slide">
+				<img src="{{ static_asset('assets/img/spotlight3.webp') }}" alt="">
+			</div>
+			
+			<div class="swiper-slide">
+				<img src="{{ static_asset('assets/img/spotlight1.webp') }}" alt="">
+			</div>
+			
+			<div class="swiper-slide">
+				<img src="{{ static_asset('assets/img/spotlight2.webp') }}" alt="">
+			</div>
+		</div>
+		
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+
+</div>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+
+        <section class="signature_section org_bg_light pt-4 pt-md-5 pb-md-5 pb-4">
+            <div class="container">
+                 <h3 class="main_heading text_clr_green text-center mb-md-4">Signature Series</h3>
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                          <div class="signature_box">
+                               <div class="signature_image">
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img1.webp') }}" />
+                               </div>
+                               <h4 class="text-center pt-3">BRIDAL</h4>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                          <div class="signature_box">
+                               <div class="signature_image">
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img2.webp') }}" />
+                               </div>
+                               <h4 class="text-center pt-3">SOLITAIRE</h4>
+                          </div>
+                    </div>
+                     <div class="col-md-4">
+                          <div class="signature_box">
+                               <div class="signature_image">
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img3.webp') }}" />
+                               </div>
+                               <h4 class="text-center pt-3">GOLD </h4>
+                          </div>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                        <div class="shop_now_button2 text-center"><a href="/search">Shop Now</a></div>
+                    </div>
+                </div>
+            </div>
+       </section>
+
+
+       <section class="elete_selection pt-4 pt-md-5 pb-md-5 pb-4">
+    <div class="container">
+               <div class="text-center">
+         <h3 class="main_heading text_clr_green pb-md-4 pb-2">Our Elite Selections</h3>
+       </div>
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="">
+                    <img class="w-100" src="{{ static_asset('assets/img/selection_image1.webp') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="pt-3 text-uppercase">Antiques</h4>
+                    <p class="mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
+                    <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="">
+                    <img class="w-100" src="{{ static_asset('assets/img/selection_image2.webp') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="pt-3 text-uppercase">Jadau</h4>
+                    <p class="mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+                    <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="">
+                    <img class="w-100" src="{{ static_asset('assets/img/selection_image3.webp') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="pt-3 text-uppercase">High Jewelry</h4>
+                    <p class="mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
+                    <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="about_sections about_bg1">
+    <div class="container">
+        <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="">
+                    <h4 class="main_heading text-white pb-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
+                    <p class="text-white">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+                    <div class="shop_now_button3 text-white"><a href="/about-us">Read More</a></div>
+                </div>
+            </div>
+            <div class="col-md-6 pl-md-5">
+                <div class="">
+                    <img class="profile_img_box" src="{{ static_asset('assets/img/about_profile_image.webp') }}" />
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</section>
+
+
+<div class="video_section pt-md-5 pb-md-5">
+    <div class="container">
+         <img src="{{ static_asset('assets/img/video/middle_video.gif') }}" class="w-100"/>
+    </div>
 </div>
 
 
     <!-- Featured Categories -->
     @if (count($featured_categories) > 0)
-        <section class="pt-md-5 pb-md-2 pt-4 pb-0 category_section">
+        <section class="pt-md-5 pb-md-5 pt-4 pb-0 category_section org_bg_light">
             <div class="container">
-                <h3 class="main_heading text_clr_green text-center mb-md-5">Our Collections</h3>
+                <!-- <h3 class="main_heading text_clr_green text-center mb-md-5">Our Collections</h3> -->
                 <!-- Categories -->
-                <div class="bg-white px-sm-3">
-                    <div class="aiz-carousel sm-gutters-17" data-items="4" data-xxl-items="4" data-xl-items="4"
+                <div class="px-sm-3">
+                    <div class="aiz-carousel sm-gutters-17" data-items="3" data-xxl-items="3" data-xl-items="3"
                         data-lg-items="3" data-md-items="2" data-sm-items="2" data-xs-items="1" data-arrows="true"
                         data-dots="false" data-autoplay="false" data-infinite="true">
                         @foreach ($featured_categories as $key => $category)
@@ -210,6 +383,10 @@ header svg path {
                         @endforeach
                     </div>
                 </div>
+                <div class="text-center">
+                    <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
+                </div>
+                
             </div>
         </section>
     @endif
@@ -220,7 +397,7 @@ header svg path {
     @php $homeBanner1Images = get_setting('home_banner1_images', null, $lang);   @endphp
     @if ($homeBanner1Images != null)
         <div class="">
-            <div class="container mb-2 mb-md-3">
+            <div class="container">
                 @php
                     $banner_1_imags = json_decode($homeBanner1Images);
                     $data_md = count($banner_1_imags) >= 2 ? 2 : 1;
@@ -249,94 +426,17 @@ header svg path {
         </div>
     @endif
 
- <div class="discovery_section position-relative">
-   <img class="w-100" src="{{ static_asset('assets/img/video/video_2.gif') }}" />
-   <div class="discovery_content w-100">
-    <h4>Discover expertly crafted jewelry, inspired <span class="d-lg-block"></span>by Australia's natural beauty</h4>
-   </div>
-</div>
-
-    
-<section class="unique_section green_bg">
-    <div class="row align-items-center">
-        <div class="col-md-4 p-0 overflow-hidden margintp8">
-            <div class="shop_imges position-relative ">
-                <img class="w-100 has-transition " src="{{ static_asset('assets/img/unique_img1_new.webp') }}"/>
-                 <div class="discover_absolute">
-                        <a class="title_bg_clr text-white " href="/search">Shop Now</a>
-                    </div>
-            </div>
-        </div>
-
-         <div class="col-md-4 p-0">
-            <div class="uinique_box pt-md-0 pb-md-0 pt-5 pb-5">
-                <img src="{{ static_asset('assets/img/uinique_logo.png') }}"/>
-                <p class="shop_content text-white pb-0 mb-0">Unique, <span class="d-block">Timeless, and</span> Beautiful.</p>
-            </div>
-        </div>
-
-         <div class="col-md-4 p-0">
-            <div class="uinique_slider">
-           <div id="shop_slider" class="slick-slider bottom40">
-             
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/unique_slider1_new1.webp') }}"/>
-             </div>
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/unique_slider1_new1.webp') }}"/>
-             </div>
-
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/unique_slider1_new1.webp') }}"/>
-             </div>
-
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/unique_slider1_new1.webp') }}"/>
-             </div>
-           </div>
-    
-
-
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="pt-md-5 pt-4 pb-3 product_category_tabs">
-    <div class="container">
-        <div class="text-center">
-         <h3 class="main_heading text_clr_green pb-md-3 pb-0">Browse By Categories</h3>
-       </div>
-     <ul class="nav nav-pills mb-md-3 justify-content-center listing_tabs" id="pills-tab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="pills-home-tab" data-toggle="pill" data-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Best Seller</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-profile-tab" data-toggle="pill" data-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Bracelets</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="pills-contact-tab" data-toggle="pill" data-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Earrings</button>
-  </li>
-</ul>
-<div class="tab-content" id="pills-tabContent">
-  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"></div>
-  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"></div>
-  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"></div>
-</div>
-    </div>
-</section>
 
 
     <!-- Featured Products -->
-    <div id="section_featured" class="">
+    <div id="section_featured" class="d-none">
 
     </div>
 
     <!-- Banner Section 2 -->
     @php $homeBanner2Images = get_setting('home_banner2_images', null, $lang);   @endphp
     @if ($homeBanner2Images != null)
-        <div class="mb-2 mb-md-3 mt-2 mt-md-3">
+        <div class="">
             <div class="container">
                 @php
                     $banner_2_imags = json_decode($homeBanner2Images);
@@ -382,7 +482,7 @@ header svg path {
     <!-- Banner Section 3 -->
     @php $homeBanner3Images = get_setting('home_banner3_images', null, $lang);   @endphp
     @if (get_setting('home_banner3_images') != null)
-        <div class="mb-2 mb-md-3 mt-2 mt-md-3">
+        <div class="">
             <div class="container">
                 @php
                     $banner_3_imags = json_decode(get_setting('home_banner3_images', null, $lang));
@@ -418,7 +518,7 @@ header svg path {
     @endif
 
     <!-- Category wise Products -->
-    <div id="section_home_categories">
+    <div id="section_home_categories" class="d-none">
 
     </div>
 
@@ -567,122 +667,49 @@ header svg path {
     @endif
 
 
-
-    <section class="unique_section">
-    <div class="row align-items-center">
-        <div class="col-md-6 pl-0 pr-1 pb-1">
-            <div class="shop_imges position-relative overflow-hidden mt-3 mt-md-0">
-                <img class="w-100 has-transition" src="{{ static_asset('assets/img/category_images1.webp') }}"/>
-                    <div class="discover_absolute">
-                        <a class="title_bg_clr text-white " href="#">Antique Collections</a>
-                        <a class="discover_text text-white " href="#">Discover More</a>
-                    </div>
-            </div>
-        </div>
-         <div class="col-md-6 pr-0 pl-1 pb-1">
-            <div class="uinique_slider mt-3 mt-md-0 overflow-hidden">
-           <div id="category_slider" class="slick-slider">
-             
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/category_slider1.webp') }}"/>
-             </div>
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/category_slider1.webp') }}"/>
-             </div>
-
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/category_slider1.webp') }}"/>
-             </div>
-
-             <div class="item">
-                 <img class="w-100 has-transition" src="{{ static_asset('assets/img/category_slider1.webp') }}"/>
-             </div>
-           </div>
-    
-
-
-            </div>
-        </div>
-        <div class="col-md-6 pl-0 pr-1">
-            <div class="shop_imges position-relative overflow-hidden mt-2 mt-md-0">
-                <img class="w-100 has-transition" src="{{ static_asset('assets/img/category_images2.webp') }}"/>
-                <div class="discover_absolute">
-                        <a class="title_bg_clr text-white " href="#">Antique Collections</a>
-                        <a class="discover_text text-white " href="#">Discover More</a>
-                    </div>
-                
-            </div>
-        </div>
-
-        <div class="col-md-6 pr-0 pl-1">
-            <div class="shop_imges position-relative overflow-hidden mt-3 mt-md-0">
-                <img class="w-100 has-transition" src="{{ static_asset('assets/img/category_images3.webp') }}"/>
-                 <div class="discover_absolute">
-                        <a class="title_bg_clr text-white " href="#">Antique Collections</a>
-                        <a class="discover_text text-white " href="#">Discover More</a>
-                    </div>
-                
-            </div>
-        </div>
-    </div>
-</section>
-
-
-    <section class="about_section gray_bg">
-        <div class="row align-items-center">
-            <div class="col-md-6 order-md-1 order-2">
-                <div class="about_content_sec pl-lg-5 pr-lg-5 pl-md-0 pr-md-0">
-                    <h3 class="main_heading text_clr_green ">About BilkBox</h3>
-                    <div class="aboutbg_logo ">
-                        <img src="{{ static_asset('assets/img/about_logo_bg.svg') }}" />
-                    </div>
-                    <p class="about_content_para1">Experience luxury at About BilkBox, <span class="">where every piece is expertly crafted, </span> inspired by nature,</p>
-                    <p class="about_content_para2">Is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when </p>
-                    <div class="shop_now_button2"><a href="">Read More</a></div>
-                </div>
-            </div>
-             <div class="col-md-6 order-md-2 order-1 pl-md-1">
-                <div class="mb-md-0 mb-3">
-                    <img class="w-100" src="{{ static_asset('assets/img/about_section_img.webp') }}" />
-                </div>
-            </div>
-        </div>
-</section>
-
-
-
-
-<div class="video_section">
-    <video class="embed-responsive embed-responsive-16by9" autoplay="" muted="" loop="" id="myVideo2">
-                        <source src="{{ static_asset('assets/img/video/video_3.mp4') }}" type="video/mp4">
-                    </video>
-</div>
-
-
-<section class="gray_bg pb-4">
+<section class="location_section pt-4 pt-md-5 pb-md-5 pb-4">
     <div class="container">
+               <div class="text-center">
+         <h3 class="main_heading text_clr_green pb-md-4 pb-2">The House of Motiwala & Sons</h3>
+       </div>
         <div class="row align-items-center">
-            <div class="col-md-6 pr-md-5">
+            <div class="col-md-4">
                 <div class="">
-                    <img class="w-100" src="{{ static_asset('assets/img/about_img.webp') }}" />
+                    <img class="w-100" src="{{ static_asset('assets/img/our_shop.webp') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="pt-3 text-uppercase">Our Shop</h4>
+                    <p class="text-center">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
+                    <div class="shop_now_button2"><a href="/search">View More</a></div>
                 </div>
             </div>
-            <div class="col-md-6">
+
+            <div class="col-md-4">
                 <div class="">
-                    <p class="shop_content">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
-                    <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
+                    <img class="w-100" src="{{ static_asset('assets/img/product_care.webp') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="pt-3 text-uppercase">Product Care</h4>
+                    <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
+                    <div class="shop_now_button2"><a href="/search">View More</a></div>
                 </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="">
+                    <img class="w-100" src="{{ static_asset('assets/img/crafted_images.webp') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="pt-3 text-uppercase">Crafted for eternity</h4>
+                    <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
+                    <div class="shop_now_button2"><a href="/search">View More</a></div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 </section>
-
-
-<div class="video_section">
-    <video class="embed-responsive embed-responsive-16by9" autoplay="" muted="" loop="" id="myVideo2">
-                        <source src="{{ static_asset('assets/img/video/video_4.mp4') }}" type="video/mp4">
-                    </video>
-</div>
 
 
 

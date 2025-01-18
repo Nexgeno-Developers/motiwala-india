@@ -70,7 +70,7 @@
     @endif
     <link rel="stylesheet" href="{{ static_asset('assets/css/aiz-core.css?v=') }}{{ rand(1000, 9999) }}">
     <link rel="stylesheet" href="{{ static_asset('assets/css/custom-style.css') }}">
-
+<link rel="stylesheet" href="https://md-aqil.github.io/images/swiper.min.css">
 
     <script>
         var AIZ = AIZ || {};
@@ -1027,6 +1027,25 @@ $(document).ready(function(){
     @php
         echo get_setting('footer_script');
     @endphp
-
+<script src="https://md-aqil.github.io/images/swiper.min.js"></script>
+	<script>
+	     var galleryThumbs = new Swiper('.gallery-thumbs', {
+	effect: 'coverflow',
+	grabCursor: true,
+	centeredSlides: true,
+	slidesPerView: '3',
+	coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 150,
+        modifier:2,
+        slideShadows : false,
+	  },
+	  	navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+  });
+	</script>
 </body>
 </html>

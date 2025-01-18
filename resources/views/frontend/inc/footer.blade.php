@@ -675,9 +675,9 @@
             </div>
         </div>
     </div>
-    <div class="offer_coupon">
+    <!-- <div class="offer_coupon">
     <p>Get 20% Off</p>
-</div>
+</div> -->
 
 </footer>
 

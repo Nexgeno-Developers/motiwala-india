@@ -76,99 +76,102 @@
     </div>
 </section> -->
 
-<section class="about_section mt-md-5 mt-4 org_bg_light">
-    <div class="row align-items-center">
-          <div class="col-md-6 p-md-0">
-            <div class="mb-md-0 mb-3">
-                  <video class="embed-responsive embed-responsive-16by9" autoplay="" muted="" loop="" id="myVideo2">
-                        <source src="{{ static_asset('assets/img/video/about_video_1.mp4') }}" type="video/mp4">
-                    </video>
+<section class="about_sections about_bg1 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+              <div class="col-md-6">
+                <div class="">
+                    <h4 class="main_heading text-white pb-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
+                    <p class="text-white">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+                </div>
             </div>
-        </div>
-
-        <div class="col-md-6 p-md-0">
-            <div class="about_content_sec pl-md-5 pr-md-5">
-                <h3 class="main_heading text_clr_green pb-md-3">About Lab Grown Jewelry</h3>
-                
-                <p class="about_content_para2"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley o  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1</p>
-                
-                <p class="mb-0 pb-0"><strong>"My Jewellery is here to celebrate life with you"</strong></p>
-                
+            <div class="col-md-6 pl-md-5">
+                <div class="">
+                    <img class="profile_img_box" src="{{ static_asset('assets/img/about_profile_image.webp') }}" />
+                </div>
             </div>
-        </div>
           
-    </div>
-</section>
-
-<section class="about_section org_bg_light">
-    <div class="row align-items-center">
-        <div class="col-md-6 p-md-0 order-md-1 order-2">
-            <div class="about_content_sec pl-md-5 pr-md-5">
-                <h3 class="main_heading text_clr_green pb-md-3">Our Story</h3>
-                
-                <p class="about_content_para2"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley o  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                
-                <p class="about_content_para2"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley o  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                
-                <p class="mb-0 pb-0"><strong>"What are you celebrating today?"</strong></p>
-                
-            </div>
-        </div>
-            <div class="col-md-6 p-md-0 order-md-2 order-1">
-            <div class="mb-md-0 mb-3">
-                <img class="w-100" src="{{ static_asset('assets/img/our_story_image.webp') }}" />
-            </div>
         </div>
     </div>
 </section>
 
-<div class="video_section mt-md-5 mt-4 mb-md-5 mb-4">
-    <video class="embed-responsive embed-responsive-16by9" autoplay="" muted="" loop="" id="myVideo2">
-                        <source src="{{ static_asset('assets/img/video/about_video_2.mp4') }}" type="video/mp4">
-                    </video>
-</div>
-
-
-<section class="about_section org_bg_light">
-    <div class="row align-items-center">
-          <div class="col-md-6 p-md-0">
-            <div class="mb-md-0 mb-3">
-                <img class="w-100" src="{{ static_asset('assets/img/founder_image.webp') }}" />
+<section class="location_section pt-4 pt-md-5 pb-md-5 pb-4">
+    <div class="container">
+           
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img class="" src="{{ static_asset('assets/img/free_shipping.svg') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="fs-22 pt-3 text-uppercase">FREE SHIPPING</h4>
+                    <p class="text-center px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  </p>
+                </div>
             </div>
-        </div>
 
-        <div class="col-md-6 p-md-0">
-            <div class="about_content_sec pl-md-5 pr-md-5">
-                <h3 class="main_heading text_clr_green pb-md-3">Our Founder</h3>
-                
-                <p class="about_content_para2"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley o  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has</p>
-                <p class="about_content_para2"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever sinc</p>
-                
-                <p class="mb-0 pb-0"><strong>"Embrace more, embrace better, embrace the future"</strong></p>
-                
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img class="" src="{{ static_asset('assets/img/premium_quality.svg') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="fs-22 pt-3 text-uppercase">PREMIUM QUALITY</h4>
+                    <p class="px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                </div>
             </div>
+
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img class="" src="{{ static_asset('assets/img/100percent_icons.svg') }}" />
+                </div>
+                <div class="text-center">
+                    <h4 class="fs-22 pt-3 text-uppercase">100% SECURE CHEEKOUT</h4>
+                    <p class="px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                </div>
+            </div>
+
+
         </div>
-          
     </div>
 </section>
 
-<section class="about_section org_bg_light">
+
+<section class="about_section pb-5">
+    <div class="container">
     <div class="row align-items-center">
-        <div class="col-md-6 p-md-0 order-md-1 order-2">
-            <div class="about_content_sec pl-md-5 pr-md-5">
-                <h3 class="main_heading text_clr_green pb-md-3">Sustainability</h3>
-                
-                <p class="about_content_para2"> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley o  is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1  is simply dummy text of the printing and typesetting industry. </p>
-                
-                <p class="mb-0 pb-0"><strong>"My Jewellery is here to celebrate life with you"</strong></p>
-                
-            </div>
-        </div>
-            <div class="col-md-6 p-md-0 order-md-2 order-1">
+        <div class="col-md-8">
+            <div class="row">
+                      <div class="col-md-4">
             <div class="mb-md-0 mb-3">
-                <img class="w-100" src="{{ static_asset('assets/img/sustainibility.webp') }}" />
+                <img class="w-100" src="{{ static_asset('assets/img/instagram_img1.webp') }}" />
             </div>
         </div>
+
+        <div class="col-md-4">
+            <div class="mb-md-0 mb-3">
+                <img class="w-100" src="{{ static_asset('assets/img/instagram_img2.webp') }}" />
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="mb-md-0 mb-3">
+                <img class="w-100" src="{{ static_asset('assets/img/instagram_img3.webp') }}" />
+            </div>
+        </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="col-md-12">
+            <div class="about_content_sec text-center">
+                <h3 class="follow_heads text_clr_green">FOLLOW OUR INSTAGRAM</h3>
+                
+                <p class="about_content_para2 mb-0">DEMO USER</p>
+                <div class="shop_now_button2 text-white"><a href="/search">Follow More</a></div>
+                
+            </div>
+        </div>
+        </div>
+          </div>
     </div>
 </section>
 

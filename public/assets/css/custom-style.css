@@ -5,22 +5,16 @@ a {
 }
 
 .green_bg {
-    background-color: #243C40;
+    background-color: #1D1A15;
 }
 
 .gray_bg {
     background-color: #F4F5F5;
 }
 
-.video_section {
-    height: 100vh;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: center;
-}
 
 .org_bg_light {
-    background-color: #DAD0C4;
+    background-color: #C2AA902B;
 }
 
 .dt_text {
@@ -45,11 +39,11 @@ a {
 }
 
 .text_clr_green {
-    color: #243C40
+    color: #1D1A15
 }
 
 .w100 {
-    width: 100px;
+    width: 50px;
 }
 
 /*-- banner css--*/
@@ -68,7 +62,14 @@ a {
     width: 100%;
     bottom: 160px;
     z-index: 999;
-    left: 10%;
+    text-align: center;
+    left: -10px;
+}
+
+.top_baar_icons img {
+    width: 22px !important;
+    margin-right: 7px;
+    margin-top: 8px;
 }
 
 .banner_content h4 {
@@ -207,10 +208,18 @@ p.about_content_para1 {
 
 .breacrums_bg {
     position: relative;
-    background-image: url(/public/assets/img/header_bg_img.webp);
+    background-image: url(/assets/img/header_bg_img.webp);
     width: 100%;
     background-size: cover;
     padding: 20px 0px 45px 0px;
+    background-position: center;
+}
+
+.about_bg1 {
+    position: relative;
+    background-image: url(/assets/img/about_bg_image.webp);
+    width: 100%;
+    background-size: cover;
     background-position: center;
 }
 
@@ -332,7 +341,7 @@ p.about_content_para1 {
 
 .front-header-search {
     position: absolute;
-    z-index: 1;
+    z-index: 111;
     width: 100%;
     height: 70%;
     top: -33px;
@@ -358,7 +367,7 @@ p.about_content_para1 {
 }
 
 .logo_width {
-    width: 160px !important;
+    width: 300px !important;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -389,16 +398,30 @@ p.about_content_para1 {
 }
 
 .shop_now_button2 a:hover {
-    background: #243C40;
+    background: #1D1A15;
     color: #fff !important;
-    border: 1px solid #243C40;
+    border: 1px solid #1D1A15;
 }
 
 .shop_now_button2 a {
     border: 1px solid;
     padding: 10px 20px;
     margin-top: 20px;
-    color: #243C40;
+    color: #1D1A15;
+    display: inline-block;
+}
+
+.shop_now_button3 a:hover {
+    background: #fff;
+    color: #1D1A15 !important;
+    border: 1px solid #fff;
+}
+
+.shop_now_button3 a {
+    border: 1px solid;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fff;
     display: inline-block;
 }
 
@@ -428,8 +451,8 @@ p.about_content_para1 {
 }
 
 .add_cart_btns {
-    border: 1px solid #243c40c7;
-    color: #243C40 !important;
+    border: 1px solid #1D1A15c7;
+    color: #1D1A15 !important;
     opacity: 0.8;
     margin-top: 14px;
     font-weight: 300 !important;
@@ -439,16 +462,20 @@ p.about_content_para1 {
     object-fit: contain;
 }
 
+.mt_20 {
+    margin-top: -25px;
+}
+
 #nav-user-info {
     margin-top: -6px !important;
 }
 
 .top-65 {
-    top: 63%;
+    top: 24%;
 }
 
 .hov-svg-green:hover>svg * {
-    fill: #243C40;
+    fill: #1D1A15;
 }
 
 .bottom40 ul.slick-dots {
@@ -473,12 +500,12 @@ p.about_content_para1 {
 }
 
 .gray_color_buttons {
-    background: #243c40;
+    background: #1D1A15;
     color: #fff !important;
 }
 
 .gray_color_buttons:hover {
-    background: #243c40d6;
+    background: #1D1A15d6;
 }
 
 .contact_form_box input,
@@ -486,20 +513,20 @@ p.about_content_para1 {
     padding: 0;
     background: transparent !important;
     border: 0;
-    border-bottom: 1px solid #243c40;
+    border-bottom: 1px solid #1D1A15;
     font-size: 16px;
 }
 
 .contact_form_box input::placeholder,
 .contact_form_box textarea::placeholder {
-    color: #243c40;
+    color: #1D1A15;
 }
 
 .contact_form_box a:hover,
 .contact_form_box button:hover {
-    background: #243C40;
+    background: #1D1A15;
     color: #fff !important;
-    border: 1px solid #243C40;
+    border: 1px solid #1D1A15;
 }
 
 .contact_form_box a,
@@ -507,7 +534,7 @@ p.about_content_para1 {
     border: 1px solid;
     padding: 10px 20px;
     margin-top: 20px;
-    color: #243C40;
+    color: #1D1A15;
     display: inline-block;
     width: 160px;
     text-align: center;
@@ -559,7 +586,7 @@ p.about_content_para1 {
 
 .product_boxex:hover .add_cart_btns {
     color: #fff !important;
-    background: #243C40;
+    background: #1D1A15;
 }
 
 .footer-widget .animate-underline-white:after {
@@ -568,7 +595,7 @@ p.about_content_para1 {
 }
 
 .offer_coupon p {
-    color: #243c40;
+    color: #1D1A15;
     margin-bottom: 0;
     font-size: 22px;
     font-weight: 500;
@@ -592,7 +619,7 @@ p.about_content_para1 {
 .copy_rights a {
     font-size: 16px;
     font-weight: 500;
-    color: #243c40 !important;
+    color: #1D1A15 !important;
 }
 
 .product_boxex ol.carousel-indicators li.active {
@@ -602,7 +629,7 @@ p.about_content_para1 {
 
 .product_boxex .carousel-indicators li {
     width: 4px;
-    background-color: #243c40;
+    background-color: #1D1A15;
 }
 
 .size_buttons {
@@ -613,6 +640,105 @@ p.about_content_para1 {
 
 .product_boxex ol.carousel-indicators {
     bottom: -20px;
+}
+
+.profile_img_box {
+    width: 80%;
+}
+
+.spots_lights .gallery-thumbs {
+    height: 100%;
+}
+
+.spots_lights .gallery-thumbs .swiper-wrapper {
+    align-items: center;
+}
+
+.spots_lights .gallery-thumbs .swiper-slide img {
+    filter: contrast(1) blur(px);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.spots_lights .swiper-button-next:after,
+.spots_lights .swiper-button-prev:after {
+    font-size: 30px;
+}
+
+.spots_lights .gallery-thumbs .swiper-slide-active img {
+    filter: contrast(1) blur(0px) !important;
+}
+
+.spots_lights .gallery-thumbs .swiper-wrapper {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.spots_lights .swiper-container.testimonial {
+    height: 100vh;
+}
+
+.spots_lights .swiper-button-prev {
+    left: 47%;
+    right: auto;
+    top: 97%;
+    color: #fff;
+}
+
+.spots_lights .swiper-container.gallery-thumbs {
+    padding-bottom: 55px;
+}
+
+.spots_lights .swiper-button-next {
+    right: 46%;
+    left: auto;
+    top: 97%;
+    color: #fff;
+}
+
+.follow_heads {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 44px;
+    letter-spacing: 0.5px;
+}
+
+.contact_image_box {
+    position: absolute;
+    top: 40px;
+    left: 75px;
+}
+
+.contact_welcome_test {
+    color: #fff;
+    font-size: 55px;
+    padding-top: 40px;
+}
+
+.contact_image_box img {
+    width: 20px !important;
+    height: 26px;
+    margin-right: 10px;
+}
+
+section.contact_us_sec .row_box .coloum_boxex_shadow {
+    box-shadow: 0px 0px 30px -8px #0000008f;
+    border-radius: 0px 50px 50px 0px;
+    align-items: center;
+    display: flex;
+}
+
+section.contact_us_sec .row_box .w-100 {
+    border-radius: 50px 0px 0px 50px;
+}
+
+.font_55 {
+    font-size: 36px;
+    padding: 0 200px !important;
+    line-height: 48px;
 }
 
 /*-- mobile device css---*/
@@ -631,6 +757,10 @@ p.about_content_para1 {
         width: 220% !important;
         object-fit: cover;
         left: -50%;
+    }
+
+    .header_position {
+        position: relative !important;
     }
 
     .banner_content {
@@ -711,7 +841,7 @@ p.about_content_para1 {
         padding: 5px 16px;
         margin-top: 9px;
         font-size: 16px;
-        color: #243C40;
+        color: #1D1A15;
         display: inline-block;
         margin-bottom: 10px;
     }
@@ -756,8 +886,8 @@ p.about_content_para1 {
     }
 
     .add_cart_btns {
-        border: 1px solid #243C40;
-        color: #243C40 !important;
+        border: 1px solid #1D1A15;
+        color: #1D1A15 !important;
         opacity: 0.8;
         margin-top: 14px;
         font-weight: 300 !important;
@@ -843,7 +973,7 @@ p.about_content_para1 {
     }
 
     .offer_coupon p {
-        color: #243c40;
+        color: #1D1A15;
         margin-bottom: 0;
         font-size: 18px;
         font-weight: 500;
@@ -959,7 +1089,7 @@ p.about_content_para1 {
         padding: 5px 16px;
         margin-top: 9px;
         font-size: 16px;
-        color: #243C40;
+        color: #1D1A15;
         display: inline-block;
         margin-bottom: 10px;
     }
@@ -1004,8 +1134,8 @@ p.about_content_para1 {
     }
 
     .add_cart_btns {
-        border: 1px solid #243C40;
-        color: #243C40 !important;
+        border: 1px solid #1D1A15;
+        color: #1D1A15 !important;
         opacity: 0.8;
         margin-top: 14px;
         font-weight: 300 !important;
@@ -1091,7 +1221,7 @@ p.about_content_para1 {
     }
 
     .offer_coupon p {
-        color: #243c40;
+        color: #1D1A15;
         margin-bottom: 0;
         font-size: 18px;
         font-weight: 500;
