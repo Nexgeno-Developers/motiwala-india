@@ -198,7 +198,7 @@
                     </div>
                 </div>
             </div>
-                <div class="align-items-center d-md-inline- d-flex">
+                <div class="align-items-center d_flexs">
                     <!-- top menu sidebar button -->
                     <button type="button" class="btn d-lg-none mr-sm-4 p-0 active" data-toggle="class-toggle"
                         data-target=".aiz-top-menu-sidebar">

@@ -764,6 +764,10 @@ section.contact_us_sec .row_box .w-100 {
         top: 7px;
     }
 
+    .d_flexs {
+        display: flex;
+    }
+
     .search-input-box>input {
         height: 40px !important;
     }
