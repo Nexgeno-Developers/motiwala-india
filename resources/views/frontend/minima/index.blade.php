@@ -22,6 +22,15 @@
             .slider-card-section .container{
                 min-width: auto !important;
             }
+           
+
+        }
+
+        @media(max-width:767px)
+        {
+            body  .dt_text {
+    color: #1D1A15 !important;
+}
         }
         @media (max-width: 575px){
             #section_featured .slick-slider .slick-list .slick-slide {
@@ -237,7 +246,7 @@ header svg path {
 
         <section class="signature_section org_bg_light pt-4 pt-md-5 pb-md-5 pb-4">
             <div class="container">
-                 <h3 class="main_heading text_clr_green text-center mb-md-4">Signature Series</h3>
+                 <h3 class="main_heading text_clr_green text-center mb-md-4 mb-4">Signature Series</h3>
                 <div class="row align-items-center">
                     <div class="col-md-4">
                           <div class="signature_box">
@@ -282,7 +291,7 @@ header svg path {
                 <div class="">
                     <img class="w-100" src="{{ static_asset('assets/img/selection_image1.webp') }}" />
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-3 text-uppercase">Antiques</h4>
                     <p class="mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
                     <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
@@ -293,7 +302,7 @@ header svg path {
                 <div class="">
                     <img class="w-100" src="{{ static_asset('assets/img/selection_image2.webp') }}" />
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-3 text-uppercase">Jadau</h4>
                     <p class="mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
                     <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
@@ -318,14 +327,14 @@ header svg path {
 <section class="about_sections about_bg1">
     <div class="container">
         <div class="row align-items-center">
-              <div class="col-md-6">
-                <div class="">
-                    <h4 class="main_heading text-white pb-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
-                    <p class="text-white">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+              <div class="col-md-6 order-md-1 order-2">
+                <div class="pt-md-0 pt-4 pb-md-0 pb-4">
+                    <h4 class="main_heading text-white pb-md-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
+                    <p class="text-white mb-md-3 mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
                     <div class="shop_now_button3 text-white"><a href="/about-us">Read More</a></div>
                 </div>
             </div>
-            <div class="col-md-6 pl-md-5">
+            <div class="col-md-6 order-md-2 order-1 pl-md-5">
                 <div class="">
                     <img class="profile_img_box" src="{{ static_asset('assets/img/about_profile_image.webp') }}" />
                 </div>
@@ -336,7 +345,7 @@ header svg path {
 </section>
 
 
-<div class="video_section pt-md-5 pb-md-5">
+<div class="video_section pt-md-5 pb-md-5 pt-4 pb-4">
     <div class="container">
          <img src="{{ static_asset('assets/img/video/middle_video.gif') }}" class="w-100"/>
     </div>
@@ -345,7 +354,7 @@ header svg path {
 
     <!-- Featured Categories -->
     @if (count($featured_categories) > 0)
-        <section class="pt-md-5 pb-md-5 pt-4 pb-0 category_section org_bg_light">
+        <section class="pt-md-5 pb-md-5 pt-4 pb-4 category_section org_bg_light">
             <div class="container">
                 <!-- <h3 class="main_heading text_clr_green text-center mb-md-5">Our Collections</h3> -->
                 <!-- Categories -->
@@ -677,7 +686,7 @@ header svg path {
                 <div class="">
                     <img class="w-100" src="{{ static_asset('assets/img/our_shop.webp') }}" />
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-3 text-uppercase">Our Shop</h4>
                     <p class="text-center">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
                     <div class="shop_now_button2"><a href="/search">View More</a></div>
@@ -688,7 +697,7 @@ header svg path {
                 <div class="">
                     <img class="w-100" src="{{ static_asset('assets/img/product_care.webp') }}" />
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-3 text-uppercase">Product Care</h4>
                     <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
                     <div class="shop_now_button2"><a href="/search">View More</a></div>

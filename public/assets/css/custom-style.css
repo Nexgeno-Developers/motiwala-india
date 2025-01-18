@@ -748,8 +748,49 @@ section.contact_us_sec .row_box .w-100 {
         overflow-x: hidden;
     }
 
+    img.logo_width {
+        filter: none !important;
+    }
+
     .logo_width {
-        width: 115px !important;
+        width: 215px !important;
+    }
+
+    .top_baar_icons img {
+        filter: none !important;
+    }
+
+    .elete_selection h4 {
+        font-size: 20px;
+    }
+
+    .contact_image_box {
+        top: 30px;
+        left: 30px;
+    }
+
+    section.contact_us_sec .row_box .w-100 {
+        border-radius: 50px 50px 0px 0px;
+    }
+
+    section.contact_us_sec .row_box .coloum_boxex_shadow {
+        box-shadow: 0px 0px 30px -8px #0000002e;
+        border-radius: 0px 0px 50px 50px;
+        margin: 0px 15px;
+        padding-bottom: 35px;
+        padding-top: 20px;
+    }
+
+    .contact_welcome_test {
+        color: #fff;
+        font-size: 28px;
+        padding-top: 20px;
+    }
+
+    .font_55 {
+        font-size: 20px;
+        padding: 0 0px !important;
+        line-height: 30px;
     }
 
     .banner_video video#myVideo2 {
@@ -759,7 +800,21 @@ section.contact_us_sec .row_box .w-100 {
         left: -50%;
     }
 
-    .header_position {
+    .location_section h4 {
+        font-size: 20px !important;
+    }
+
+    .signature_box h4 {
+        font-size: 20px !important;
+        padding-bottom: 20px;
+    }
+
+    .aniversary_logo img {
+        width: 120px !important;
+        padding-top: 10px;
+    }
+
+    body .header_position {
         position: relative !important;
     }
 

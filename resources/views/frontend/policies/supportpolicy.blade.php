@@ -76,16 +76,17 @@
     </div>
 </section> -->
 
-<section class="about_sections about_bg1 mt-5">
+<section class="about_sections about_bg1 mt-md-5 mt-4">
     <div class="container">
         <div class="row align-items-center">
-              <div class="col-md-6">
-                <div class="">
-                    <h4 class="main_heading text-white pb-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
-                    <p class="text-white">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+              <div class="col-md-6 order-md-1 order-2">
+                <div class="pt-md-0 pt-4 pb-md-0 pb-4">
+                    <h4 class="main_heading text-white pb-md-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
+                    <p class="text-white mb-md-3 mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+                    <div class="shop_now_button3 text-white"><a href="/about-us">Read More</a></div>
                 </div>
             </div>
-            <div class="col-md-6 pl-md-5">
+            <div class="col-md-6 order-md-2 order-1 pl-md-5">
                 <div class="">
                     <img class="profile_img_box" src="{{ static_asset('assets/img/about_profile_image.webp') }}" />
                 </div>
@@ -103,7 +104,7 @@
                 <div class="text-center">
                     <img class="" src="{{ static_asset('assets/img/free_shipping.svg') }}" />
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-md-0 mb-4">
                     <h4 class="fs-22 pt-3 text-uppercase">FREE SHIPPING</h4>
                     <p class="text-center px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  </p>
                 </div>
@@ -113,7 +114,7 @@
                 <div class="text-center">
                     <img class="" src="{{ static_asset('assets/img/premium_quality.svg') }}" />
                 </div>
-                <div class="text-center">
+                <div class="text-center mb-md-0 mb-4">
                     <h4 class="fs-22 pt-3 text-uppercase">PREMIUM QUALITY</h4>
                     <p class="px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
                 </div>
@@ -135,24 +136,24 @@
 </section>
 
 
-<section class="about_section pb-5">
+<section class="about_section pb-md-5">
     <div class="container">
     <div class="row align-items-center">
         <div class="col-md-8">
             <div class="row">
-                      <div class="col-md-4">
+                      <div class="col-md-4 p-md-2 p-0">
             <div class="mb-md-0 mb-3">
                 <img class="w-100" src="{{ static_asset('assets/img/instagram_img1.webp') }}" />
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 p-md-2 p-0">
             <div class="mb-md-0 mb-3">
                 <img class="w-100" src="{{ static_asset('assets/img/instagram_img2.webp') }}" />
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-4 p-md-2 p-0">
             <div class="mb-md-0 mb-3">
                 <img class="w-100" src="{{ static_asset('assets/img/instagram_img3.webp') }}" />
             </div>
@@ -160,8 +161,8 @@
             </div>
         </div>
 
-        <div class="col-md-4">
-            <div class="col-md-12">
+        <div class="col-md-4 p-md-2 p-0">
+            <div class="col-md-12 p-0">
             <div class="about_content_sec text-center">
                 <h3 class="follow_heads text_clr_green">FOLLOW OUR INSTAGRAM</h3>
                 
