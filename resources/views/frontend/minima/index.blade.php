@@ -52,7 +52,7 @@
             }
         }
 .header_position svg#Component_43_1 rect {
-    fill: #fff !important;
+    fill: #1D1A15 !important;
 }
         .header_position {
     position: absolute !important;

@@ -117,7 +117,7 @@
         <div class="position-relative logo-bar-area z-1025">
             <div class="container">
 
-            <div class="row position-relative z-2">
+            <div class="row position-relative z-2 diplay_none">
                 <div class="col-md-6">
                     <ul class="list-inline mb-0 pl-0 top_baar_icons mt-2">
                               
@@ -136,7 +136,7 @@
                 <div class="col-md-6">
                     <div class="d-flex gap-2 justify-content-end mt-2">
                          <!-- Search Icon for small device -->
-                    <div class="mr-md-2 ml-2 mt-19 header_searchs">
+                    <div class="mr-md-2 ml-2 mt-19 header_searchs d-none d-lg-block">
                         <a class="d-block text-reset" href="javascript:void(0);" data-toggle="class-toggle"
                             data-target=".front-header-search">
                             <i class="las la-search la-flip-horizontal fs-24 dt_text"></i>
@@ -198,7 +198,7 @@
                     </div>
                 </div>
             </div>
-                <div class="align-items-center">
+                <div class="align-items-center d-md-inline- d-flex">
                     <!-- top menu sidebar button -->
                     <button type="button" class="btn d-lg-none mr-sm-4 p-0 active" data-toggle="class-toggle"
                         data-target=".aiz-top-menu-sidebar">
@@ -216,8 +216,8 @@
                     <!-- Header Logo -->
 
 
-                       <div class="col-lg-12 col-md-12 col-12 pr-md-0 pl-md-0 mt_20">
-                        <a class="d-block py-10px ml-0" href="{{ route('home') }}">
+                       <div class="col-lg-12 col-md-12 col-10 pr-md-0 pl-md-0 mt_20">
+                         <a class="d-block py-10px ml-0" href="{{ route('home') }}">
                             @php
                                 $header_logo = get_setting('header_logo');
                             @endphp
@@ -228,10 +228,17 @@
                                 <img src="{{ static_asset('assets/img/logo.png') }}" alt="{{ env('APP_NAME') }}"
                                     class="logo_width">
                             @endif
+                          </a>
+                       </div>
+
+                    <div class="col-lg-12 col-md-12 col-2 d-md-none d-block">
+                              <div class="mr-md-2 ml-2 mt-19 header_searchs">
+                        <a class="d-block text-reset" href="javascript:void(0);" data-toggle="class-toggle"
+                            data-target=".front-header-search">
+                            <i class="las la-search la-flip-horizontal fs-24 dt_text"></i>
                         </a>
                     </div>
-
-
+                    </div>
 
 
                     <div class="col-lg-12 col-md-12 col-0">

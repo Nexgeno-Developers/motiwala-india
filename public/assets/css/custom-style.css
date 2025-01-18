@@ -208,7 +208,7 @@ p.about_content_para1 {
 
 .breacrums_bg {
     position: relative;
-    background-image: url(/assets/img/header_bg_img.webp);
+    background-image: url(/public/assets/img/header_bg_img.webp);
     width: 100%;
     background-size: cover;
     padding: 20px 0px 45px 0px;
@@ -217,7 +217,7 @@ p.about_content_para1 {
 
 .about_bg1 {
     position: relative;
-    background-image: url(/assets/img/about_bg_image.webp);
+    background-image: url(/public/assets/img/about_bg_image.webp);
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -748,12 +748,28 @@ section.contact_us_sec .row_box .w-100 {
         overflow-x: hidden;
     }
 
+    .diplay_none {
+        display: none;
+    }
+
     img.logo_width {
         filter: none !important;
     }
 
     .logo_width {
-        width: 215px !important;
+        width: 170px !important;
+    }
+
+    .front-header-search.active {
+        top: 7px;
+    }
+
+    .search-input-box>input {
+        height: 40px !important;
+    }
+
+    body .header_searchs {
+        margin-left: -8px !important;
     }
 
     .top_baar_icons img {
@@ -816,14 +832,25 @@ section.contact_us_sec .row_box .w-100 {
 
     body .header_position {
         position: relative !important;
+
+    }
+
+    .mt_20 {
+        margin-top: 0;
+    }
+
+    .banner_video img.w-100 {
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
     }
 
     .banner_content {
         position: absolute;
-        width: 92%;
+        width: 96%;
         bottom: 0;
         z-index: 999;
-        left: 4%;
+        left: 2%;
     }
 
     .shop_now_button a {
