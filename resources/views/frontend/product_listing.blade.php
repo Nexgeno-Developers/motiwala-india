@@ -36,7 +36,7 @@
 
 @section('content')
 
-<section class="breadcrums_sedction breacrums_bg">
+<section class="breadcrums_sedction breacrums_bg" style="background-image: url('{{ static_asset('assets/img/header_bg_img.webp') }}');">
     <div class="container">
     <h4 class="text-white text-center">
         @if(isset($category_id) && $category_id)
@@ -73,7 +73,7 @@
 
 
 
-     <div class="product_listing_section position-relative mt-5 mb-3">
+     <!-- <div class="product_listing_section position-relative mt-5 mb-3">
         <div class="row align-items-center">
             <div class="col-md-6 p-0"><img class="w-100" src="{{ static_asset('assets/img/earrning_image.webp') }}" /></div>
             <div class="col-md-6 p-0">
@@ -89,9 +89,9 @@
                 </div>
             </div>
         </div>
-</div>
+</div> -->
 
-    <section class="mb-4 pt-4">
+    <section class="mb-4 pt-5">
         <div class="container sm-px-0 pt-2">
             <form class="" id="search-form" action="" method="GET">
                 <div class="row">

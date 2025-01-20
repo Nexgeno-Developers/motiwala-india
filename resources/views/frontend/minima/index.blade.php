@@ -77,6 +77,13 @@ header svg path {
 .top_baar_icons img {
     filter: invert(100%) brightness(100%);
 }
+
+@media(min-width:768px) and (max-width:991px) 
+{
+    .header_position svg#Component_43_1 rect {
+    fill: #ffffff !important;
+}
+}
     </style>
 
     <!-- Sliders -->
@@ -208,11 +215,11 @@ header svg path {
        </section>
 
 
-       <section class="spots_lights about_bg1 pt-5 pb-5">
+       <section class="spots_lights about_bg1 pt-md-5 pb-md-5 pt-4 pb-4" style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
     <div class="container">
         <div class="row align-items-center">
               <div class="col-md-3">
-                <div class="">
+                <div class="text-md-left text-center">
                     <h4 class="main_heading text-white pb-2">Our <span class="d-md-block">Spotlight</span></h4> 
                 </div>
             </div>
@@ -260,6 +267,7 @@ header svg path {
                           <div class="signature_box">
                                <div class="signature_image">
                                      <img class="w-100" src="{{ static_asset('assets/img/signature_img2.webp') }}" />
+                                     
                                </div>
                                <h4 class="text-center pt-3">SOLITAIRE</h4>
                           </div>
@@ -324,10 +332,10 @@ header svg path {
 </section>
 
 
-<section class="about_sections about_bg1">
-    <div class="container">
+<section class="about_sections about_bg1 " style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
+    <div class="container position-relative">
         <div class="row align-items-center">
-              <div class="col-md-6 order-md-1 order-2">
+              <div class="col-md-5 order-md-1 order-2">
                 <div class="pt-md-0 pt-4 pb-md-0 pb-4">
                     <h4 class="main_heading text-white pb-md-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
                     <p class="text-white mb-md-3 mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
@@ -338,6 +346,10 @@ header svg path {
                 <div class="">
                     <img class="profile_img_box" src="{{ static_asset('assets/img/about_profile_image.webp') }}" />
                 </div>
+            </div>
+            <div class="col-md-1 profile_names d-none d-lg-block ">
+                <h4>ABDE ALI MOTIWALA</h4>
+                <p>MOTIWALA & SONS</p>
             </div>
           
         </div>
@@ -393,7 +405,7 @@ header svg path {
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="shop_now_button2"><a href="/search">Shop Now</a></div>
+                    <div class="shop_now_button2"><a href="/search">Shop All</a></div>
                 </div>
                 
             </div>

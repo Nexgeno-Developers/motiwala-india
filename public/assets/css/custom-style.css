@@ -208,7 +208,6 @@ p.about_content_para1 {
 
 .breacrums_bg {
     position: relative;
-    background-image: url(/public/assets/img/header_bg_img.webp);
     width: 100%;
     background-size: cover;
     padding: 20px 0px 45px 0px;
@@ -217,7 +216,6 @@ p.about_content_para1 {
 
 .about_bg1 {
     position: relative;
-    background-image: url(/public/assets/img/about_bg_image.webp);
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -488,7 +486,7 @@ p.about_content_para1 {
 }
 
 .black_color_buttons {
-    background: #000;
+    background: #523A33;
 }
 
 .min-w-180px {
@@ -496,7 +494,7 @@ p.about_content_para1 {
 }
 
 .black_color_buttons:hover {
-    background: #333;
+    background: #523A33;
 }
 
 .gray_color_buttons {
@@ -741,6 +739,65 @@ section.contact_us_sec .row_box .w-100 {
     line-height: 48px;
 }
 
+.signature_image img:hover {
+    transform: scale(1.1);
+}
+
+.signature_box img {
+    transition: 0.5s all;
+}
+
+.signature_image {
+    overflow: hidden;
+    transition: 0.5s all;
+}
+
+.profile_names {
+    position: absolute;
+    right: 0px;
+    max-width: 233px;
+    bottom: 20px;
+    text-align: center;
+}
+
+.profile_names h4 {
+    color: rgba(215, 195, 145, 1);
+    font-size: 18px;
+    margin-bottom: -5px;
+}
+
+.profile_names p {
+    color: rgba(215, 195, 145, 1);
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-primary.dropdown-toggle {
+    background-color: #523A33 !important;
+    border-color: #523A33 !important;
+}
+
+.btn-primary,
+.btn-soft-primary:hover,
+.btn-outline-primary:hover {
+    background-color: #523A33 !important;
+    border-color: #523A33 !important;
+}
+
+.light_gray_bg {
+    background-color: #F4F5F5;
+}
+
 /*-- mobile device css---*/
 
 @media(max-width:767px) {
@@ -748,8 +805,27 @@ section.contact_us_sec .row_box .w-100 {
         overflow-x: hidden;
     }
 
+    .spots_lights .swiper-button-prev {
+        left: 40%;
+        right: auto;
+        top: 93%;
+        color: #fff;
+    }
+
     .diplay_none {
         display: none;
+    }
+
+    .spots_lights .swiper-button-next:after,
+    .spots_lights .swiper-button-prev:after {
+        font-size: 20px;
+    }
+
+    .spots_lights .swiper-button-next {
+        right: 42%;
+        left: auto;
+        top: 93%;
+        color: #fff;
     }
 
     img.logo_width {
@@ -1080,12 +1156,33 @@ section.contact_us_sec .row_box .w-100 {
         overflow-x: hidden;
     }
 
+    .diplay_none {
+        display: none;
+    }
+
+    .header_searchs i {
+        position: relative;
+        right: -25px;
+    }
+
+    .mt_20 {
+        margin-top: 0;
+    }
+
+    .front-header-search {
+        height: 100%;
+    }
+
+    .d_flexs {
+        display: flex;
+    }
+
     .logo_width {
-        width: 115px !important;
+        width: 230px !important;
     }
 
     .header_searchs {
-        margin-right: -20px !important;
+        margin-right: 0px !important;
         padding-right: 0;
         margin-top: 0;
     }
@@ -1345,7 +1442,7 @@ section.contact_us_sec .row_box .w-100 {
     }
 
     .header_position .container {
-        max-width: 100%;
+        max-width: 96%;
         padding: 0;
     }
 

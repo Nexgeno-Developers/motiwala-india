@@ -57,7 +57,7 @@
 
 @section('content')
 
-<section class="breadcrums_sedction breacrums_bg">
+<section class="breadcrums_sedction breacrums_bg" style="background-image: url('{{ static_asset('assets/img/header_bg_img.webp') }}');">
     <div class="container">
     <h4 class="text-white text-center"> {{ $detailedProduct->getTranslation('name') }}</h4>
 
@@ -103,7 +103,7 @@
                 <div class="col-md-12 text-center">
                      <h4 class="fs40 dt_text mb-md-3 mb-1">The Heart</h4>
                      <p class="pl-md-5 pr-md-5">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It</p>
-                      <img class="w-100" src="{{ static_asset('assets/img/product_dt_img.webp') }}">
+                      <img src="{{ static_asset('assets/img/video/middle_video.gif') }}" class="w-100"/>
                     </div> 
             </div>
         </div>

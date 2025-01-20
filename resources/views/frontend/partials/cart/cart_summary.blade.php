@@ -46,9 +46,9 @@
             <div class="row gutters-5">
                 <!-- Total Products -->
                 <div class="@if (addon_is_activated('club_point')) col-6 @else col-12 @endif">
-                    <div class="d-flex align-items-center justify-content-between bg-primary p-2">
-                        <span class="fs-16 text-white">{{ translate('Total Products') }}</span>
-                        <span class="fs-16 fw-700 text-white">{{ sprintf("%02d", count($carts)) }}</span>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <span class="fs-16">{{ translate('Total Products') }}</span>
+                        <span class="fs-16 fw-700">{{ sprintf("%02d", count($carts)) }}</span>
                     </div>
                 </div>
                 @if (addon_is_activated('club_point'))

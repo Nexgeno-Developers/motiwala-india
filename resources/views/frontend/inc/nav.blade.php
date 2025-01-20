@@ -122,12 +122,12 @@
                     <ul class="list-inline mb-0 pl-0 top_baar_icons mt-2">
                               
                                         <li class="list-inline-item mr-0">
-                                            <a href="">
+                                            <a href="/contact-us">
                                                  <img src="{{ static_asset('assets/img/location_icons.svg') }}" class="w-100">
                                             </a>
                                         </li>
                                           <li class="list-inline-item mr-0">
-                                            <a href="">
+                                            <a href="mailto:care@motiwalasons.in">
                                                  <img src="{{ static_asset('assets/img/email_icons1.svg') }}" class="w-100">
                                             </a>
                                         </li>
@@ -152,7 +152,7 @@
                     </div>
                     
                     
-                    <div class="d-none d-xl-block  mt-23 ">
+                    <div class="d-none d-xl-block d-md-block d-lg-block mt-23 ">
                         @auth
                             <span
                                 class="d-flex align-items-center nav-user-info @if (isAdmin()) ml-2 @endif"
@@ -216,7 +216,7 @@
                     <!-- Header Logo -->
 
 
-                       <div class="col-lg-12 col-md-12 col-10 pr-md-0 pl-md-0 mt_20">
+                       <div class="col-lg-12 col-md-10 col-10 pr-md-0 pl-md-0 mt_20">
                          <a class="d-block py-10px ml-0" href="{{ route('home') }}">
                             @php
                                 $header_logo = get_setting('header_logo');
@@ -231,7 +231,7 @@
                           </a>
                        </div>
 
-                    <div class="col-lg-12 col-md-12 col-2 d-md-none d-block">
+                    <div class="col-lg-12 col-md-2 col-2 d-lg-none d-md-block d-block">
                               <div class="mr-md-2 ml-2 mt-19 header_searchs">
                         <a class="d-block text-reset" href="javascript:void(0);" data-toggle="class-toggle"
                             data-target=".front-header-search">

@@ -33,7 +33,7 @@
 
 
 
-<section class="breadcrums_sedction breacrums_bg">
+<section class="breadcrums_sedction breacrums_bg" style="background-image: url('{{ static_asset('assets/img/header_bg_img.webp') }}');">
     <div class="container">
     <!-- Breadcrumb -->
      <h4 class="text-white text-center">Contact Us</h4>
