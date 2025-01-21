@@ -432,9 +432,14 @@ p.about_content_para1 {
     transition: 0.5s all;
 }
 
+.category_images {
+    padding: 20px;
+}
+
 .category_images img {
     width: 100%;
     margin: 0 auto;
+    transition: 0.5s all;
 }
 
 .position_contens {
@@ -817,6 +822,10 @@ section.contact_us_sec .row_box .w-100 {
 @media(max-width:767px) {
     html {
         overflow-x: hidden;
+    }
+
+    .category_images {
+        padding: 0px;
     }
 
     .spots_lights .swiper-button-prev {
