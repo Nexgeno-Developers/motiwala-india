@@ -380,18 +380,18 @@ header svg path {
                             @endphp
                             <div class="carousel-box position-relative p-0 has-transition @if ($key == 0)  @endif">
                                 <div class="">
-                                    <div class="category_images h-100 w-100 w-xl-auto position-relative hov-scale-img overflow-hidden">
+                                    <div class="category_images h-100 w-100 w-xl-auto position-relative overflow-hidden img_hover1">
                                         <div class=" h-100 w-100 overflow-hidden">
-                                           <a  href="{{ route('products.category', $category->slug) }}"><img src="{{ isset($category->coverImage->file_name) ? my_asset($category->coverImage->file_name) : static_asset('assets/img/placeholder.jpg') }}"
+                                           <a  href="{{ route('products.category', $category->slug) }}"><img class="" src="{{ isset($category->coverImage->file_name) ? my_asset($category->coverImage->file_name) : static_asset('assets/img/placeholder.jpg') }}"
                                                 alt="{{ $category_name }}"
                                                 class="img-fit h-100 has-transition"
                                                 onerror="this.onerror=null;this.src='{{ static_asset('assets/img/placeholder.jpg') }}';">
                                                 </a> 
                                         </div>
-                                        <div class="has-transition h-80px w-100 d-flex flex-column align-items-center justify-content-center"
+                                        <div class="has-transition h-80px w-100 d-flex flex-column align-items-center justify-content-center position_contens"
                                           >
                                             <div class="w-100 text-center">
-                                                <a class="home-category-name animate-underline-white category_name_text text-{{ get_setting('featured_categories_text') }}"
+                                                <a class="home-category-name text-white category_name_text"
                                                     href="{{ route('products.category', $category->slug) }}"
                                                     style="width: max-content;">
                                                     {{ $category_name }}

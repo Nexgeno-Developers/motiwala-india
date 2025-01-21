@@ -423,9 +423,23 @@ p.about_content_para1 {
     display: inline-block;
 }
 
+.img_hover1 {
+    transition: 0.5s all;
+}
+
+.img_hover1 img:hover {
+    transform: scale(1.1);
+    transition: 0.5s all;
+}
+
 .category_images img {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
+}
+
+.position_contens {
+    position: absolute;
+    bottom: 40%;
 }
 
 .aboutbg_logo {
