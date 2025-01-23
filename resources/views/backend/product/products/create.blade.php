@@ -443,11 +443,65 @@
 
                                 </div>
 
+                                <!-- Gold Section -->
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Gold Carat</label>
+                                    <div class="col-xxl-9">
+                                        <select id="gold_carat" name="gold_carat" class="form-control">
+                                            <option value="" selected>Select Gold Carat</option>
+                                            <option value="gold_rate_18_carat">18 Carat</option>
+                                            <option value="gold_rate_21_carat">21 Carat</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">{{ translate('Quantity (in grams)') }}</label>
+                                    <div class="col-xxl-9">
+                                        <input type="number" id="gold_qty" name="gold_qty" value="1" step="0.01"
+                                            placeholder="{{ translate('Enter quantity in grams') }}"
+                                            class="form-control @error('gold_qty') is-invalid @enderror">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Gold Rate</label>
+                                    <div class="col-xxl-9">
+                                        <input type="text" id="gold_rate" name="gold_rate" class="form-control" readonly>
+                                        <p id="gold_preview" class="mt-2 text-muted">Gold Calculation: 0.00 x 0.00 = 0.00</p>
+                                    </div>
+                                </div>
+
+                                <!-- Diamond Section -->
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Diamond Carat</label>
+                                    <div class="col-xxl-9">
+                                        <select id="diamond_carat" name="diamond_carat" class="form-control">
+                                            <option value="" selected>Select Diamond Carat</option>
+                                            <option value="diamond_rate_14_carat">14 Carat</option>
+                                            <option value="diamond_rate_18_carat">18 Carat</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">{{ translate('Quantity (in grams)') }}</label>
+                                    <div class="col-xxl-9">
+                                        <input type="number" id="diamond_qty" name="diamond_qty" value="1" step="0.01"
+                                            placeholder="{{ translate('Enter quantity in grams') }}"
+                                            class="form-control @error('diamond_qty') is-invalid @enderror">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Diamond Rate</label>
+                                    <div class="col-xxl-9">
+                                        <input type="text" id="diamond_rate" name="diamond_rate" class="form-control" readonly>
+                                        <p id="diamond_preview" class="mt-2 text-muted">Diamond Calculation: 0.00 x 0.00 = 0.00</p>
+                                    </div>
+                                </div>
+
                                 <!-- Unit price -->
                                 <div class="form-group row">
                                     <label class="col-md-3 col-from-label">{{translate('Unit price')}} <span class="text-danger">*</span></label>
                                     <div class="col-md-6">
-                                        <input type="number" lang="en" min="0" value="0" step="0.01" placeholder="{{ translate('Unit price') }}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror">
+                                        <input type="number" id="unit_price" lang="en" min="0" value="0" step="0.01" placeholder="{{ translate('Unit price') }}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror">
                                     </div>
                                 </div>
                                 <!-- Discount Date Range -->
@@ -728,9 +782,9 @@
                                 <div class="form-group row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-10">
-                                        <select class="form-control aiz-selectpicker" 
-                                            name="warranty_id" 
-                                            id="warranty_id" 
+                                        <select class="form-control aiz-selectpicker"
+                                            name="warranty_id"
+                                            id="warranty_id"
                                             data-live-search="true">
                                             <option value="">{{ translate('Select Warranty') }}</option>
                                             @foreach (\App\Models\Warranty::all() as $warranty)
@@ -739,7 +793,7 @@
                                         </select>
 
                                         <input type="hidden" name="warranty_note_id" id="warranty_note_id">
-                                        
+
                                         <h5 class="fs-14 fw-600 mb-3 mt-4 pb-3" style="border-bottom: 1px dashed #e4e5eb;">{{translate('Warranty Note')}}</h5>
                                         <div id="warranty_note" class="">
 
@@ -837,7 +891,87 @@
 @endsection
 
 @section('script')
+<script>
+    $(document).ready(function () {
+        let typingTimer; // Timer variable
+        const doneTypingInterval = 500; // Delay in milliseconds
 
+    // Common AJAX function
+    function fetchRate(caratType, rateInputId) {
+        if (caratType) {
+            $.ajax({
+                url: "{{ route('get.rate.by.carat') }}", // AJAX route
+                method: "POST",
+                data: {
+                    carat_type: caratType,
+                    _token: "{{ csrf_token() }}" // CSRF token for security
+                },
+                success: function (response) {
+                    if (response.rate !== undefined) {
+                        $(`#${rateInputId}`).val(response.rate); // Set the fetched rate in the input field
+                    } else {
+                        alert('Rate not found!');
+                        $(`#${rateInputId}`).val(''); // Clear the input field
+                    }
+                },
+                error: function () {
+                    alert('Something went wrong! Please try again.');
+                    $(`#${rateInputId}`).val(''); // Clear the input field
+                }
+            });
+        } else {
+            $(`#${rateInputId}`).val(''); // Clear the input field if no carat selected
+        }
+    }
+
+    // Handle change event for Gold Carat
+    $('#gold_carat').on('change', function () {
+        const caratType = $(this).val(); // Get selected value (e.g., gold_rate_18_carat)
+        fetchRate(caratType, 'gold_rate'); // Call the common function.. passing [option, and id to append value]
+    });
+
+    // Handle change event for Diamond Carat
+    $('#diamond_carat').on('change', function () {
+        const caratType = $(this).val(); // Get selected value (e.g., diamond_rate_14_carat)
+        fetchRate(caratType, 'diamond_rate'); // Call the common function.. passing [option, and id to append value]
+    });
+
+    // Calculate unit price dynamically
+    function calculateUnitPrice() {
+        // Fetch values for gold
+        const goldRate = parseFloat($('#gold_rate').val()) || 0;
+        const goldQty = parseFloat($('#gold_qty').val()) || 1;
+        const value1 = goldRate * goldQty;
+
+        // Fetch values for diamond
+        const diamondRate = parseFloat($('#diamond_rate').val()) || 0;
+        const diamondQty = parseFloat($('#diamond_qty').val()) || 1;
+        const value2 = diamondRate * diamondQty;
+
+        // Update preview for Gold and Diamond
+        $('#gold_preview').text(`Gold Calculation: ${goldRate.toFixed(2)} x ${goldQty.toFixed(2)} = ${value1.toFixed(2)}`);
+        $('#diamond_preview').text(`Diamond Calculation: ${diamondRate.toFixed(2)} x ${diamondQty.toFixed(2)} = ${value2.toFixed(2)}`);
+
+
+        // Calculate and update unit price
+        const unitPrice = value1 + value2;
+        $('#unit_price').val(unitPrice.toFixed(2)); // Update unit price field
+    }
+
+    // On input event for gold and diamond quantity (with a delay)
+    $('#gold_qty, #diamond_qty').on('input', function () {
+        clearTimeout(typingTimer); // Clear the previous timer
+        typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
+    });
+
+    // On change event for gold and diamond Carat (with a delay)
+    $('#gold_carat, #diamond_carat').on('change', function () {
+        clearTimeout(typingTimer); // Clear the previous timer
+        typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
+    });
+
+});
+</script>
 <!-- Treeview js -->
 <script src="{{ static_asset('assets/js/hummingbird-treeview.js') }}"></script>
 
@@ -1041,7 +1175,7 @@
             $('#warranty_id').removeAttr('required');
         }
     }
-    
+
     function noteModal(noteType){
         $.post('{{ route('get_notes') }}',{_token:'{{ @csrf_token() }}', note_type: noteType}, function(data){
             $('#note_modal #note_modal_content').html(data);
