@@ -51,6 +51,7 @@ use App\Http\Controllers\SupportTicketController;
 use App\Http\Controllers\WalletController;
 use App\Http\Controllers\WishlistController;
 use App\Http\Controllers\SizeChartController;
+use App\Http\Controllers\CronJobController;
 
 /*
   |--------------------------------------------------------------------------
@@ -62,6 +63,8 @@ use App\Http\Controllers\SizeChartController;
   | contains the "web" middleware group. Now create something great!
   |
  */
+
+Route::get('/cron/update-gold-rates', [CronJobController::class, 'updateGoldRates']);
 
 Route::controller(DemoController::class)->group(function () {
     Route::get('/demo/cron_1', 'cron_1');
