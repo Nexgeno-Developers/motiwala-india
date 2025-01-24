@@ -542,7 +542,7 @@
                                     <div class="form-group row">
                                         <label class="col-md-3 col-from-label">{{translate('Quantity')}} <span class="text-danger">*</span></label>
                                         <div class="col-md-6">
-                                            <input type="number" lang="en" min="0" value="0" step="1" placeholder="{{ translate('Quantity') }}" name="current_stock" class="form-control">
+                                            <input type="number" lang="en" min="0" value="10" step="1" placeholder="{{ translate('Quantity') }}" name="current_stock" class="form-control">
                                         </div>
                                     </div>
                                     <!-- SKU -->
@@ -893,84 +893,183 @@
 @section('script')
 <script>
     $(document).ready(function () {
+
+        // Function to clear specific properties (e.g., unit_price, diamond_price, gold_qty) from localStorage
+        function clearSpecificLocalStorageValues() {
+            // Get the existing object stored in localStorage (if exists)
+            let productData = JSON.parse(localStorage.getItem('tempdataproduct_physical'));
+
+            // Check if the object exists before trying to clear specific values
+            if (productData) {
+                // Remove specific properties
+                delete productData.unit_price;   // Remove the 'unit_price' property
+                delete productData.gold_carat; // Remove the 'diamond_price' property
+                delete productData.gold_rate; // Remove the 'diamond_price' property
+                delete productData.gold_qty;    // Remove the 'gold_qty' property
+                delete productData.diamond_carat; // Remove the 'diamond_price' property
+                delete productData.diamond_rate; // Remove the 'diamond_price' property
+                delete productData.diamond_qty;    // Remove the 'gold_qty' property
+
+                // Save the updated object back to localStorage
+                localStorage.setItem('tempdataproduct_physical', JSON.stringify(productData));
+
+                console.log('Specific properties cleared from localStorage.');
+            } else {
+                console.log('No product data found in localStorage.');
+            }
+        }
+
+        clearSpecificLocalStorageValues();
+
         let typingTimer; // Timer variable
         const doneTypingInterval = 500; // Delay in milliseconds
 
-    // Common AJAX function
-    function fetchRate(caratType, rateInputId) {
-        if (caratType) {
-            $.ajax({
-                url: "{{ route('get.rate.by.carat') }}", // AJAX route
-                method: "POST",
-                data: {
-                    carat_type: caratType,
-                    _token: "{{ csrf_token() }}" // CSRF token for security
-                },
-                success: function (response) {
-                    if (response.rate !== undefined) {
-                        $(`#${rateInputId}`).val(response.rate); // Set the fetched rate in the input field
-                    } else {
-                        alert('Rate not found!');
+        // Common AJAX function
+        function fetchRate(caratType, rateInputId) {
+            if (caratType) {
+                $.ajax({
+                    url: "{{ route('get.rate.by.carat') }}", // AJAX route
+                    method: "POST",
+                    data: {
+                        carat_type: caratType,
+                        _token: "{{ csrf_token() }}" // CSRF token for security
+                    },
+                    success: function (response) {
+                        if (response.rate !== undefined) {
+                            $(`#${rateInputId}`).val(response.rate); // Set the fetched rate in the input field
+                        } else {
+                            alert('Rate not found!');
+                            $(`#${rateInputId}`).val(''); // Clear the input field
+                        }
+                    },
+                    error: function () {
+                        alert('Something went wrong! Please try again.');
                         $(`#${rateInputId}`).val(''); // Clear the input field
                     }
-                },
-                error: function () {
-                    alert('Something went wrong! Please try again.');
-                    $(`#${rateInputId}`).val(''); // Clear the input field
-                }
-            });
-        } else {
-            $(`#${rateInputId}`).val(''); // Clear the input field if no carat selected
+                });
+            } else {
+                $(`#${rateInputId}`).val(''); // Clear the input field if no carat selected
+            }
         }
-    }
 
-    // Handle change event for Gold Carat
-    $('#gold_carat').on('change', function () {
-        const caratType = $(this).val(); // Get selected value (e.g., gold_rate_18_carat)
-        fetchRate(caratType, 'gold_rate'); // Call the common function.. passing [option, and id to append value]
+        // Handle change event for Gold Carat
+        $('#gold_carat').on('change', function () {
+            const caratType = $(this).val(); // Get selected value (e.g., gold_rate_18_carat)
+            fetchRate(caratType, 'gold_rate'); // Call the common function.. passing [option, and id to append value]
+        });
+
+        // Handle change event for Diamond Carat
+        $('#diamond_carat').on('change', function () {
+            const caratType = $(this).val(); // Get selected value (e.g., diamond_rate_14_carat)
+            fetchRate(caratType, 'diamond_rate'); // Call the common function.. passing [option, and id to append value]
+        });
+
+        // Calculate unit price dynamically
+        function calculateUnitPrice() {
+
+            // Fetch values for gold
+            const goldRate = parseFloat($('#gold_rate').val()) || 0;
+            const goldQty = parseFloat($('#gold_qty').val()) || 1;
+            const value1 = goldRate * goldQty;
+
+            // Fetch values for diamond
+            const diamondRate = parseFloat($('#diamond_rate').val()) || 0;
+            const diamondQty = parseFloat($('#diamond_qty').val()) || 1;
+            const value2 = diamondRate * diamondQty;
+
+            // Update preview for Gold and Diamond
+            $('#gold_preview').text(`Gold Calculation: ${goldRate.toFixed(2)} x ${goldQty.toFixed(2)} = ${value1.toFixed(2)}`);
+            $('#diamond_preview').text(`Diamond Calculation: ${diamondRate.toFixed(2)} x ${diamondQty.toFixed(2)} = ${value2.toFixed(2)}`);
+
+
+            // Calculate and update unit price
+            const unitPrice = value1 + value2;
+            $('#unit_price').val(unitPrice.toFixed(2)); // Update unit price field
+        }
+
+        // On input event for gold and diamond quantity (with a delay)
+        $('#gold_qty, #diamond_qty').on('input', function () {
+            clearTimeout(typingTimer); // Clear the previous timer
+            typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
+        });
+
+        // On change event for gold and diamond Carat (with a delay)
+        $('#gold_carat, #diamond_carat').on('change', function () {
+            clearTimeout(typingTimer); // Clear the previous timer
+            typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
+        });
+
+        /*varient product js*/
+        function fetchRateVarient(caratType, rateInput, closestRow) {
+            if (caratType) {
+                $.ajax({
+                    url: "{{ route('get.rate.by.carat') }}",
+                    method: "POST",
+                    data: {
+                        carat_type: caratType,
+                        _token: "{{ csrf_token() }}"
+                    },
+                    success: function (response) {
+                        if (response.rate !== undefined) {
+                            closestRow.find(rateInput).val(response.rate);
+                            calculateUnitPriceVarient(closestRow);
+                        } else {
+                            alert('Rate not found!');
+                            closestRow.find(rateInput).val('');
+                        }
+                    },
+                    error: function () {
+                        alert('Something went wrong! Please try again.');
+                        closestRow.find(rateInput).val('');
+                    }
+                });
+            } else {
+                closestRow.find(rateInput).val('');
+            }
+        }
+
+        function calculateUnitPriceVarient(row) {
+            const goldRate = parseFloat(row.find('.gold-rate').val()) || 0;
+            const goldQty = parseFloat(row.find('.gold-qty').val()) || 1;
+            const goldTotal = goldRate * goldQty;
+
+            const diamondRate = parseFloat(row.find('.diamond-rate').val()) || 0;
+            const diamondQty = parseFloat(row.find('.diamond-qty').val()) || 1;
+            const diamondTotal = diamondRate * diamondQty;
+
+            const unitPrice = goldTotal + diamondTotal;
+
+            row.find('.gold-preview').text(`Gold Calculation: ${goldRate.toFixed(2)} x ${goldQty.toFixed(2)} = ${goldTotal.toFixed(2)}`);
+            row.find('.diamond-preview').text(`Diamond Calculation: ${diamondRate.toFixed(2)} x ${diamondQty.toFixed(2)} = ${diamondTotal.toFixed(2)}`);
+            row.find('.varient-price').val(unitPrice.toFixed(2));
+        }
+
+        // Event listeners
+        $(document).on('change', '.gold-carat', function () {
+            const row = $(this).closest('.variant');
+            const caratType = $(this).val();
+            fetchRateVarient(caratType, '.gold-rate', row);
+        });
+
+        $(document).on('change', '.diamond-carat', function () {
+            const row = $(this).closest('.variant');
+            const caratType = $(this).val();
+            fetchRateVarient(caratType, '.diamond-rate', row);
+        });
+
+        $(document).on('input', '.gold-qty, .diamond-qty', function () {
+            const row = $(this).closest('.variant');
+            clearTimeout(typingTimer); // Clear the previous timer
+
+            // Use an anonymous function to pass the correct `row` to `calculateUnitPriceVarient`
+            typingTimer = setTimeout(function () {
+                calculateUnitPriceVarient(row);
+            }, doneTypingInterval);
+            // calculateUnitPriceVarient(row);
+        });
+
     });
 
-    // Handle change event for Diamond Carat
-    $('#diamond_carat').on('change', function () {
-        const caratType = $(this).val(); // Get selected value (e.g., diamond_rate_14_carat)
-        fetchRate(caratType, 'diamond_rate'); // Call the common function.. passing [option, and id to append value]
-    });
-
-    // Calculate unit price dynamically
-    function calculateUnitPrice() {
-        // Fetch values for gold
-        const goldRate = parseFloat($('#gold_rate').val()) || 0;
-        const goldQty = parseFloat($('#gold_qty').val()) || 1;
-        const value1 = goldRate * goldQty;
-
-        // Fetch values for diamond
-        const diamondRate = parseFloat($('#diamond_rate').val()) || 0;
-        const diamondQty = parseFloat($('#diamond_qty').val()) || 1;
-        const value2 = diamondRate * diamondQty;
-
-        // Update preview for Gold and Diamond
-        $('#gold_preview').text(`Gold Calculation: ${goldRate.toFixed(2)} x ${goldQty.toFixed(2)} = ${value1.toFixed(2)}`);
-        $('#diamond_preview').text(`Diamond Calculation: ${diamondRate.toFixed(2)} x ${diamondQty.toFixed(2)} = ${value2.toFixed(2)}`);
-
-
-        // Calculate and update unit price
-        const unitPrice = value1 + value2;
-        $('#unit_price').val(unitPrice.toFixed(2)); // Update unit price field
-    }
-
-    // On input event for gold and diamond quantity (with a delay)
-    $('#gold_qty, #diamond_qty').on('input', function () {
-        clearTimeout(typingTimer); // Clear the previous timer
-        typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
-    });
-
-    // On change event for gold and diamond Carat (with a delay)
-    $('#gold_carat, #diamond_carat').on('change', function () {
-        clearTimeout(typingTimer); // Clear the previous timer
-        typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
-    });
-
-});
 </script>
 <!-- Treeview js -->
 <script src="{{ static_asset('assets/js/hummingbird-treeview.js') }}"></script>

@@ -490,11 +490,65 @@
                                     @endforeach
                                 </div>
 
+                                <!-- Gold Section -->
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Gold Carat</label>
+                                    <div class="col-xxl-9">
+                                        <select id="gold_carat" name="gold_carat" class="form-control">
+                                            <option value="" {{ old('gold_carat', $product->gold_carat) == '' ? 'selected' : '' }}>Select Gold Carat</option>
+                                            <option value="gold_rate_18_carat" {{ old('gold_carat', $product->gold_carat) == 'gold_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
+                                            <option value="gold_rate_21_carat" {{ old('gold_carat', $product->gold_carat) == 'gold_rate_21_carat' ? 'selected' : '' }}>21 Carat</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">{{ translate('Quantity (in grams)') }}</label>
+                                    <div class="col-xxl-9">
+                                        <input value="{{$product->gold_qty}}" type="number" id="gold_qty" name="gold_qty" value="1" step="0.01"
+                                            placeholder="{{ translate('Enter quantity in grams') }}"
+                                            class="form-control @error('gold_qty') is-invalid @enderror">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Gold Rate</label>
+                                    <div class="col-xxl-9">
+                                        <input value="{{$product->gold_rate}}" type="text" id="gold_rate" name="gold_rate" class="form-control" readonly>
+                                        <p id="gold_preview" class="mt-2 text-muted">Gold Calculation: 0.00 x 0.00 = 0.00</p>
+                                    </div>
+                                </div>
+
+                                <!-- Diamond Section -->
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Diamond Carat</label>
+                                    <div class="col-xxl-9">
+                                        <select id="diamond_carat" name="diamond_carat" class="form-control">
+                                            <option value="" {{ old('gold_carat', $product->gold_carat) == '' ? 'selected' : '' }}>Select Gold Carat</option>
+                                            <option value="diamond_rate_14_carat" {{ old('diamond_carat', $product->diamond_carat) == 'diamond_rate_14_carat' ? 'selected' : '' }}>14 Carat</option>
+                                            <option value="diamond_rate_18_carat" {{ old('diamond_carat', $product->diamond_carat) == 'diamond_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">{{ translate('Quantity (in grams)') }}</label>
+                                    <div class="col-xxl-9">
+                                        <input value="{{$product->diamond_qty}}" type="number" id="diamond_qty" name="diamond_qty" value="1" step="0.01"
+                                            placeholder="{{ translate('Enter quantity in grams') }}"
+                                            class="form-control @error('diamond_qty') is-invalid @enderror">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-xxl-3 col-form-label fs-13">Diamond Rate</label>
+                                    <div class="col-xxl-9">
+                                        <input value="{{$product->diamond_rate}}" type="text" id="diamond_rate" name="diamond_rate" class="form-control" readonly>
+                                        <p id="diamond_preview" class="mt-2 text-muted">Diamond Calculation: 0.00 x 0.00 = 0.00</p>
+                                    </div>
+                                </div>
+
                                 <!-- Unit price -->
                                 <div class="form-group row">
                                     <label class="col-md-3 col-from-label">{{translate('Unit price')}} <span class="text-danger">*</span></label>
                                     <div class="col-md-6">
-                                        <input type="text" placeholder="{{translate('Unit price')}}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror" value="{{$product->unit_price}}">
+                                        <input id="unit_price" type="text" placeholder="{{translate('Unit price')}}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror" value="{{$product->unit_price}}">
                                     </div>
                                 </div>
 
@@ -778,7 +832,7 @@
                                 <label class="col-md-2 col-from-label">{{translate('Warranty')}}</label>
                                 <div class="col-md-10">
                                     <label class="aiz-switch aiz-switch-success mb-0">
-                                        <input type="checkbox" name="has_warranty" onchange="warrantySelection()" @if($product->has_warranty == 1) checked @endif> 
+                                        <input type="checkbox" name="has_warranty" onchange="warrantySelection()" @if($product->has_warranty == 1) checked @endif>
                                         <span></span>
                                     </label>
                                 </div>
@@ -787,10 +841,10 @@
                                 <div class="form-group row">
                                     <div class="col-md-2"></div>
                                     <div class="col-md-10">
-                                        <select class="form-control aiz-selectpicker" 
-                                            name="warranty_id" 
-                                            id="warranty_id" 
-                                            data-selected="{{ $product->warranty_id }}" 
+                                        <select class="form-control aiz-selectpicker"
+                                            name="warranty_id"
+                                            id="warranty_id"
+                                            data-selected="{{ $product->warranty_id }}"
                                             data-live-search="true"
                                             @if($product->has_warranty == 1) required @endif
                                         >
@@ -801,7 +855,7 @@
                                         </select>
 
                                         <input type="hidden" name="warranty_note_id" id="warranty_note_id">
-                                        
+
                                         <h5 class="fs-14 fw-600 mb-3 mt-4 pb-3" style="border-bottom: 1px dashed #e4e5eb;">{{translate('Warranty Note')}}</h5>
                                         <div id="warranty_note">
                                             @if($product->warrantyNote != null)
@@ -969,6 +1023,160 @@
 @endsection
 
 @section('script')
+<script>
+
+    let typingTimer; // Timer variable
+    const doneTypingInterval = 500; // Delay in milliseconds
+
+    // Common AJAX function
+    function fetchRate(caratType, rateInputId) {
+        if (caratType) {
+            $.ajax({
+                url: "{{ route('get.rate.by.carat') }}", // AJAX route
+                method: "POST",
+                data: {
+                    carat_type: caratType,
+                    _token: "{{ csrf_token() }}" // CSRF token for security
+                },
+                success: function (response) {
+                    if (response.rate !== undefined) {
+                        $(`#${rateInputId}`).val(response.rate); // Set the fetched rate in the input field
+                    } else {
+                        alert('Rate not found!');
+                        $(`#${rateInputId}`).val(''); // Clear the input field
+                    }
+                },
+                error: function () {
+                    alert('Something went wrong! Please try again.');
+                    $(`#${rateInputId}`).val(''); // Clear the input field
+                }
+            });
+        } else {
+            $(`#${rateInputId}`).val(''); // Clear the input field if no carat selected
+        }
+    }
+
+    // Handle change event for Gold Carat
+    $('#gold_carat').on('change', function () {
+        const caratType = $(this).val(); // Get selected value (e.g., gold_rate_18_carat)
+        fetchRate(caratType, 'gold_rate'); // Call the common function.. passing [option, and id to append value]
+    });
+
+    // Handle change event for Diamond Carat
+    $('#diamond_carat').on('change', function () {
+        const caratType = $(this).val(); // Get selected value (e.g., diamond_rate_14_carat)
+        fetchRate(caratType, 'diamond_rate'); // Call the common function.. passing [option, and id to append value]
+    });
+
+    // Calculate unit price dynamically
+    function calculateUnitPrice() {
+
+        // Fetch values for gold
+        const goldRate = parseFloat($('#gold_rate').val()) || 0;
+        const goldQty = parseFloat($('#gold_qty').val()) || 1;
+        const value1 = goldRate * goldQty;
+
+        // Fetch values for diamond
+        const diamondRate = parseFloat($('#diamond_rate').val()) || 0;
+        const diamondQty = parseFloat($('#diamond_qty').val()) || 1;
+        const value2 = diamondRate * diamondQty;
+
+        // Update preview for Gold and Diamond
+        $('#gold_preview').text(`Gold Calculation: ${goldRate.toFixed(2)} x ${goldQty.toFixed(2)} = ${value1.toFixed(2)}`);
+        $('#diamond_preview').text(`Diamond Calculation: ${diamondRate.toFixed(2)} x ${diamondQty.toFixed(2)} = ${value2.toFixed(2)}`);
+
+
+        // Calculate and update unit price
+        const unitPrice = value1 + value2;
+        $('#unit_price').val(unitPrice.toFixed(2)); // Update unit price field
+    }
+
+    calculateUnitPrice();
+
+    // On input event for gold and diamond quantity (with a delay)
+    $('#gold_qty, #diamond_qty').on('input', function () {
+        clearTimeout(typingTimer); // Clear the previous timer
+        typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
+    });
+
+    // On change event for gold and diamond Carat (with a delay)
+    $('#gold_carat, #diamond_carat').on('change', function () {
+        clearTimeout(typingTimer); // Clear the previous timer
+        typingTimer = setTimeout(calculateUnitPrice, doneTypingInterval); // Set a new timer
+    });
+
+    /*varient product js*/
+    function fetchRateVarient(caratType, rateInput, closestRow) {
+        if (caratType) {
+            $.ajax({
+                url: "{{ route('get.rate.by.carat') }}",
+                method: "POST",
+                data: {
+                    carat_type: caratType,
+                    _token: "{{ csrf_token() }}"
+                },
+                success: function (response) {
+                    if (response.rate !== undefined) {
+                        closestRow.find(rateInput).val(response.rate);
+                        calculateUnitPriceVarient(closestRow);
+                    } else {
+                        alert('Rate not found!');
+                        closestRow.find(rateInput).val('');
+                    }
+                },
+                error: function () {
+                    alert('Something went wrong! Please try again.');
+                    closestRow.find(rateInput).val('');
+                }
+            });
+        } else {
+            closestRow.find(rateInput).val('');
+        }
+    }
+
+    function calculateUnitPriceVarient(row) {
+        const goldRate = parseFloat(row.find('.gold-rate').val()) || 0;
+        const goldQty = parseFloat(row.find('.gold-qty').val()) || 1;
+        const goldTotal = goldRate * goldQty;
+
+        const diamondRate = parseFloat(row.find('.diamond-rate').val()) || 0;
+        const diamondQty = parseFloat(row.find('.diamond-qty').val()) || 1;
+        const diamondTotal = diamondRate * diamondQty;
+
+        const unitPrice = goldTotal + diamondTotal;
+
+        row.find('.gold-preview').text(`Gold Calculation: ${goldRate.toFixed(2)} x ${goldQty.toFixed(2)} = ${goldTotal.toFixed(2)}`);
+        row.find('.diamond-preview').text(`Diamond Calculation: ${diamondRate.toFixed(2)} x ${diamondQty.toFixed(2)} = ${diamondTotal.toFixed(2)}`);
+        row.find('.varient-price').val(unitPrice.toFixed(2));
+    }
+
+
+
+
+    // Event listeners
+    $(document).on('change', '.gold-carat', function () {
+        const row = $(this).closest('.variant');
+        const caratType = $(this).val();
+        fetchRateVarient(caratType, '.gold-rate', row);
+    });
+
+    $(document).on('change', '.diamond-carat', function () {
+        const row = $(this).closest('.variant');
+        const caratType = $(this).val();
+        fetchRateVarient(caratType, '.diamond-rate', row);
+    });
+
+    $(document).on('input', '.gold-qty, .diamond-qty', function () {
+        const row = $(this).closest('.variant');
+        clearTimeout(typingTimer); // Clear the previous timer
+
+        // Use an anonymous function to pass the correct `row` to `calculateUnitPriceVarient`
+        typingTimer = setTimeout(function () {
+            calculateUnitPriceVarient(row);
+        }, doneTypingInterval);
+        // calculateUnitPriceVarient(row);
+    });
+</script>
 <!-- Treeview js -->
 <script src="{{ static_asset('assets/js/hummingbird-treeview.js') }}"></script>
 
@@ -1085,6 +1293,16 @@
                 else {
                     $('#show-hide-div').show();
                 }
+
+                // Check if there are any .variant elements
+                if ($('.variant').length > 0) {
+                    // Iterate over each variant and pre-calculate unit price
+                    $('.variant').each(function () {
+                        const row = $(this); // Get the current element as a jQuery object
+                        // Trigger the calculation function with existing data
+                        calculateUnitPriceVarient(row);
+                    });
+                }
            }
         });
     }
@@ -1098,7 +1316,19 @@
             $(this).parents(".col-md-4").remove();
         });
     });
+    // $(document).ready(function () {
+    //     // Check if there are any .variant elements
+    //     if ($('.variant').length > 0) {
+    //         // Iterate over each variant and pre-calculate unit price
+    //         $('.variant').each(function () {
+    //             const row = $(this); // Get the current element as a jQuery object
+    //             alert(row.html()); // Display the inner HTML of the element for debugging
 
+    //             // Trigger the calculation function with existing data
+    //             calculateUnitPriceVarient(row);
+    //         });
+    //     }
+    // });
     $('#choice_attributes').on('change', function() {
         $.each($("#choice_attributes option:selected"), function(j, attribute){
             flag = false;
@@ -1186,7 +1416,7 @@
             $('#warranty_id').removeAttr('required');
         }
     }
-    
+
     function noteModal(noteType){
         $.post('{{ route('get_notes') }}',{_token:'{{ @csrf_token() }}', note_type: noteType}, function(data){
             $('#note_modal #note_modal_content').html(data);
