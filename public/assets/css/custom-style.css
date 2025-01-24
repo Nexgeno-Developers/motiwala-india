@@ -390,7 +390,7 @@ p.about_content_para1 {
 
 .shop_now_button a {
     border: 1px solid;
-    padding: 10px 20px;
+    padding: 10px 20px 7px 20px;
     margin-top: 20px;
     display: inline-block;
 }
@@ -403,7 +403,7 @@ p.about_content_para1 {
 
 .shop_now_button2 a {
     border: 1px solid;
-    padding: 10px 20px;
+    padding: 10px 20px 7px 20px;
     margin-top: 20px;
     color: #1D1A15;
     display: inline-block;
@@ -417,7 +417,7 @@ p.about_content_para1 {
 
 .shop_now_button3 a {
     border: 1px solid;
-    padding: 10px 20px;
+    padding: 10px 20px 7px 20px;
     margin-top: 20px;
     color: #fff;
     display: inline-block;
