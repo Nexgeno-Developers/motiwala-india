@@ -768,7 +768,7 @@ header svg path {
    <section class="testimonials gray_bg pt-md-5 pb-md-5 pt-4 pb-4">
      <div class="">
        <div class="text-center">
-         <h3 class="main_heading text_clr_green pb-md-5 pb-2">Customer Experiences</h3>
+         <h3 class="main_heading text_clr_green pb-md-4 pb-2">Customer Experiences</h3>
        </div>
       
            <div id="customers-testimonials" class="slick-slider" >
