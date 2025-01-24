@@ -13,6 +13,7 @@ use App\Models\Cart;
 use App\Models\ProductCategory;
 use App\Models\Review;
 use App\Models\Wishlist;
+use App\Models\BusinessSetting;
 use App\Models\User;
 use App\Notifications\ShopProductNotification;
 use Carbon\Carbon;
@@ -185,8 +186,35 @@ class ProductController extends Controller
             ->with('childrenCategories')
             ->get();
 
+            // Fetch the current rates in one query
+            $rates = BusinessSetting::whereIn('type', [
+                'gold_rate_18_carat',
+                'gold_rate_21_carat',
+                'diamond_rate_14_carat',
+                'diamond_rate_18_carat'
+            ])
+            ->pluck('value', 'type');
+
+        // // Accessing rates by type
+        // $goldRate18Carat = $rates['gold_rate_18_carat'] ?? null;
+        // $goldRate21Carat = $rates['gold_rate_21_carat'] ?? null;
+        // $diamondRate14Carat = $rates['diamond_rate_14_carat'] ?? null;
+        // $diamondRate18Carat = $rates['diamond_rate_18_carat'] ?? null;
+
+        // return view('backend.product.products.create', compact('categories', 'goldRate18Carat', 'goldRate21Carat', 'diamondRate14Carat', 'diamondRate18Carat'));
         return view('backend.product.products.create', compact('categories'));
     }
+
+    public function getRateByCarat(Request $request)
+    {
+        $caratType = $request->carat_type; // e.g., gold_18_carat or diamond_14_carat
+
+        // Fetch the rate from the BusinessSetting table
+        $rate = BusinessSetting::where('type', $caratType)->value('value');
+
+        return response()->json(['rate' => $rate]);
+    }
+
 
     public function add_more_choice_option(Request $request)
     {
@@ -238,13 +266,13 @@ class ProductController extends Controller
         $this->frequentlyBoughtProductService->store($request->only([
             'product_id', 'frequently_bought_selection_type', 'fq_bought_product_ids', 'fq_bought_product_category_id'
         ]));
-       
+
         // Product Translations
         $request->merge(['lang' => env('DEFAULT_LANGUAGE')]);
         ProductTranslation::create($request->only([
             'lang', 'name', 'unit', 'description', 'product_id'
         ]));
-        
+
         flash(translate('Product has been inserted successfully'))->success();
 
         Artisan::call('view:clear');
@@ -285,7 +313,23 @@ class ProductController extends Controller
             ->where('digital', 0)
             ->with('childrenCategories')
             ->get();
-        return view('backend.product.products.edit', compact('product', 'categories', 'tags', 'lang'));
+
+        // Fetch the current rates in one query
+        $rates = BusinessSetting::whereIn('type', [
+            'gold_rate_18_carat',
+            'gold_rate_21_carat',
+            'diamond_rate_14_carat',
+            'diamond_rate_18_carat'
+        ])
+        ->pluck('value', 'type');
+
+        // Accessing rates by type
+        $goldRate18Carat = $rates['gold_rate_18_carat'] ?? null;
+        $goldRate21Carat = $rates['gold_rate_21_carat'] ?? null;
+        $diamondRate14Carat = $rates['diamond_rate_14_carat'] ?? null;
+        $diamondRate18Carat = $rates['diamond_rate_18_carat'] ?? null;
+
+        return view('backend.product.products.edit', compact('product', 'categories', 'tags', 'lang', 'goldRate18Carat', 'goldRate21Carat', 'diamondRate14Carat', 'diamondRate18Carat'));
     }
 
     /**
@@ -308,7 +352,22 @@ class ProductController extends Controller
             ->with('childrenCategories')
             ->get();
 
-        return view('backend.product.products.edit', compact('product', 'categories', 'tags', 'lang'));
+        // Fetch the current rates in one query
+        $rates = BusinessSetting::whereIn('type', [
+            'gold_rate_18_carat',
+            'gold_rate_21_carat',
+            'diamond_rate_14_carat',
+            'diamond_rate_18_carat'
+        ])
+        ->pluck('value', 'type');
+
+        // Accessing rates by type
+        $goldRate18Carat = $rates['gold_rate_18_carat'] ?? null;
+        $goldRate21Carat = $rates['gold_rate_21_carat'] ?? null;
+        $diamondRate14Carat = $rates['diamond_rate_14_carat'] ?? null;
+        $diamondRate18Carat = $rates['diamond_rate_18_carat'] ?? null;
+
+        return view('backend.product.products.edit', compact('product', 'categories', 'tags', 'lang', 'goldRate18Carat', 'goldRate21Carat', 'diamondRate14Carat', 'diamondRate18Carat'));
     }
 
     /**
@@ -440,7 +499,7 @@ class ProductController extends Controller
 
         //VAT & Tax
         $this->productTaxService->product_duplicate_store($product->taxes, $product_new);
-        
+
         // Product Categories
         foreach($product->product_categories as $product_category){
             ProductCategory::insert([
