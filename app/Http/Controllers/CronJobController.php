@@ -13,13 +13,6 @@ class CronJobController extends Controller
     public function updateGoldRates()
     {
         try {
-            // Fetch all rates from business_settings
-            $rates = DB::table('business_settings')->pluck('value', 'type');
-
-            if ($rates->isEmpty()) {
-                throw new \Exception('Rates not found in business_settings.');
-            }
-
             // Update products table
             $products = DB::table('products')->get();
             foreach ($products as $product) {
@@ -27,16 +20,16 @@ class CronJobController extends Controller
                 if (empty($product->gold_carat) || empty($product->diamond_carat)) {
                     continue;
                 }
-                // Retrieve the gold and diamond rates based on stored carat
-                $goldRate = isset($rates[$product->gold_carat]) ? $rates[$product->gold_carat] : null;
-                $diamondRate = isset($rates[$product->diamond_carat]) ? $rates[$product->diamond_carat] : null;
 
-                // if (!$goldRate || !$diamondRate) {
-                //     throw new \Exception("Missing rate for gold_carat: {$product->gold_carat} or diamond_carat: {$product->diamond_carat}");
-                // }
-                if (!$goldRate || !$diamondRate) {
-                    continue; // Skip if rates are missing
+                // Retrieve the gold and diamond rates based on stored carat
+                $goldRate = get_setting($product->gold_carat);
+                $diamondRate = get_setting($product->diamond_carat);
+
+                // Skip if rates are missing
+                if ($goldRate === null || $diamondRate === null) {
+                    continue;
                 }
+
                 // Calculate new price
                 $newPrice = ($goldRate * $product->gold_qty) + ($diamondRate * $product->diamond_qty);
 
@@ -59,15 +52,14 @@ class CronJobController extends Controller
                 }
 
                 // Retrieve the gold and diamond rates based on stored carat
-                $goldRate = isset($rates[$stock->gold_carat]) ? $rates[$stock->gold_carat] : null;
-                $diamondRate = isset($rates[$stock->diamond_carat]) ? $rates[$stock->diamond_carat] : null;
+                $goldRate = get_setting($stock->gold_carat);
+                $diamondRate = get_setting($stock->diamond_carat);
 
-                // if (!$goldRate || !$diamondRate) {
-                //     throw new \Exception("Missing rate for gold_carat: {$stock->gold_carat} or diamond_carat: {$stock->diamond_carat}");
-                // }
-                if (!$goldRate || !$diamondRate) {
-                    continue; // Skip if rates are missing
+                // Skip if rates are missing
+                if ($goldRate === null || $diamondRate === null) {
+                    continue;
                 }
+
                 // Calculate new price
                 $newPrice = ($goldRate * $stock->gold_qty) + ($diamondRate * $stock->diamond_qty);
 
