@@ -9,7 +9,7 @@ class ProductStock extends Model
 {
     use PreventDemoModeChanges;
 
-    protected $fillable = ['product_id', 'variant', 'sku', 'price', 'qty', 'image'];
+    protected $fillable = ['product_id', 'variant', 'gold_carat' ,'gold_rate', 'gold_qty', 'diamond_carat', 'diamond_rate', 'diamond_qty', 'sku', 'price', 'qty', 'image'];
     //
     public function product(){
     	return $this->belongsTo(Product::class);
