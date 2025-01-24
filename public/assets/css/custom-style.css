@@ -917,6 +917,24 @@ a {
         overflow-x: hidden;
     }
 
+    .sign_head {
+        width: 92%;
+        bottom: 10px;
+    }
+
+
+
+    .video_section img {
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .signature_box {
+        margin-bottom: 15px;
+
+    }
+
     .position_contens .w-100.text-center {
         width: 100%;
         left: 0;
@@ -1282,6 +1300,26 @@ a {
         display: none;
     }
 
+    .aniversary_logo img {
+        width: 130px;
+    }
+
+    .video_section img {
+        height: auto;
+    }
+
+    .location_section h4 {
+        font-size: 18px;
+    }
+
+    .sign_head {
+        width: 87%;
+    }
+
+    .sign_head h4 {
+        font-size: 20px;
+    }
+
     .header_searchs i {
         position: relative;
         right: -25px;
@@ -1326,7 +1364,7 @@ a {
 
     .shop_now_button a {
         border: 1px solid;
-        padding: 5px 16px;
+        padding: 8px 16px 5px 16px;
         margin-top: 9px;
         display: inline-block;
         margin-bottom: 40px;
@@ -1391,7 +1429,7 @@ a {
 
     .shop_now_button2 a {
         border: 1px solid;
-        padding: 5px 16px;
+        padding: 8px 16px 5px 16px;
         margin-top: 9px;
         font-size: 16px;
         color: #1D1A15;
@@ -1552,7 +1590,24 @@ a {
         width: 100%;
         bottom: 60px;
         z-index: 999;
-        left: 6%;
+        left: 0%;
+    }
+
+    .aniversary_logo img {
+        width: 166px;
+    }
+
+    .aniversary_section h3 {
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+
+    .main_heading {
+        font-size: 40px;
+    }
+
+    .video_section img {
+        height: auto;
     }
 
     .banner_content h4 {

@@ -189,15 +189,15 @@ header svg path {
 
         <section class="aniversary_section">
                 <div class="row align-items-center">
-                    <div class="col-md-7 order-md-1 order-2 pl-md-5 pr-md-5">
+                    <div class="col-md-7 order-md-1 order-2 pl-lg-5 pr-lg-5">
                                     <div class="aniversary_logo mb-md-3">
                                         <img src="{{ static_asset('assets/img/aniversary_logo.png') }}" />
                                     </div>
-                                    <h3 class="main_heading text_clr_green text-center pt-4">A Century of Legacy, Redefined</h3>
-                                    <div class="about_content_sec pt-4 text-center">
-                                        <p class="">we’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
+                                    <h3 class="main_heading text_clr_green text-center pt-lg-4 pt-3">A Century of Legacy, Redefined</h3>
+                                    <div class="about_content_sec pt-lg-4 pt-1 text-center">
+                                        <p class="mb-md-2 mb-0">we’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
                                     </div>
-                                    <div class="col-md-12 text-center">
+                                    <div class="col-md-12 text-center pb-md-0 pb-3">
                                     <div class="shop_now_button2 text-center"><a href="/about-us">Read More</a></div>
                     </div>
                     </div>
@@ -292,7 +292,7 @@ header svg path {
 
 
     <section class="banner_sliders">
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel" data-interval="5000" data-pause="false">
         <ol class="carousel-indicators mt-4">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
