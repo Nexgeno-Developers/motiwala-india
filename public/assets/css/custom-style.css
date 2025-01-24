@@ -437,7 +437,7 @@ p.about_content_para1 {
 }
 
 .category_images img {
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
     transition: 0.5s all;
 }
