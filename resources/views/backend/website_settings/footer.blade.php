@@ -235,6 +235,53 @@
     	</div>
     </div>
 
+    <!-- Gold and Diamond Rates Widget -->
+    <div class="col-lg-6">
+        <div class="card shadow-none bg-light">
+            <div class="card-header">
+                <h6 class="mb-0">{{ translate('Gold and Diamond Rates Widget') }}</h6>
+            </div>
+            <div class="card-body">
+                <form action="{{ route('business_settings.update') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <!-- Gold Rate 18 Carat -->
+                    <div class="form-group">
+                        <label>{{ translate('Gold Rate 18 Carat') }}</label>
+                        <input type="hidden" name="types[]" value="gold_rate_18_carat">
+                        <input type="text" class="form-control" placeholder="{{ translate('Enter Gold Rate for 18 Carat') }}" name="gold_rate_18_carat" value="{{ get_setting('gold_rate_18_carat') }}">
+                    </div>
+
+                    <!-- Gold Rate 21 Carat -->
+                    <div class="form-group">
+                        <label>{{ translate('Gold Rate 21 Carat') }}</label>
+                        <input type="hidden" name="types[]" value="gold_rate_21_carat">
+                        <input type="text" class="form-control" placeholder="{{ translate('Enter Gold Rate for 21 Carat') }}" name="gold_rate_21_carat" value="{{ get_setting('gold_rate_21_carat') }}">
+                    </div>
+
+                    <!-- Diamond Rate 14 Carat -->
+                    <div class="form-group">
+                        <label>{{ translate('Diamond Rate 14 Carat') }}</label>
+                        <input type="hidden" name="types[]" value="diamond_rate_14_carat">
+                        <input type="text" class="form-control" placeholder="{{ translate('Enter Diamond Rate for 14 Carat') }}" name="diamond_rate_14_carat" value="{{ get_setting('diamond_rate_14_carat') }}">
+                    </div>
+
+                    <!-- Diamond Rate 18 Carat -->
+                    <div class="form-group">
+                        <label>{{ translate('Diamond Rate 18 Carat') }}</label>
+                        <input type="hidden" name="types[]" value="diamond_rate_18_carat">
+                        <input type="text" class="form-control" placeholder="{{ translate('Enter Diamond Rate for 18 Carat') }}" name="diamond_rate_18_carat" value="{{ get_setting('diamond_rate_18_carat') }}">
+                    </div>
+
+                    <!-- Update Button -->
+                    <div class="mt-4 text-right">
+                        <button type="submit" class="btn btn-success w-230px btn-md rounded-2 fs-14 fw-700 shadow-success">{{ translate('Update') }}</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 	<!-- Footer Bottom -->
     <div class="card">
     	<div class="card-header">

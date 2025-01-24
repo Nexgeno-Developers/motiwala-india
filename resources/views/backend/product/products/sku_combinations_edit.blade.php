@@ -5,6 +5,8 @@
             <td class="text-center">
                 {{translate('Variant')}}
             </td>
+            <td class="text-center">{{translate('Gold Section')}}</td>
+            <td class="text-center">{{translate('Diamond Section')}}</td>
             <td class="text-center">
                 {{translate('Variant Price')}}
             </td>
@@ -58,7 +60,59 @@
                     <label for="" class="control-label">{{ $str }}</label>
                 </td>
                 <td>
-                    <input type="number" lang="en" name="price_{{ $str }}" value="@php
+                    <select name="gold_carat_{{ $str }}" class="form-control gold-carat">
+                        <option value="">Select Gold Carat</option>
+                        <option value="gold_rate_18_carat" @if($stock != null && $stock->gold_carat == 'gold_rate_18_carat') selected @endif>18 Carat</option>
+                        <option value="gold_rate_21_carat" @if($stock != null && $stock->gold_carat == 'gold_rate_21_carat') selected @endif>21 Carat</option>
+                    </select>
+
+                    <input name="gold_qty_{{ $str }}" type="number" class="form-control gold-qty mt-2" value="@php
+                            if($stock != null){
+                                echo $stock->gold_qty;
+                            }
+                            else{
+                                echo '1';
+                            }
+                        @endphp" placeholder="Gold Quantity (grams)" min="0" step="0.01">
+
+                    <input name="gold_rate_{{ $str }}" type="number" value="@php
+                            if($stock != null){
+                                echo $stock->gold_rate;
+                            }
+                            else{
+                                echo '1';
+                            }
+                        @endphp" min="0" step="0.01" class="form-control gold-rate mt-2" readonly>
+                    <p class="gold-preview mt-2 text-muted">Gold Calculation: 0.00 x 0.00 = 0.00</p>
+                </td>
+                <td>
+                    <select name="diamond_carat_{{ $str }}" class="form-control diamond-carat">
+                        <option value="">Select Diamond Carat</option>
+                        <option value="diamond_rate_14_carat" @if($stock != null && $stock->diamond_carat == 'diamond_rate_14_carat') selected @endif>14 Carat</option>
+                        <option value="diamond_rate_18_carat" @if($stock != null && $stock->diamond_carat == 'diamond_rate_18_carat') selected @endif>18 Carat</option>
+                    </select>
+
+                    <input name="diamond_qty_{{ $str }}" value="@php
+                            if($stock != null){
+                                echo $stock->diamond_qty;
+                            }
+                            else{
+                                echo '1';
+                            }
+                        @endphp" type="number" class="form-control diamond-qty mt-2" placeholder="Diamond Quantity (grams)" min="0" step="0.01">
+
+                    <input name="diamond_rate_{{ $str }}" type="number" value="@php
+                            if($stock != null){
+                                echo $stock->diamond_rate;
+                            }
+                            else{
+                                echo '1';
+                            }
+                        @endphp" min="0" step="0.01" class="form-control diamond-rate mt-2" readonly>
+                    <p class="diamond-preview mt-2 text-muted">Diamond Calculation: 0.00 x 0.00 = 0.00</p>
+                </td>
+                <td>
+                    <input readonly class="form-control varient-price" type="number" lang="en" name="price_{{ $str }}" value="@php
                             if ($product->unit_price == $unit_price) {
                                 if($stock != null){
                                     echo $stock->price;
