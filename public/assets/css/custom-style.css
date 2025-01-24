@@ -858,6 +858,52 @@ section.contact_us_sec .row_box .w-100 {
     bottom: 20px;
 }
 
+.carousel-indicators li.active {
+    background: #fff;
+}
+
+.carousel-indicators li {
+    box-sizing: content-box;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 100% !important;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: transparent;
+    background-clip: padding-box;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border: 1px solid #fff;
+}
+
+
+li,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    letter-spacing: 0.5px;
+}
+
+.banner_contents h4 {
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.banner_contents {
+    width: 50%;
+    margin: 0 auto;
+}
+
 .video_section img {
     height: 100vh;
     object-fit: cover;

@@ -198,7 +198,7 @@ header svg path {
                                         <p class="">we’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
                                     </div>
                                     <div class="col-md-12 text-center">
-                                    <div class="shop_now_button2 text-center"><a href="/search">Shop Now</a></div>
+                                    <div class="shop_now_button2 text-center"><a href="/about-us">Read More</a></div>
                     </div>
                     </div>
                     <div class="col-md-5 order-md-2 order-1 ">
@@ -293,7 +293,7 @@ header svg path {
 
     <section class="banner_sliders">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
+        <ol class="carousel-indicators mt-4">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -301,24 +301,27 @@ header svg path {
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img class="w-100" src="{{ static_asset('assets/img/banner_slider1.webp') }}" alt="Banner 1"/>
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Antiques</h4>
-    <p class="text-white">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
-  </div>
+    <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+    <div class="shop_now_button3 mb-4"><a href="/search">Shop Now</a></div>  
+</div>
     </div>
     <div class="carousel-item">
       <img class="w-100" src="{{ static_asset('assets/img/banner_slider2.webp') }}" alt="Banner 2" />
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Jadau</h4>
-    <p class="text-white">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
-  </div>
+    <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+  <div class="shop_now_button3 mb-4"><a href="/search">Shop Now</a></div>
+</div>
     </div>
     <div class="carousel-item">
       <img class="w-100" src="{{ static_asset('assets/img/banner_slider3.webp') }}" alt="Banner 3" />
-      <div class="carousel-caption d-none d-md-block">
+      <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">High Jewelry</h4>
-    <p class="text-white">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
-  </div>
+    <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+  <div class="shop_now_button3 mb-4"><a href="/search">Shop Now</a></div>
+</div>
     </div>
   </div>
 </div>
@@ -331,7 +334,7 @@ header svg path {
                     <div class="col-md-4">
                           <div class="signature_box">
                                <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img1.png') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img1.webp') }}" />
                                </div>
                                <div class="sign_head">
                                <h4 class="text-center pt-3 text-white">BRIDAL</h4>
@@ -341,7 +344,7 @@ header svg path {
                     <div class="col-md-4">
                           <div class="signature_box">
                                <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img2.png') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img2.webp') }}" />
                                      
                                </div>
                                <div class="sign_head">
@@ -352,7 +355,7 @@ header svg path {
                      <div class="col-md-4">
                           <div class="signature_box">
                                <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img3.png') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img3.webp') }}" />
                                </div>
 
                                <div class="sign_head">
@@ -725,7 +728,7 @@ header svg path {
                     <img class="w-100" src="{{ static_asset('assets/img/our_shop.webp') }}" />
                 </div>
                 <div class="text-center mb-md-0 mb-4">
-                    <h4 class="pt-3 text-uppercase">Our Shop</h4>
+                    <h4 class="pt-4 text-uppercase">Our Shop</h4>
                     <p class="text-center">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
                     <div class="shop_now_button2"><a href="/search">View More</a></div>
                 </div>
@@ -736,7 +739,7 @@ header svg path {
                     <img class="w-100" src="{{ static_asset('assets/img/product_care.webp') }}" />
                 </div>
                 <div class="text-center mb-md-0 mb-4">
-                    <h4 class="pt-3 text-uppercase">Product Care</h4>
+                    <h4 class="pt-4 text-uppercase">Product Care</h4>
                     <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
                     <div class="shop_now_button2"><a href="/search">View More</a></div>
                 </div>
@@ -747,7 +750,7 @@ header svg path {
                     <img class="w-100" src="{{ static_asset('assets/img/crafted_images.webp') }}" />
                 </div>
                 <div class="text-center">
-                    <h4 class="pt-3 text-uppercase">Crafted for eternity</h4>
+                    <h4 class="pt-4 text-uppercase">Crafted for eternity</h4>
                     <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
                     <div class="shop_now_button2"><a href="/search">View More</a></div>
                 </div>
