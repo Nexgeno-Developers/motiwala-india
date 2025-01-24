@@ -1,7 +1,7 @@
 p,
 a {
-    font-size: 20px;
-    line-height: 31px;
+    font-size: 18px;
+    line-height: 28px;
 }
 
 .green_bg {
@@ -12,6 +12,9 @@ a {
     background-color: #F4F5F5;
 }
 
+.about_content_sec {
+    padding: 0px 140px;
+}
 
 .org_bg_light {
     background-color: #C2AA902B;
@@ -995,6 +998,10 @@ a {
 @media(max-width:767px) {
     html {
         overflow-x: hidden;
+    }
+
+    .about_content_sec {
+        padding: 0px 0px;
     }
 
     .sign_head {
