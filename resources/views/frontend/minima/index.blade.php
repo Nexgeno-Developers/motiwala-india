@@ -182,7 +182,7 @@ header svg path {
             <div class="banner_content">
                 <h4>Elegance That Lasts a Lifetime</h4>
                 <p class="text-white pt-md-3 pt-2">Shop the Finest Collection of Diamonds & Precious Gems</p>
-                <div class="shop_now_button"><a href="/search" class="text-white">Shop Now</a></div>
+                <div class="animation_button_1"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
             </div>
         </div>
     </div>
@@ -198,7 +198,7 @@ header svg path {
                                         <p class="mb-md-2 mb-0">we’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
                                     </div>
                                     <div class="col-md-12 text-center pb-md-0 pb-3">
-                                    <div class="shop_now_button2 text-center"><a href="/about-us">Read More</a></div>
+                                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">Read More</a></div>  
                     </div>
                     </div>
                     <div class="col-md-5 order-md-2 order-1 ">
@@ -304,7 +304,7 @@ header svg path {
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Antiques</h4>
     <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
-    <div class="shop_now_button3 mb-4"><a href="/search">Shop Now</a></div>  
+    <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
     <div class="carousel-item">
@@ -312,7 +312,7 @@ header svg path {
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Jadau</h4>
     <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
-  <div class="shop_now_button3 mb-4"><a href="/search">Shop Now</a></div>
+   <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
     <div class="carousel-item">
@@ -320,7 +320,7 @@ header svg path {
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">High Jewelry</h4>
     <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
-  <div class="shop_now_button3 mb-4"><a href="/search">Shop Now</a></div>
+   <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
   </div>
@@ -730,7 +730,7 @@ header svg path {
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-4 text-uppercase">Our Shop</h4>
                     <p class="text-center">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
-                    <div class="shop_now_button2"><a href="/search">View More</a></div>
+                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
 
@@ -741,7 +741,7 @@ header svg path {
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-4 text-uppercase">Product Care</h4>
                     <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
-                    <div class="shop_now_button2"><a href="/search">View More</a></div>
+                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
 
@@ -752,7 +752,7 @@ header svg path {
                 <div class="text-center">
                     <h4 class="pt-4 text-uppercase">Crafted for eternity</h4>
                     <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
-                    <div class="shop_now_button2"><a href="/search">View More</a></div>
+                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
 
