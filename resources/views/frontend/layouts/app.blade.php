@@ -61,7 +61,8 @@
     <link rel="apple-touch-icon" href="{{ $site_icon }}">
 
     <!-- Google Fonts -->
-   <link href="https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+
 
     <!-- CSS Files -->
     <link rel="stylesheet" href="{{ static_asset('assets/css/vendors.css') }}">
@@ -124,7 +125,7 @@
             --soft-primary: {{ hex2rgba(get_setting('base_color', '#d43533'), 0.15) }};
         }
         body{
-            font-family: "Ysabeau SC", serif;
+            font-family: "Sorts Mill Goudy", serif;
         }
 
         .pagination .page-link,

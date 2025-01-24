@@ -764,6 +764,9 @@ section.contact_us_sec .row_box .w-100 {
 
 .signature_box img {
     transition: 0.5s all;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .signature_image {
@@ -821,6 +824,44 @@ section.contact_us_sec .row_box .w-100 {
     width: 91.6% !important;
     left: -4.3% !important;
     position: relative;
+}
+
+.aniversary_logo img {
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+}
+
+.signature_image {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    overflow: hidden;
+}
+
+.signature_image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0 / 60%));
+    pointer-events: none;
+}
+
+.sign_head {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 20px;
+}
+
+.video_section img {
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
 }
 
 /*-- mobile device css---*/

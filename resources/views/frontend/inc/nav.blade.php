@@ -243,7 +243,7 @@
 
                     <div class="col-lg-12 col-md-12 col-0">
                                <!-- Menu Bar -->
-        <div class="d-none d-lg-block position-relative">
+        <div class="d-none d-lg-block position-relative mt-md-3">
              @php
                         $nav_txt_color = ((get_setting('header_nav_menu_text') == 'light') ||  (get_setting('header_nav_menu_text') == null)) ? 'text-white' : 'text-dark';
                     @endphp

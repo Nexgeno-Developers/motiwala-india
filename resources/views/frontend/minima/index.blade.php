@@ -187,35 +187,30 @@ header svg path {
         </div>
     </div>
 
-        <section class="aniversary_section pt-4 pt-md-5 pb-md-5 pb-4">
-            <div class="container">
+        <section class="aniversary_section">
                 <div class="row align-items-center">
-                    <div class="col-md-6 order-md-1 order-2 pr-md-5">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <h3 class="main_heading text_clr_green ">Celebrating Over 100 Years of Timeless Craftsmanship</h3>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="aniversary_logo">
-                                        <img class="w-100" src="{{ static_asset('assets/img/aniversary_logo.png') }}" />
+                    <div class="col-md-7 order-md-1 order-2 pl-md-5 pr-md-5">
+                                    <div class="aniversary_logo mb-md-3">
+                                        <img src="{{ static_asset('assets/img/aniversary_logo.png') }}" />
                                     </div>
-                                </div>
-                            </div>
-                        <div class="about_content_sec pt-4">
-                            <p class="">For over a century, we've been creating stunning jewelry that blends tradition with a fresh, modern touch. Each piece is made with care, quality, and a passion for perfection—whether it's a treasured heirloom or a contemporary design.</p>
-                        </div>
+                                    <h3 class="main_heading text_clr_green text-center pt-4">A Century of Legacy, Redefined</h3>
+                                    <div class="about_content_sec pt-4 text-center">
+                                        <p class="">we’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                    <div class="shop_now_button2 text-center"><a href="/search">Shop Now</a></div>
                     </div>
-                    <div class="col-md-6 order-md-2 order-1 ">
+                    </div>
+                    <div class="col-md-5 order-md-2 order-1 ">
                         <div class="mb-md-0 mb-3">
                             <img class="w-100" src="{{ static_asset('assets/img/celebrate_image.webp') }}" />
                         </div>
                     </div>
                 </div>
-            </div>
        </section>
 
 
-       <section class="spots_lights about_bg1 pt-md-5 pb-md-5 pt-4 pb-4" style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
+       <!-- <section class="spots_lights about_bg1 pt-md-5 pb-md-5 pt-4 pb-4" style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
     <div class="container">
         <div class="row align-items-center">
               <div class="col-md-3">
@@ -248,8 +243,86 @@ header svg path {
           
         </div>
     </div>
-</section>
+</section> -->
 
+
+<!-- Featured Categories -->
+    @if (count($featured_categories) > 0)
+        <section class="pt-md-5 pb-md-2 pt-4 pb-0 category_section" style="background:#C2AA900D;">
+            <div class="container">
+                <h3 class="main_heading text_clr_green text-center mb-md-2">Our Collections</h3>
+                <!-- Categories -->
+                <div class=" px-sm-3">
+                    <div class="aiz-carousel sm-gutters-17" data-items="4" data-xxl-items="4" data-xl-items="4"
+                        data-lg-items="3" data-md-items="2" data-sm-items="2" data-xs-items="1" data-arrows="true"
+                        data-dots="false" data-autoplay="false" data-infinite="true">
+                        @foreach ($featured_categories as $key => $category)
+                            @php
+                                $category_name = $category->getTranslation('name');
+                            @endphp
+                            <div class="carousel-box position-relative p-0 has-transition @if ($key == 0)  @endif">
+                                <div class="">
+                                    <div class="category_images h-100 w-100 w-xl-auto position-relative hov-scale-img overflow-hidden">
+                                        <div class=" h-100 w-100 overflow-hidden">
+                                           <a  href="{{ route('products.category', $category->slug) }}"><img src="{{ isset($category->coverImage->file_name) ? my_asset($category->coverImage->file_name) : static_asset('assets/img/placeholder.jpg') }}"
+                                                alt="{{ $category_name }}"
+                                                class="img-fit h-100 has-transition"
+                                                onerror="this.onerror=null;this.src='{{ static_asset('assets/img/placeholder.jpg') }}';">
+                                                </a> 
+                                        </div>
+                                        <div class="has-transition h-80px w-100 d-flex flex-column align-items-center justify-content-center"
+                                          >
+                                            <div class="w-100 text-center">
+                                                <a class="home-category-name animate-underline-white category_name_text text-{{ get_setting('featured_categories_text') }}"
+                                                    href="{{ route('products.category', $category->slug) }}"
+                                                    style="width: max-content;">
+                                                    {{ $category_name }}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </section>
+    @endif
+
+
+    <section class="banner_sliders">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="w-100" src="{{ static_asset('assets/img/banner_slider1.webp') }}" alt="Banner 1"/>
+      <div class="carousel-caption d-none d-md-block">
+    <h4 class="text-white">Antiques</h4>
+    <p class="text-white">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="w-100" src="{{ static_asset('assets/img/banner_slider2.webp') }}" alt="Banner 2" />
+      <div class="carousel-caption d-none d-md-block">
+    <h4 class="text-white">Jadau</h4>
+    <p class="text-white">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+  </div>
+    </div>
+    <div class="carousel-item">
+      <img class="w-100" src="{{ static_asset('assets/img/banner_slider3.webp') }}" alt="Banner 3" />
+      <div class="carousel-caption d-none d-md-block">
+    <h4 class="text-white">High Jewelry</h4>
+    <p class="text-white">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+  </div>
+    </div>
+  </div>
+</div>
+    </section>
 
         <section class="signature_section org_bg_light pt-4 pt-md-5 pb-md-5 pb-4">
             <div class="container">
@@ -258,38 +331,41 @@ header svg path {
                     <div class="col-md-4">
                           <div class="signature_box">
                                <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img1.webp') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img1.png') }}" />
                                </div>
-                               <h4 class="text-center pt-3">BRIDAL</h4>
+                               <div class="sign_head">
+                               <h4 class="text-center pt-3 text-white">BRIDAL</h4>
+                               </div>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="signature_box">
                                <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img2.webp') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img2.png') }}" />
                                      
                                </div>
-                               <h4 class="text-center pt-3">SOLITAIRE</h4>
+                               <div class="sign_head">
+                               <h4 class="text-center pt-3 text-white">SOLITAIRE</h4>
+                               </div>
                           </div>
                     </div>
                      <div class="col-md-4">
                           <div class="signature_box">
                                <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img3.webp') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img3.png') }}" />
                                </div>
-                               <h4 class="text-center pt-3">GOLD </h4>
-                          </div>
-                    </div>
 
-                    <div class="col-md-12 text-center">
-                        <div class="shop_now_button2 text-center"><a href="/search">Shop Now</a></div>
+                               <div class="sign_head">
+                               <h4 class="text-center pt-3 text-white">GOLD </h4>
+                               </div>
+                          </div>
                     </div>
                 </div>
             </div>
        </section>
 
 
-       <section class="elete_selection pt-4 pt-md-5 pb-md-5 pb-4">
+       <!-- <section class="elete_selection pt-4 pt-md-5 pb-md-5 pb-4">
     <div class="container">
                <div class="text-center">
          <h3 class="main_heading text_clr_green pb-md-4 pb-2">Our Elite Selections</h3>
@@ -329,10 +405,10 @@ header svg path {
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
-<section class="about_sections about_bg1 " style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
+<!-- <section class="about_sections about_bg1 " style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
     <div class="container position-relative">
         <div class="row align-items-center">
               <div class="col-md-5 order-md-1 order-2">
@@ -354,63 +430,13 @@ header svg path {
           
         </div>
     </div>
-</section>
+</section> -->
 
 
-<div class="video_section pt-md-5 pb-md-5 pt-4 pb-4">
-    <div class="container">
+<div class="video_section">
          <img src="{{ static_asset('assets/img/video/middle_video.gif') }}" class="w-100"/>
     </div>
-</div>
 
-
-    <!-- Featured Categories -->
-    @if (count($featured_categories) > 0)
-        <section class="pt-md-5 pb-md-5 pt-4 pb-4 category_section org_bg_light">
-            <div class="container">
-                <!-- <h3 class="main_heading text_clr_green text-center mb-md-5">Our Collections</h3> -->
-                <!-- Categories -->
-                <div class="px-sm-3">
-                    <div class="aiz-carousel sm-gutters-17" data-items="3" data-xxl-items="3" data-xl-items="3"
-                        data-lg-items="3" data-md-items="2" data-sm-items="2" data-xs-items="1" data-arrows="true"
-                        data-dots="false" data-autoplay="false" data-infinite="true">
-                        @foreach ($featured_categories as $key => $category)
-                            @php
-                                $category_name = $category->getTranslation('name');
-                            @endphp
-                            <div class="carousel-box position-relative p-0 has-transition @if ($key == 0)  @endif">
-                                <div class="">
-                                    <div class="category_images h-100 w-100 w-xl-auto position-relative overflow-hidden img_hover1">
-                                        <div class=" h-100 w-100 overflow-hidden">
-                                           <a  href="{{ route('products.category', $category->slug) }}"><img class="" src="{{ isset($category->coverImage->file_name) ? my_asset($category->coverImage->file_name) : static_asset('assets/img/placeholder.jpg') }}"
-                                                alt="{{ $category_name }}"
-                                                class="img-fit h-100 has-transition"
-                                                onerror="this.onerror=null;this.src='{{ static_asset('assets/img/placeholder.jpg') }}';">
-                                                </a> 
-                                        </div>
-                                        <div class="has-transition h-80px w-100 d-flex flex-column align-items-center justify-content-center position_contens"
-                                          >
-                                            <div class="w-100 text-center">
-                                                <a class="home-category-name text-white category_name_text"
-                                                    href="{{ route('products.category', $category->slug) }}"
-                                                    style="width: max-content;">
-                                                    {{ $category_name }}
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-                <div class="text-center">
-                    <div class="shop_now_button2"><a href="/search">Shop All</a></div>
-                </div>
-                
-            </div>
-        </section>
-    @endif
 
    
 
