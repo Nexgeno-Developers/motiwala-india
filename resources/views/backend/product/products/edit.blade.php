@@ -546,7 +546,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 col-from-label">{{translate('Unit price')}} <span class="text-danger">*</span></label>
                                     <div class="col-md-6">
-                                        <input id="unit_price" type="text" placeholder="{{translate('Unit price')}}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror" value="{{$product->unit_price}}">
+                                        <input readonly id="unit_price" type="text" placeholder="{{translate('Unit price')}}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror" value="{{$product->unit_price}}">
                                     </div>
                                 </div>
 
