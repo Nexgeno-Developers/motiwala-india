@@ -100,10 +100,6 @@
         {
             background:#DAD0C41A;
         }
-        .user_login_style
-        {
-
-        }
         @media (max-width: 991px) {
             .right-content{
                 background: var(--white);

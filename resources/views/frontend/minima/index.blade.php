@@ -193,7 +193,7 @@ header svg path {
                                     <div class="aniversary_logo mb-md-3">
                                         <img src="{{ static_asset('assets/img/aniversary_logo.png') }}" />
                                     </div>
-                                    <h3 class="main_heading text_clr_green text-center pt-lg-4 pt-3">A Century of Legacy, Redefined</h3>
+                                    <h3 class="main_heading text_clr_green text-center pt-lg-5 pt-3">A Century of Legacy, Redefined</h3>
                                     <div class="about_content_sec pt-lg-4 pt-1 text-center">
                                         <p class="mb-md-2 mb-0">we’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
                                     </div>
@@ -303,7 +303,7 @@ header svg path {
       <img class="w-100" src="{{ static_asset('assets/img/banner_slider1.webp') }}" alt="Banner 1"/>
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Antiques</h4>
-    <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+    <p class="text-white mb-0 pb-0">Echoes of the past, reimagined for the present – where every piece tells a story of timeless elegance.</p>
     <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
@@ -311,7 +311,7 @@ header svg path {
       <img class="w-100" src="{{ static_asset('assets/img/banner_slider2.webp') }}" alt="Banner 2" />
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Jadau</h4>
-    <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+    <p class="text-white mb-0 pb-0">Regal opulence, handcrafted to perfection – a masterpiece of culture and artistry.</p>
    <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
@@ -319,7 +319,7 @@ header svg path {
       <img class="w-100" src="{{ static_asset('assets/img/banner_slider3.webp') }}" alt="Banner 3" />
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">High Jewelry</h4>
-    <p class="text-white mb-0 pb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an</p>
+    <p class="text-white mb-0 pb-0">An ode to rarity and refinement – bold designs and exquisite gems that define unparalleled luxury.</p>
    <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
@@ -729,8 +729,8 @@ header svg path {
                 </div>
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-4 text-uppercase">Our Shop</h4>
-                    <p class="text-center">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
-                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">View More</a></div> 
+                    <p class="text-center">Motiwala Jewellery has been adorning dreams with precious simplicity for 100 years. Since 1923, our flagship store has stood as a testament...</p>
+                    <div class="animation_button_1"><a href="/about-us" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
 
@@ -740,8 +740,8 @@ header svg path {
                 </div>
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-4 text-uppercase">Product Care</h4>
-                    <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an </p>
-                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">View More</a></div> 
+                    <p class="">our jewelry deserves the utmost care to preserve its beauty and brilliance. Explore our expert guidance on storing, cleaning, and protecting...</p>
+                    <div class="animation_button_1"><a href="/about-us" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
 
@@ -751,8 +751,8 @@ header svg path {
                 </div>
                 <div class="text-center">
                     <h4 class="pt-4 text-uppercase">Crafted for eternity</h4>
-                    <p class="">is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an  </p>
-                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">View More</a></div> 
+                    <p class="">Every piece of Motiwala Jewellery is a testament to timeless elegance and masterful craftsmanship. Designed to endure and inspire...</p>
+                    <div class="animation_button_1"><a href="/about-us" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
 
