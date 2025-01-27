@@ -611,6 +611,15 @@ class ProductController extends Controller
             $colors_active = 0;
         }
 
+        $data = [
+            'gold_carat' => $request->gold_carat,
+            'gold_rate' => $request->gold_rate,
+            'gold_qty' => $request->gold_qty,
+            'diamond_carat' => $request->diamond_carat,
+            'diamond_rate' => $request->diamond_rate,
+            'diamond_qty' => $request->diamond_qty,
+        ];
+
         $unit_price = $request->unit_price;
         $product_name = $request->name;
 
@@ -630,7 +639,7 @@ class ProductController extends Controller
         }
 
         $combinations = (new CombinationService())->generate_combination($options);
-        return view('backend.product.products.sku_combinations', compact('combinations', 'unit_price', 'colors_active', 'product_name'));
+        return view('backend.product.products.sku_combinations', compact('combinations', 'unit_price', 'colors_active', 'product_name', 'data'));
     }
 
     public function sku_combination_edit(Request $request)
@@ -645,6 +654,15 @@ class ProductController extends Controller
             $colors_active = 0;
         }
 
+        $data_product = [
+            'gold_carat' => $request->gold_carat,
+            'gold_rate' => $request->gold_rate,
+            'gold_qty' => $request->gold_qty,
+            'diamond_carat' => $request->diamond_carat,
+            'diamond_rate' => $request->diamond_rate,
+            'diamond_qty' => $request->diamond_qty,
+        ];
+
         $product_name = $request->name;
         $unit_price = $request->unit_price;
 
@@ -664,7 +682,7 @@ class ProductController extends Controller
         }
 
         $combinations = (new CombinationService())->generate_combination($options);
-        return view('backend.product.products.sku_combinations_edit', compact('combinations', 'unit_price', 'colors_active', 'product_name', 'product'));
+        return view('backend.product.products.sku_combinations_edit', compact('combinations', 'unit_price', 'colors_active', 'product_name', 'product','data_product'));
     }
 
     public function product_search(Request $request)

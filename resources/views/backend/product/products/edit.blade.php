@@ -495,7 +495,6 @@
                                     <label class="col-xxl-3 col-form-label fs-13">Gold Carat</label>
                                     <div class="col-xxl-9">
                                         <select id="gold_carat" name="gold_carat" class="form-control">
-                                            <option value="" {{ old('gold_carat', $product->gold_carat) == '' ? 'selected' : '' }}>Select Gold Carat</option>
                                             <option value="gold_rate_18_carat" {{ old('gold_carat', $product->gold_carat) == 'gold_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
                                             <option value="gold_rate_21_carat" {{ old('gold_carat', $product->gold_carat) == 'gold_rate_21_carat' ? 'selected' : '' }}>21 Carat</option>
                                         </select>
@@ -522,7 +521,6 @@
                                     <label class="col-xxl-3 col-form-label fs-13">Diamond Carat</label>
                                     <div class="col-xxl-9">
                                         <select id="diamond_carat" name="diamond_carat" class="form-control">
-                                            <option value="" {{ old('gold_carat', $product->gold_carat) == '' ? 'selected' : '' }}>Select Gold Carat</option>
                                             <option value="diamond_rate_14_carat" {{ old('diamond_carat', $product->diamond_carat) == 'diamond_rate_14_carat' ? 'selected' : '' }}>14 Carat</option>
                                             <option value="diamond_rate_18_carat" {{ old('diamond_carat', $product->diamond_carat) == 'diamond_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
                                         </select>

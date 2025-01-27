@@ -37,7 +37,7 @@ class ProductStockService
                 $product_stock->gold_qty = request()->get('gold_qty_' . str_replace('.', '_', $str), null);
                 $product_stock->diamond_carat = request()->get('diamond_carat_' . str_replace('.', '_', $str), null);
                 $product_stock->diamond_rate = request()->get('diamond_rate_' . str_replace('.', '_', $str), null);
-                $product_stock->diamond_qty = request()->get('gold_qty_' . str_replace('.', '_', $str), null);
+                $product_stock->diamond_qty = request()->get('diamond_qty_' . str_replace('.', '_', $str), null);
 
                 $product_stock->save();
             }
