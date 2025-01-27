@@ -24,6 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+        $schedule->call('App\Http\Controllers\CronJobController@updateGoldRates')->everyMinute();
         // $schedule->command('inspire')
         //          ->hourly();
     }

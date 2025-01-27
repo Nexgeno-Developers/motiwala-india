@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class CronJobController extends Controller
 {
@@ -14,25 +15,45 @@ class CronJobController extends Controller
     {
         try {
             // Fetch all rates from business_settings
+            // Log::debug("Fetching all rates from business_settings...");
             $rates = DB::table('business_settings')->pluck('value', 'type');
 
             if ($rates->isEmpty()) {
+                Log::debug("No rates found in business_settings.");
                 throw new \Exception('Rates not found in business_settings.');
             }
+            // Log::debug("Fetched rates: " . print_r($rates, true));
 
             // Update products table
             $products = DB::table('products')->get();
-            foreach ($products as $product) {
-                // Retrieve the gold and diamond rates based on stored carat
-                $goldRate = isset($rates[$product->gold_carat]) ? $rates[$product->gold_carat] : null;
-                $diamondRate = isset($rates[$product->diamond_carat]) ? $rates[$product->diamond_carat] : null;
+            // Log::debug("Fetched products: " . print_r($products, true));
 
+            foreach ($products as $product) {
+                // Log::debug("Processing product ID: {$product->id}");
+
+                // Construct type keys for gold and diamond rates
+                $goldRateKey = $product->gold_carat;
+                $diamondRateKey = $product->diamond_carat;
+
+                // Log::debug("Looking for gold rate key: {$goldRateKey}");
+                // Log::debug("Looking for diamond rate key: {$diamondRateKey}");
+
+                // Retrieve the gold and diamond rates from business_settings
+                $goldRate = isset($rates[$goldRateKey]) ? $rates[$goldRateKey] : null;
+                $diamondRate = isset($rates[$diamondRateKey]) ? $rates[$diamondRateKey] : null;
+
+                // Log::debug("Gold rate: " . ($goldRate ? $goldRate : 'Not found'));
+                // Log::debug("Diamond rate: " . ($diamondRate ? $diamondRate : 'Not found'));
+
+                // Skip product if either rate is missing
                 if (!$goldRate || !$diamondRate) {
-                    throw new \Exception("Missing rate for gold_carat: {$product->gold_carat} or diamond_carat: {$product->diamond_carat}");
+                    // Log::debug("Skipping product ID: {$product->id} due to missing rates.");
+                    continue;
                 }
 
                 // Calculate new price
                 $newPrice = ($goldRate * $product->gold_qty) + ($diamondRate * $product->diamond_qty);
+                // Log::debug("Calculated new price for product ID {$product->id}: {$newPrice}");
 
                 // Update the product
                 DB::table('products')
@@ -42,21 +63,40 @@ class CronJobController extends Controller
                         'diamond_rate' => $diamondRate,
                         'unit_price' => $newPrice,
                     ]);
+
+                // Log::debug("Product ID {$product->id} updated successfully.");
             }
 
             // Update product_stocks table
             $productStocks = DB::table('product_stocks')->get();
-            foreach ($productStocks as $stock) {
-                // Retrieve the gold and diamond rates based on stored carat
-                $goldRate = isset($rates[$stock->gold_carat]) ? $rates[$stock->gold_carat] : null;
-                $diamondRate = isset($rates[$stock->diamond_carat]) ? $rates[$stock->diamond_carat] : null;
+            // Log::debug("Fetched product stocks: " . print_r($productStocks, true));
 
+            foreach ($productStocks as $stock) {
+                // Log::debug("Processing product stock ID: {$stock->id}");
+
+                // Construct type keys for gold and diamond rates
+                $goldRateKey = $stock->gold_carat;
+                $diamondRateKey = $stock->diamond_carat;
+
+                // Log::debug("Looking for gold rate key: {$goldRateKey}");
+                // Log::debug("Looking for diamond rate key: {$diamondRateKey}");
+
+                // Retrieve the gold and diamond rates from business_settings
+                $goldRate = isset($rates[$goldRateKey]) ? $rates[$goldRateKey] : null;
+                $diamondRate = isset($rates[$diamondRateKey]) ? $rates[$diamondRateKey] : null;
+
+                // Log::debug("Gold rate: " . ($goldRate ? $goldRate : 'Not found'));
+                // Log::debug("Diamond rate: " . ($diamondRate ? $diamondRate : 'Not found'));
+
+                // Skip product stock if either rate is missing
                 if (!$goldRate || !$diamondRate) {
-                    throw new \Exception("Missing rate for gold_carat: {$stock->gold_carat} or diamond_carat: {$stock->diamond_carat}");
+                    // Log::debug("Skipping product stock ID: {$stock->id} due to missing rates.");
+                    continue;
                 }
 
                 // Calculate new price
                 $newPrice = ($goldRate * $stock->gold_qty) + ($diamondRate * $stock->diamond_qty);
+                // Log::debug("Calculated new price for product stock ID {$stock->id}: {$newPrice}");
 
                 // Update the product stock
                 DB::table('product_stocks')
@@ -66,10 +106,13 @@ class CronJobController extends Controller
                         'diamond_rate' => $diamondRate,
                         'price' => $newPrice,
                     ]);
+
+                // Log::debug("Product stock ID {$stock->id} updated successfully.");
             }
 
             return response()->json(['status' => 'success', 'message' => 'Gold and diamond rates and prices updated successfully.']);
         } catch (\Exception $e) {
+            // Log::error("Error occurred: " . $e->getMessage());
             return response()->json(['status' => 'error', 'message' => $e->getMessage()]);
         }
     }

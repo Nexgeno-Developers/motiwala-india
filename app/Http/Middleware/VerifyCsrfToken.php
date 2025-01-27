@@ -35,6 +35,7 @@ class VerifyCsrfToken extends Middleware
         '/apple-callback',
         '/lnmo*',
         '/rozer*',
+        '/payumoney/*',
         '/phonepe*',
         '/import-data',
     ];
