@@ -1,7 +1,7 @@
 @php
     $cart_added = [];
 @endphp
-<div class="aiz-card-box h-auto pt-4 hov-scale-img product_boxex" style="background:#F4F5F5;">
+<div class="aiz-card-box h-auto pt-0 hov-scale-img product_boxex" style="background:#F4F5F5;">
     <div class="position-relative height_250 img-fit overflow-hidden">
         @php
             $product_url = route('product', $product->slug);
