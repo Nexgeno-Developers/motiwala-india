@@ -55,7 +55,7 @@
         $lang = str_replace('_', '-', app()->getLocale());
         $content = json_decode($page->getTranslation('content', $lang));
     @endphp
-    <div class="mt-4 mb-4">
+    <div class="mt-md-5 mt-4 mb-4">
         <div class="container">
             <div class="row  row_box">
                 
