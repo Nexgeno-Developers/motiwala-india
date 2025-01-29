@@ -1412,6 +1412,25 @@ a {
         display: none;
     }
 
+    .follow_heads {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+    }
+
+    .about_content_sec {
+        padding: 0px 1px;
+    }
+
+    .shop_box_content {
+        padding: 0 30px;
+    }
+
+    .shop_box_content h4 {
+        font-size: 24px;
+    }
+
     .aniversary_logo img {
         width: 130px;
     }
