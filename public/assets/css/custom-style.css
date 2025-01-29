@@ -153,6 +153,12 @@ a {
     padding-top: 10px;
 }
 
+.location_section img {
+    height: 370px;
+    object-fit: cover;
+    object-position: top;
+}
+
 .quote_icon {
     position: absolute;
     right: 23px;
@@ -1006,6 +1012,12 @@ a {
 @media(max-width:767px) {
     html {
         overflow-x: hidden;
+    }
+
+    .location_section img {
+        height: auto;
+        object-fit: cover;
+        object-position: top;
     }
 
     .shop_box_content {
