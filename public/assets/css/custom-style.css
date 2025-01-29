@@ -49,6 +49,14 @@ a {
     width: 50px;
 }
 
+.shop_box_content {
+    padding: 0 100px;
+}
+
+.shop_box_content h4 {
+    font-size: 40px;
+}
+
 /*-- banner css--*/
 
 .banner_video::before {
@@ -998,6 +1006,14 @@ a {
 @media(max-width:767px) {
     html {
         overflow-x: hidden;
+    }
+
+    .shop_box_content {
+        padding: 0 30px;
+    }
+
+    .shop_box_content h4 {
+        font-size: 20px;
     }
 
     .about_content_sec {

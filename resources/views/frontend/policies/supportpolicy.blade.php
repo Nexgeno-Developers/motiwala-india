@@ -100,6 +100,52 @@
     </div>
 </section>
 
+<section class="mt-5" style="background: #F6F4F2;">
+    <div class="row align-items-center">
+        <div class="col-md-6 p-0">
+            <img class="w-100" src="{{ static_asset('assets/img/our_shop.webp') }}" />
+        </div>
+        <div class="col-md-6 p-0">
+            <div class="text-center mb-md-0 mb-4 shop_box_content">
+                    <h4 class="pt-4 text-uppercase">Our Shop</h4>
+                    <p class="text-center">Motiwala Jewellery has been adorning dreams with precious simplicity for 100 years. Since 1923, our flagship store has stood as a testament to timeless craftsmanship, blending tradition and purity to create pieces that inspire elegance and curiosity.</p>
+                    
+                </div>
+        </div>
+    </div>
+</section>
+
+<section style="background: #F6F4F2;">
+    <div class="row align-items-center">
+         <div class="col-md-6 p-0 order-md-1 order-2">
+            <div class="text-center mb-md-0 mb-4 shop_box_content">
+                    <h4 class="pt-4 text-uppercase">Product Care</h4>
+                    <p class="">Your jewelry deserves the utmost care to preserve its beauty and brilliance. Explore our expert guidance on storing, cleaning, and protecting your treasured pieces to ensure they remain as stunning as the day you fell in love with them.</p>
+                
+                </div>
+        </div>
+        <div class="col-md-6 p-0 order-md-2 order-1">
+            <img class="w-100" src="{{ static_asset('assets/img/product_care.webp') }}" />
+        </div>
+       
+    </div>
+</section>
+
+<section style="background: #F6F4F2;">
+    <div class="row align-items-center">
+        <div class="col-md-6 p-0">
+            <img class="w-100" src="{{ static_asset('assets/img/crafted_images.webp') }}" />
+        </div>
+        <div class="col-md-6 p-0">
+           <div class="text-center shop_box_content">
+                    <h4 class="pt-4 text-uppercase">Crafted for eternity</h4>
+                    <p class="">Every piece of Motiwala Jewellery is a testament to timeless elegance and masterful craftsmanship. Designed to endure and inspire, our creations are cherished heirlooms, crafted to be treasured for generations.</p>
+                    
+                </div>
+        </div>
+    </div>
+</section>
+
 <section class="location_section pt-4 pt-md-5 pb-md-5 pb-4">
     <div class="container">
            
@@ -109,8 +155,7 @@
                     <img class="" src="{{ static_asset('assets/img/free_shipping.svg') }}" />
                 </div>
                 <div class="text-center mb-md-0 mb-4">
-                    <h4 class="fs-22 pt-3 text-uppercase">FREE SHIPPING</h4>
-                    <p class="text-center px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's  </p>
+                    <h4 class="fs-22 pt-3">Free Shipping</h4>
                 </div>
             </div>
 
@@ -119,8 +164,7 @@
                     <img class="" src="{{ static_asset('assets/img/premium_quality.svg') }}" />
                 </div>
                 <div class="text-center mb-md-0 mb-4">
-                    <h4 class="fs-22 pt-3 text-uppercase">PREMIUM QUALITY</h4>
-                    <p class="px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                    <h4 class="fs-22 pt-3">100% Certified Jewellery</h4>
                 </div>
             </div>
 
@@ -129,8 +173,7 @@
                     <img class="" src="{{ static_asset('assets/img/100percent_icons.svg') }}" />
                 </div>
                 <div class="text-center">
-                    <h4 class="fs-22 pt-3 text-uppercase">100% SECURE CHEEKOUT</h4>
-                    <p class="px-3 mb-0">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's </p>
+                    <h4 class="fs-22 pt-3">100% Secure Cheekout</h4>
                 </div>
             </div>
 

@@ -740,7 +740,7 @@ header svg path {
                 </div>
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-4 text-uppercase">Product Care</h4>
-                    <p class="">our jewelry deserves the utmost care to preserve its beauty and brilliance. Explore our expert guidance on storing, cleaning, and protecting...</p>
+                    <p class="">Your jewelry deserves the utmost care to preserve its beauty and brilliance. Explore our expert guidance on storing, cleaning, and protecting...</p>
                     <div class="animation_button_1"><a href="/about-us" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
