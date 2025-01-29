@@ -448,7 +448,6 @@
                                     <label class="col-xxl-3 col-form-label fs-13">Gold Carat</label>
                                     <div class="col-xxl-9">
                                         <select id="gold_carat" name="gold_carat" class="form-control">
-                                            <option value="" selected>Select Gold Carat</option>
                                             <option value="gold_rate_18_carat">18 Carat</option>
                                             <option value="gold_rate_21_carat">21 Carat</option>
                                         </select>
@@ -475,7 +474,6 @@
                                     <label class="col-xxl-3 col-form-label fs-13">Diamond Carat</label>
                                     <div class="col-xxl-9">
                                         <select id="diamond_carat" name="diamond_carat" class="form-control">
-                                            <option value="" selected>Select Diamond Carat</option>
                                             <option value="diamond_rate_14_carat">14 Carat</option>
                                             <option value="diamond_rate_18_carat">18 Carat</option>
                                         </select>
@@ -501,7 +499,7 @@
                                 <div class="form-group row">
                                     <label class="col-md-3 col-from-label">{{translate('Unit price')}} <span class="text-danger">*</span></label>
                                     <div class="col-md-6">
-                                        <input type="number" id="unit_price" lang="en" min="0" value="0" step="0.01" placeholder="{{ translate('Unit price') }}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror">
+                                        <input readonly type="number" id="unit_price" lang="en" min="0" value="0" step="0.01" placeholder="{{ translate('Unit price') }}" name="unit_price" class="form-control @error('unit_price') is-invalid @enderror">
                                     </div>
                                 </div>
                                 <!-- Discount Date Range -->
@@ -925,7 +923,7 @@
         const doneTypingInterval = 500; // Delay in milliseconds
 
         // Common AJAX function
-        function fetchRate(caratType, rateInputId) {
+        function fetchRate(caratType, rateInputId, callback) {
             if (caratType) {
                 $.ajax({
                     url: "{{ route('get.rate.by.carat') }}", // AJAX route
@@ -937,6 +935,7 @@
                     success: function (response) {
                         if (response.rate !== undefined) {
                             $(`#${rateInputId}`).val(response.rate); // Set the fetched rate in the input field
+                            if (callback) callback(); // Call the callback if provided (to calculate unit price)
                         } else {
                             alert('Rate not found!');
                             $(`#${rateInputId}`).val(''); // Clear the input field
@@ -1066,6 +1065,11 @@
                 calculateUnitPriceVarient(row);
             }, doneTypingInterval);
             // calculateUnitPriceVarient(row);
+        });
+
+        // Fetch and calculate Gold and Diamond rates when the page loads
+        fetchRate($('#gold_carat').val(), 'gold_rate', function () {
+            fetchRate($('#diamond_carat').val(), 'diamond_rate', calculateUnitPrice); // Once diamond rate is fetched, calculate unit price
         });
 
     });

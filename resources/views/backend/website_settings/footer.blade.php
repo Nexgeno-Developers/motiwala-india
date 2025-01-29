@@ -246,28 +246,28 @@
                     @csrf
                     <!-- Gold Rate 18 Carat -->
                     <div class="form-group">
-                        <label>{{ translate('Gold Rate 18 Carat') }}</label>
+                        <label>{{ translate('Gold Rate 18 Carat (1/gm)') }}</label>
                         <input type="hidden" name="types[]" value="gold_rate_18_carat">
                         <input type="text" class="form-control" placeholder="{{ translate('Enter Gold Rate for 18 Carat') }}" name="gold_rate_18_carat" value="{{ get_setting('gold_rate_18_carat') }}">
                     </div>
 
                     <!-- Gold Rate 21 Carat -->
                     <div class="form-group">
-                        <label>{{ translate('Gold Rate 21 Carat') }}</label>
+                        <label>{{ translate('Gold Rate 21 Carat (1/gm)') }}</label>
                         <input type="hidden" name="types[]" value="gold_rate_21_carat">
                         <input type="text" class="form-control" placeholder="{{ translate('Enter Gold Rate for 21 Carat') }}" name="gold_rate_21_carat" value="{{ get_setting('gold_rate_21_carat') }}">
                     </div>
 
                     <!-- Diamond Rate 14 Carat -->
                     <div class="form-group">
-                        <label>{{ translate('Diamond Rate 14 Carat') }}</label>
+                        <label>{{ translate('Diamond Rate 14 Carat (1/gm)') }}</label>
                         <input type="hidden" name="types[]" value="diamond_rate_14_carat">
                         <input type="text" class="form-control" placeholder="{{ translate('Enter Diamond Rate for 14 Carat') }}" name="diamond_rate_14_carat" value="{{ get_setting('diamond_rate_14_carat') }}">
                     </div>
 
                     <!-- Diamond Rate 18 Carat -->
                     <div class="form-group">
-                        <label>{{ translate('Diamond Rate 18 Carat') }}</label>
+                        <label>{{ translate('Diamond Rate 18 Carat (1/gm)') }}</label>
                         <input type="hidden" name="types[]" value="diamond_rate_18_carat">
                         <input type="text" class="form-control" placeholder="{{ translate('Enter Diamond Rate for 18 Carat') }}" name="diamond_rate_18_carat" value="{{ get_setting('diamond_rate_18_carat') }}">
                     </div>

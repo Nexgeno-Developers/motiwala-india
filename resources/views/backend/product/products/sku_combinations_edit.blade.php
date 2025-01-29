@@ -61,9 +61,16 @@
                 </td>
                 <td>
                     <select name="gold_carat_{{ $str }}" class="form-control gold-carat">
-                        <option value="">Select Gold Carat</option>
-                        <option value="gold_rate_18_carat" @if($stock != null && $stock->gold_carat == 'gold_rate_18_carat') selected @endif>18 Carat</option>
-                        <option value="gold_rate_21_carat" @if($stock != null && $stock->gold_carat == 'gold_rate_21_carat') selected @endif>21 Carat</option>
+                        @if($stock != null)
+                            <option value="gold_rate_18_carat" @if($stock->gold_carat == 'gold_rate_18_carat') selected @endif>18 Carat</option>
+                            <option value="gold_rate_21_carat" @if($stock->gold_carat == 'gold_rate_21_carat') selected @endif>21 Carat</option>
+                        @elseif($product != null)
+                            <option value="gold_rate_18_carat" @if($product->gold_carat == 'gold_rate_18_carat') selected @endif>18 Carat p</option>
+                            <option value="gold_rate_21_carat" @if($product->gold_carat == 'gold_rate_21_carat') selected @endif>21 Carat p</option>
+                        @else
+                            <option value="gold_rate_18_carat">18 Carat</option>
+                            <option value="gold_rate_21_carat">21 Carat</option>
+                        @endif
                     </select>
 
                     <input name="gold_qty_{{ $str }}" type="number" class="form-control gold-qty mt-2" value="@php
@@ -71,7 +78,7 @@
                                 echo $stock->gold_qty;
                             }
                             else{
-                                echo '1';
+                                echo $product->gold_qty;
                             }
                         @endphp" placeholder="Gold Quantity (grams)" min="0" step="0.01">
 
@@ -80,24 +87,32 @@
                                 echo $stock->gold_rate;
                             }
                             else{
-                                echo '1';
+                                echo $product->gold_rate;
                             }
                         @endphp" min="0" step="0.01" class="form-control gold-rate mt-2" readonly>
                     <p class="gold-preview mt-2 text-muted">Gold Calculation: 0.00 x 0.00 = 0.00</p>
                 </td>
                 <td>
                     <select name="diamond_carat_{{ $str }}" class="form-control diamond-carat">
-                        <option value="">Select Diamond Carat</option>
-                        <option value="diamond_rate_14_carat" @if($stock != null && $stock->diamond_carat == 'diamond_rate_14_carat') selected @endif>14 Carat</option>
-                        <option value="diamond_rate_18_carat" @if($stock != null && $stock->diamond_carat == 'diamond_rate_18_carat') selected @endif>18 Carat</option>
+                        @if($stock != null)
+                            <option value="diamond_rate_14_carat" @if($stock->diamond_carat == 'diamond_rate_14_carat') selected @endif>14 Carat</option>
+                            <option value="diamond_rate_18_carat" @if($stock->diamond_carat == 'diamond_rate_18_carat') selected @endif>18 Carat</option>
+                        @elseif($product != null)
+                            <option value="diamond_rate_14_carat" @if($product->diamond_carat == 'diamond_rate_14_carat') selected @endif>14 Carat p</option>
+                            <option value="diamond_rate_18_carat" @if($product->diamond_carat == 'diamond_rate_18_carat') selected @endif>18 Carat p</option>
+                        @else
+                            <option value="diamond_rate_14_carat">14 Carat</option>
+                            <option value="diamond_rate_18_carat">18 Carat</option>
+                        @endif
                     </select>
+
 
                     <input name="diamond_qty_{{ $str }}" value="@php
                             if($stock != null){
                                 echo $stock->diamond_qty;
                             }
                             else{
-                                echo '1';
+                                echo $product->diamond_qty;
                             }
                         @endphp" type="number" class="form-control diamond-qty mt-2" placeholder="Diamond Quantity (grams)" min="0" step="0.01">
 
@@ -106,7 +121,7 @@
                                 echo $stock->diamond_rate;
                             }
                             else{
-                                echo '1';
+                                echo $product->diamond_rate;
                             }
                         @endphp" min="0" step="0.01" class="form-control diamond-rate mt-2" readonly>
                     <p class="diamond-preview mt-2 text-muted">Diamond Calculation: 0.00 x 0.00 = 0.00</p>
