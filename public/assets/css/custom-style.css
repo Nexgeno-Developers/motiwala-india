@@ -13,7 +13,7 @@ a {
 }
 
 .about_content_sec {
-    padding: 0px 90px;
+    padding: 0px 15px;
 }
 
 .org_bg_light {
@@ -868,7 +868,7 @@ section.contact_us_sec .row_box .w-100 {
 .profile_names {
     position: absolute;
     right: 0px;
-    max-width: 233px;
+    max-width: 250px;
     bottom: 20px;
     text-align: center;
 }

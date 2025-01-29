@@ -100,7 +100,7 @@
     </div>
 </section>
 
-<section class="mt-5" style="background: #F6F4F2;">
+<section id="our_shops" class="mt-5" style="background: #F6F4F2;">
     <div class="row align-items-center">
         <div class="col-md-6 p-0">
             <img class="w-100" src="{{ static_asset('assets/img/our_shop.webp') }}" />
@@ -115,7 +115,7 @@
     </div>
 </section>
 
-<section style="background: #F6F4F2;">
+<section id="prduct_care" style="background: #F6F4F2;">
     <div class="row align-items-center">
          <div class="col-md-6 p-0 order-md-1 order-2">
             <div class="text-center mb-md-0 mb-4 shop_box_content">
@@ -131,7 +131,7 @@
     </div>
 </section>
 
-<section style="background: #F6F4F2;">
+<section id="crafted_for_eternity" style="background: #F6F4F2;">
     <div class="row align-items-center">
         <div class="col-md-6 p-0">
             <img class="w-100" src="{{ static_asset('assets/img/crafted_images.webp') }}" />
@@ -149,22 +149,14 @@
 <section class="location_section pt-4 pt-md-5 pb-md-5 pb-4">
     <div class="container">
            
-        <div class="row align-items-center">
+        <div class="row">
             <div class="col-md-4">
                 <div class="text-center">
                     <img class="" src="{{ static_asset('assets/img/free_shipping.svg') }}" />
                 </div>
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="fs-22 pt-3">Free Shipping</h4>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="text-center">
-                    <img class="" src="{{ static_asset('assets/img/premium_quality.svg') }}" />
-                </div>
-                <div class="text-center mb-md-0 mb-4">
-                    <h4 class="fs-22 pt-3">100% Certified Jewellery</h4>
+                    <p>Enjoy *free shipping* with no minimum purchase—because luxury should come hassle-free!</p>
                 </div>
             </div>
 
@@ -172,8 +164,20 @@
                 <div class="text-center">
                     <img class="" src="{{ static_asset('assets/img/100percent_icons.svg') }}" />
                 </div>
+                <div class="text-center mb-md-0 mb-4">
+                    <h4 class="fs-22 pt-3">100% Certified Jewellery</h4>
+                    <p>Our jewellery always comes with a certificate of authentication.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center">
+                    
+                    <img class="" src="{{ static_asset('assets/img/premium_quality.svg') }}" />
+                </div>
                 <div class="text-center">
                     <h4 class="fs-22 pt-3">100% Secure Cheekout</h4>
+                    <p>Your peace of mind matters! We offer *100% secure checkout* with encrypted payment processing to keep your details safe. </p>
                 </div>
             </div>
 
@@ -214,7 +218,7 @@
                 <h3 class="follow_heads text_clr_green">FOLLOW OUR INSTAGRAM</h3>
                 
                 <p class="about_content_para2 mb-0">DEMO USER</p>
-                <div class="shop_now_button2 text-white"><a href="/search">Follow More</a></div>
+                <div class="shop_now_button2 text-white"><a target="_blank" href="https://www.instagram.com/motiwalajewelsofficial/">Follow More</a></div>
                 
             </div>
         </div>
