@@ -1045,6 +1045,10 @@ body .iti__selected-flag {
         overflow-x: hidden;
     }
 
+    .font_16 a {
+        font-size: 16px;
+    }
+
     .location_section img {
         height: auto;
         object-fit: cover;
