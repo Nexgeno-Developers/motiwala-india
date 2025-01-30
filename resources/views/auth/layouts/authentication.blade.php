@@ -73,7 +73,7 @@
     border-bottom: 1px solid #000 !important;
 }
 .login_logo_wdth img {
-    width: 130px;
+    width: 170px;
     margin-bottom: 50px;
 }
 .user_login_style label {
