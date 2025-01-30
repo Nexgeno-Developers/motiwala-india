@@ -1038,6 +1038,13 @@ body .iti__selected-flag {
     padding-left: 80px !important;
 }
 
+.text-truncate-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
 /*-- mobile device css---*/
 
 @media(max-width:767px) {
