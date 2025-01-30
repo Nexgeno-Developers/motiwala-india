@@ -728,8 +728,16 @@ p.about_content_para1 {
 }
 
 .height_250 img {
-    height: 270px;
+    height: 230px;
     object-fit: cover;
+}
+
+.btn-sm {
+    padding: 0.616rem 1rem 0.4rem !important;
+}
+
+.btn {
+    padding: 0.6rem 1.2rem 0.4rem !important;
 }
 
 .copy_rights a {

@@ -108,7 +108,7 @@
             @endif
         </div>
         <!-- add to cart -->
-            <a class="add_cart_btns w-100 h-35px aiz-p-hov-icon text-black fs-18 fw-700 d-flex flex-column justify-content-center align-items-center @if (in_array($product->id, $cart_added)) active @endif"
+            <a class="add_cart_btns w-100 h-35px aiz-p-hov-icon text-black fs-16 fw-700 d-flex flex-column justify-content-center align-items-center @if (in_array($product->id, $cart_added)) active @endif"
                 href="javascript:void(0)"
                 onclick="showAddToCartModal({{ $product->id }})">
                 <span class="cart-btn-text">
