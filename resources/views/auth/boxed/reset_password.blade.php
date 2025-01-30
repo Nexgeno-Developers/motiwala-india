@@ -16,7 +16,7 @@
                             <div class="col-lg-6 p-4 p-lg-5 d-flex flex-column justify-content-center border right-content bg_dark_org user_login_style" style="height: auto;">
                                 <!-- Site Icon -->
                               <div class="login_logo_wdth">
-                                <a href="/"><img src="{{ static_asset('assets/img/logo.png') }}" alt="Logo"
+                                <a href="/"><img src="{{ static_asset('assets/img/login_logo.png') }}" alt="Logo"
                                     class="login_width"></a>
                                </div>
 

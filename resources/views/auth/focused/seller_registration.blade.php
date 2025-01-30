@@ -18,7 +18,7 @@
                         <div class="py-3 py-lg-4 px-3 px-xl-5 flex-grow-1">
                             <!-- Site Icon -->
                           <div class="login_logo_wdth">
-                                <a href="/"><img src="{{ static_asset('assets/img/logo.png') }}" alt="Logo"
+                                <a href="/"><img src="{{ static_asset('assets/img/login_logo.png') }}" alt="Logo"
                                     class="login_width"></a>
                                </div>
                             <!-- Titles -->

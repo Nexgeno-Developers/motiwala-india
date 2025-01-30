@@ -15,7 +15,7 @@
                         <div class="col-xxl-6 p-4 p-lg-5">
                             <!-- Site Icon -->
                           <div class="login_logo_wdth">
-                                <a href="/"><img src="{{ static_asset('assets/img/logo.png') }}" alt="Logo"
+                                <a href="/"><img src="{{ static_asset('assets/img/login_logo.png') }}" alt="Logo"
                                     class="login_width"></a>
                                </div>
 
