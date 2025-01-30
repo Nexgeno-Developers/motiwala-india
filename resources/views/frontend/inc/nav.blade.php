@@ -200,7 +200,7 @@
             </div>
                 <div class="align-items-center d_flexs">
                     <!-- top menu sidebar button -->
-                    <button type="button" class="btn d-lg-none mr-sm-4 p-0 active" data-toggle="class-toggle"
+                    <button type="button" class="btn d-lg-none mr-sm-4 p-0 active padd-0" data-toggle="class-toggle"
                         data-target=".aiz-top-menu-sidebar">
                         <svg id="Component_43_1" data-name="Component 43 – 1" xmlns="http://www.w3.org/2000/svg"
                             width="22" height="22" viewBox="0 0 22 22">
