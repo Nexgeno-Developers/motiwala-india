@@ -146,7 +146,7 @@
     </div>
 </section>
 
-<section class="location_section pt-4 pt-md-5 pb-md-5 pb-4">
+<section class=" pt-4 pt-md-5 pb-md-5 pb-4">
     <div class="container">
            
         <div class="row">
@@ -176,7 +176,7 @@
                     <img class="" src="{{ static_asset('assets/img/premium_quality.svg') }}" />
                 </div>
                 <div class="text-center">
-                    <h4 class="fs-22 pt-3">100% Secure Cheekout</h4>
+                    <h4 class="fs-22 pt-3">100% Secure Checkout</h4>
                     <p>Your peace of mind matters! We offer *100% secure checkout* with encrypted payment processing to keep your details safe. </p>
                 </div>
             </div>

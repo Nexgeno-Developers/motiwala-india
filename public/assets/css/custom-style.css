@@ -607,6 +607,8 @@ p.about_content_para1 {
 
 .min-w-180px {
     width: 200px;
+    padding-top: 12px;
+    padding-bottom: 8px !important;
 }
 
 .black_color_buttons:hover {
@@ -1005,6 +1007,10 @@ a {
     height: 100vh;
     object-fit: cover;
     object-position: center;
+}
+
+.add_cart_btns span.cart-btn-text {
+    padding-top: 6px;
 }
 
 /*-- mobile device css---*/
