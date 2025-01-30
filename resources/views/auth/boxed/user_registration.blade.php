@@ -4,7 +4,7 @@
     <div class="aiz-main-wrapper d-flex flex-column justify-content-md-center bg-white">
         <section class="bg-white overflow-hidden">
             <div class="row">
-                <div class="col-xxl-6 col-xl-9 col-lg-10 col-md-7 mx-auto py-lg-4">
+                <div class="col-xxl-8 col-xl-9 col-lg-10 col-md-7 mx-auto py-lg-4">
                     <div class="card shadow-none rounded-0 border-0  ">
                         <div class="row no-gutters">
                             <!-- Left Side Image-->

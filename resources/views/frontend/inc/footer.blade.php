@@ -294,7 +294,7 @@
                     <h5 class="fs-20 text-white fw-400 mt-3 mt-lg-4">{{ translate('Follow Us') }}</h5>
                     <ul class="list-inline social colored mb-0 footer_social_media">
                         <li class="list-inline-item mr-1">
-                                <a href="/" target="_blank"
+                                <a href="https://api.whatsapp.com/send?phone=+919920077780&text=Hi%2C+I+am+contacting+you+through+your+website+from+desktop+view+https://motiwalajewels.in/%2F" target="_blank"
                                     class="whatsapp"><i class="lab la-whatsapp"></i></a>
                             </li>
                         @if (!empty(get_setting('facebook_link')))

@@ -86,7 +86,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                          <div class="form-group mb-md-4 mb-4">
-                                            <label for="name" class="fs-20 fw-400 text_clr_green mb-0">{{  translate('Name') }}</label>
+                                            <label for="name" class="fs-20 fw-400 text_clr_green mb-0">{{  translate('First Name') }}</label>
                                             <input type="text" class="form-control rounded-0" value="{{ old('name') }}" placeholder="{{  translate('Enter Name') }}" name="name" required>
                                         </div>
                                     </div>
