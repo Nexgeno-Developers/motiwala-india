@@ -1009,7 +1009,7 @@ a {
     object-position: center;
 }
 
-.iti__selected-flag {
+body .iti__selected-flag {
     background: transparent !important;
     border: 0px !important;
 }
