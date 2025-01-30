@@ -97,7 +97,7 @@
                 <div class="row">
 
                     <!-- Sidebar Filters -->
-                    <div class="col-xl-3 d-none">
+                    <div class="col-xl-3">
                         <div class="aiz-filter-sidebar collapse-sidebar-wrap sidebar-xl sidebar-right z-1035">
                             <div class="overlay overlay-fixed dark c-pointer" data-toggle="class-toggle" data-target=".aiz-filter-sidebar" data-same=".filter-sidebar-thumb"></div>
                             <div class="collapse-sidebar c-scrollbar-light text-left">
@@ -285,7 +285,7 @@
                     </div>
                     
                     <!-- Contents -->
-                    <div class="col-xl-12">
+                    <div class="col-xl-9">
                         
                         <!-- Breadcrumb -->
                         <ul class="breadcrumb bg-transparent py-0 px-1 d-none">
