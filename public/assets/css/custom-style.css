@@ -732,7 +732,7 @@ p.about_content_para1 {
     object-fit: cover;
 }
 
-.padd-0 {
+body .padd-0 {
     padding: 0px !important;
 }
 
