@@ -538,7 +538,7 @@
 
 
         <div class="">
-            <h5 class="pt-5 fs-24">Description And Specfivation</h5>
+            <h5 class="pt-5 fs-24">Description and Specification</h5>
             <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
 </p>
         </div>
