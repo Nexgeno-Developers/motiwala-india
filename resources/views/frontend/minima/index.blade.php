@@ -333,27 +333,32 @@ header svg path {
                 <div class="row align-items-center">
                     <div class="col-md-4">
                           <div class="signature_box">
-                               <div class="signature_image">
+                              <a href="/search">
+                                 <div class="signature_image">
                                      <img class="w-100" src="{{ static_asset('assets/img/signature_img1.webp') }}" />
                                </div>
                                <div class="sign_head">
                                <h4 class="text-center pt-3 text-white">BRIDAL</h4>
                                </div>
+</a>
                           </div>
                     </div>
                     <div class="col-md-4">
                           <div class="signature_box">
-                               <div class="signature_image">
+                               <a href="/search">
+                                <div class="signature_image">
                                      <img class="w-100" src="{{ static_asset('assets/img/signature_img2.webp') }}" />
                                      
                                </div>
                                <div class="sign_head">
                                <h4 class="text-center pt-3 text-white">SOLITAIRE</h4>
                                </div>
+</a>
                           </div>
                     </div>
                      <div class="col-md-4">
                           <div class="signature_box">
+                            <a href="/search">
                                <div class="signature_image">
                                      <img class="w-100" src="{{ static_asset('assets/img/signature_img3.webp') }}" />
                                </div>
@@ -361,6 +366,7 @@ header svg path {
                                <div class="sign_head">
                                <h4 class="text-center pt-3 text-white">GOLD </h4>
                                </div>
+                               </a>
                           </div>
                     </div>
                 </div>
