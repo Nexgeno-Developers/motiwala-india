@@ -1009,8 +1009,17 @@ a {
     object-position: center;
 }
 
+.iti__selected-flag {
+    background: transparent !important;
+    border: 0px !important;
+}
+
 .add_cart_btns span.cart-btn-text {
     padding-top: 5px;
+}
+
+.iti--allow-dropdown input {
+    padding-left: 80px !important;
 }
 
 /*-- mobile device css---*/
