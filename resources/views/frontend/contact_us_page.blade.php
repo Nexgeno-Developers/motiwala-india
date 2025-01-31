@@ -182,15 +182,7 @@
     <div class="container">
         <div class="row">
 
-         <div class="col-lg-12 text-center">
-                        <div class="mb-md-4 mb-4">
-                            <span class="ml-3">
-                                <h4 class="font_55"><b>Address:</b></h4>
-                                <!-- <span class="fs-19 fw-700">{{ translate('Phone') }}</span><br> -->
-                                <span class="font_55 text_clr_green d-block pl-md-5 pr-md-5">{!! str_replace("\n", "<br>", $content->address) !!}</span>
-                            </span>
-                        </div>
-                     </div>
+         
 
                      <div class="col-lg-6 text-center">
                         <div class="mb-md-0 mb-4">
@@ -209,6 +201,16 @@
                                 <img class="w100 mb-1" src="{{ static_asset('assets/img/envelope_icon.svg') }}"/>
                                 <!-- <span class="fs-19 fw-700">{{ translate('Phone') }}</span><br> -->
                                 <span class="fs-24 text_clr_green d-block">{{ $content->email }}</span>
+                            </span>
+                        </div>
+                     </div>
+
+                     <div class="col-lg-12 text-center">
+                        <div class="mb-md-4 mb-4">
+                            <span class="ml-3">
+                                <h4 class="font_55"><b>Address:</b></h4>
+                                <!-- <span class="fs-19 fw-700">{{ translate('Phone') }}</span><br> -->
+                                <span class="font_55 text_clr_green d-block pl-md-5 pr-md-5">{!! str_replace("\n", "<br>", $content->address) !!}</span>
                             </span>
                         </div>
                      </div>

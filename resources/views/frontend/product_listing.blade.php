@@ -354,7 +354,7 @@
                         <div class="">
                             <div class="row">
                                 @foreach ($products as $key => $product)
-                                    <div class="col-md-3 col-6 pddleft_m mb-md-4 mb-3">
+                                    <div class="col-md-4 col-6 pddleft_m mb-md-4 mb-3">
                                         @include('frontend.'.get_setting('homepage_select').'.partials.product_box_1',['product' => $product])
                                     </div>
                                 @endforeach

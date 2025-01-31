@@ -49,10 +49,10 @@
         </div>
     </div>
 </section> -->
-
+<!-- 
 <section class="breadcrums_sedction breacrums_bg" style="background-image: url('{{ static_asset('assets/img/header_bg_img.webp') }}');">
     <div class="container">
-    <!-- Breadcrumb -->
+
      <h4 class="text-white text-center">About Us</h4>
         <ul class="breadcrumb bg-transparent py-0 px-1 justify-content-center">
             <li class="breadcrumb-item fs-18">
@@ -63,7 +63,7 @@
             </li>
         </ul>
     </div>
-</section>
+</section> -->
 
 
 <!-- <section class="mb-4">
@@ -76,13 +76,13 @@
     </div>
 </section> -->
 
-<section class="about_sections about_bg1 mt-md-5 mt-4" style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
+<section class="about_sections about_bg1" style="background-image: url('{{ static_asset('assets/img/about_bg_image.webp') }}');">
     <div class="container position-relative">
         <div class="row align-items-center">
               <div class="col-md-5 order-md-1 order-2">
                 <div class="pt-md-0 pt-4 pb-md-0 pb-4">
                     <h4 class="main_heading text-white pb-md-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
-                    <p class="text-white mb-md-3 mb-0">is simply dummy text of the printing and typesetting industry. Lorem Ipsum </p>
+                    <p class="text-white mb-md-3 mb-0">-</p>
                    
                 </div>
             </div>
@@ -100,7 +100,7 @@
     </div>
 </section>
 
-<section id="our_shops" class="mt-5" style="background: #F6F4F2;">
+<section id="our_shops" style="background: #F6F4F2;">
     <div class="row align-items-center">
         <div class="col-md-6 p-0">
             <img class="w-100" src="{{ static_asset('assets/img/our_shop.webp') }}" />

@@ -97,12 +97,12 @@
         </div>
     </section>
 
-    <section class="pb-5">
-        <div class="container">
+    <section class="pb-5 heart_section">
+        <div class="">
             <div class="row">
                 <div class="col-md-12 text-center">
                      <h4 class="fs40 dt_text mb-md-3 mb-1">The Heart</h4>
-                     <p class="pl-md-5 pr-md-5">s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It</p>
+                     <p class="pl-md-5 pr-md-5">-</p>
                       <img src="{{ static_asset('assets/img/video/middle_video.gif') }}" class="w-100"/>
                     </div> 
             </div>

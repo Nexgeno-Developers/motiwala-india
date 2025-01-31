@@ -68,7 +68,7 @@
                                         $all_admin_products = false;
                                     }
                                 @endphp
-                                <div class="pt-3 px-0">
+                                <!-- <div class="pt-3 px-0">
                                     <div class="aiz-checkbox-inline">
                                         <label class="aiz-checkbox d-block">
                                             <input type="checkbox" class="check-one check-seller" value="admin" @if($all_admin_products) checked @endif>
@@ -78,7 +78,7 @@
                                             <span class="aiz-square-check"></span>
                                         </label>
                                     </div>
-                                </div>
+                                </div> -->
                                 @foreach ($admin_products as $key => $product_id)
                                     @php
                                         $product = get_single_product($product_id);

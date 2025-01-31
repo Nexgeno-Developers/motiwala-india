@@ -46,11 +46,11 @@ a {
 }
 
 .w100 {
-    width: 50px;
+    width: 90px;
 }
 
 .shop_box_content {
-    padding: 0 100px;
+    padding: 0 130px;
 }
 
 .shop_box_content h4 {
@@ -1045,11 +1045,57 @@ body .iti__selected-flag {
     -webkit-box-orient: vertical;
 }
 
+.heart_section img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+section#prduct_care img {
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+section#crafted_for_eternity img {
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+section#our_shops img {
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
 /*-- mobile device css---*/
 
 @media(max-width:767px) {
     html {
         overflow-x: hidden;
+    }
+
+    section#prduct_care img {
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    section#crafted_for_eternity img {
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    section#our_shops img {
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .heart_section img {
+        height: auto;
+        object-fit: cover;
     }
 
     .font_16 a {

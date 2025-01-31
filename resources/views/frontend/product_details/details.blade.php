@@ -498,10 +498,10 @@
     @else
         <!-- Add to cart & Buy now Buttons -->
         <div class="mt-md-5 mt-4">
-              <button type="button"
+              <!-- <button type="button"
                         class="btn size_buttons mr-2 add-to-cart fs-20 fw-400 min-w-180px rounded-0 text-white">
                         Size
-                    </button>
+                    </button> -->
             @if ($detailedProduct->digital == 0)
                 @if (((get_setting('product_external_link_for_seller') == 1) && ($detailedProduct->added_by == "seller") && ($detailedProduct->external_link != null)) ||
                     (($detailedProduct->added_by != "seller") && ($detailedProduct->external_link != null)))
@@ -539,8 +539,7 @@
 
         <div class="">
             <h5 class="pt-5 fs-24">Description and Specification</h5>
-            <p>s simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-</p>
+            <p>-</p>
         </div>
 
         <!-- Promote Link -->
