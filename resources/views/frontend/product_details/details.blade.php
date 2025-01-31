@@ -510,11 +510,18 @@
                         <i class="la la-share"></i> {{ translate($detailedProduct->external_link_btn) }}
                     </a>
                 @else
-                    <button type="button"
+                    <a href="/cart"
+                        class="btn black_color_buttons mr-2 add-to-cart fs-20 fw-400 min-w-180px rounded-0 text-white">
+                        <i class="las la-shopping-bag"></i> {{ translate('Add to Bag') }}
+                    </a>
+                    
+                    <!-- <button type="button"
                         class="btn black_color_buttons mr-2 add-to-cart fs-20 fw-400 min-w-180px rounded-0 text-white"
                         @if (Auth::check() || get_Setting('guest_checkout_activation') == 1) onclick="addToCart()" @else onclick="showLoginModal()" @endif>
                         <i class="las la-shopping-bag"></i> {{ translate('Add to Bag') }}
-                    </button>
+                    </button> -->
+
+                    
                     <!-- <button type="button" class="btn gray_color_buttons buy-now fs-20 fw-400 add-to-cart min-w-180px rounded-0"
                         @if (Auth::check() || get_Setting('guest_checkout_activation') == 1) onclick="addToCart()" @else onclick="showLoginModal()" @endif>
                         <i class="la la-shopping-cart"></i> {{ translate('Buy Now') }}

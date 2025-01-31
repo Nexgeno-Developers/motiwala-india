@@ -824,17 +824,17 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade login_popop_cls" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-zoom" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h6 class="modal-title fw-600">{{ translate('Login')}}</h6>
+                <div class="modal-header border_bottom_0">
                     <button type="button" class="close" data-dismiss="modal">
                         <span aria-hidden="true"></span>
                     </button>
                 </div>
-                <div class="modal-body">
-                    <div class="p-md-3">
+                <div class="modal-body pt-0">
+                    <div class="p-md-3 pddtop_0" style="background-image: url('{{ static_asset('assets/img/login_images_1.svg') }}');">
+                         <h6 class="modal-title fw-600 text-center pb-4 fs-24">{{ translate('Login')}}</h6>
                         <form class="form-default" role="form" action="{{ route('cart.login.submit') }}" method="POST">
                             @csrf
                             <div class="form-group">
