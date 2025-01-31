@@ -416,7 +416,7 @@
                 </div>
                 <div class="col-sm-9">
                     <div class="product-price">
-                        <strong id="chosen_price" class="fs-30 fw-400 dt_text ">
+                        <strong id="chosen_price" class="fs-30 fw-400 dt_text poppins_font">
 
                         </strong>
                     </div>

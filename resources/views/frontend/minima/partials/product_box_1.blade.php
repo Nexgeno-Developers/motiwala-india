@@ -92,18 +92,18 @@
                 <!-- Previous price -->
                 @if (home_base_price($product) != home_discounted_base_price($product))
                     <div class="disc-amount has-transition">
-                        <del class="fw-400 text_clr_green mr-1">{{ home_base_price($product) }}</del>
+                        <del class="fw-500 text_clr_green mr-1">{{ home_base_price($product) }}</del>
                     </div>
                 @endif
                 <!-- price -->
                 <div class="">
-                    <span class="fw-700 text_clr_green">{{ home_discounted_base_price($product) }}</span>
+                    <span class="fw-500 text_clr_green poppins_font">{{ home_discounted_base_price($product) }}</span>
                 </div>
             @endif
             @if ($product->auction_product == 1)
                 <!-- Bid Amount -->
                 <div class="">
-                    <span class="fw-700 text-primary">{{ single_price($product->starting_bid) }}</span>
+                    <span class="fw-700 text-primary poppins_font">{{ single_price($product->starting_bid) }}</span>
                 </div>
             @endif
         </div>
