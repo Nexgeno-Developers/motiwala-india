@@ -304,7 +304,7 @@ header svg path {
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Antiques</h4>
     <p class="text-white mb-0 pb-0">Echoes of the past, reimagined for the present – where every piece tells a story of timeless elegance.</p>
-    <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
+    <div class="animation_button_1"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
     <div class="carousel-item">
@@ -312,7 +312,7 @@ header svg path {
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">Jadau</h4>
     <p class="text-white mb-0 pb-0">Regal opulence, handcrafted to perfection – a masterpiece of culture and artistry.</p>
-   <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
+   <div class="animation_button_1"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
     <div class="carousel-item">
@@ -320,7 +320,7 @@ header svg path {
       <div class="carousel-caption d-none d-md-block banner_contents">
     <h4 class="text-white">High Jewelry</h4>
     <p class="text-white mb-0 pb-0">An ode to rarity and refinement – bold designs and exquisite gems that define unparalleled luxury.</p>
-   <div class="animation_button_1 mb-4"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
+   <div class="animation_button_1"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
 </div>
     </div>
   </div>

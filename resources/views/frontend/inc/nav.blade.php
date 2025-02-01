@@ -312,7 +312,7 @@
                                 <div class="d-flex position-relative align-items-center">
                                     <div class="" data-toggle="class-toggle"
                                         data-target=".front-header-search">
-                                        <button class="btn px-2" type="button"><i
+                                        <button class="btn px-2 padd-0" type="button"><i
                                                 class="la la-2x la-long-arrow-left"></i></button>
                                     </div>
                                     <div class="search-input-box">

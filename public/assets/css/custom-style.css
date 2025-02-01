@@ -82,10 +82,14 @@ a {
     height: 100%;
 }
 
+.banner_sliders ol.carousel-indicators {
+    margin-bottom: 24px !important;
+}
+
 .banner_content {
     position: absolute;
     width: 100%;
-    bottom: 160px;
+    bottom: 100px;
     z-index: 999;
     text-align: center;
     left: -10px;
@@ -652,17 +656,17 @@ p.about_content_para1 {
     color: #1D1A15;
 }
 
-.contact_form_box a:hover,
+/* .contact_form_box a:hover,
 .contact_form_box button:hover {
     background: #1D1A15;
     color: #fff !important;
     border: 1px solid #1D1A15;
-}
+} */
 
 .contact_form_box a,
 .contact_form_box button {
     border: 1px solid;
-    padding: 10px 20px;
+    padding: 10px 20px 7px;
     margin-top: 20px;
     color: #1D1A15;
     display: inline-block;
@@ -1023,7 +1027,7 @@ a {
 }
 
 .banner_contents h4 {
-    font-size: 34px;
+    font-size: 28px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -1031,6 +1035,10 @@ a {
 .banner_contents {
     width: 50%;
     margin: 0 auto;
+}
+
+.banner_sliders .carousel-caption {
+    padding-bottom: 10px !important;
 }
 
 .video_section img {
@@ -1085,6 +1093,8 @@ section#our_shops img {
 .container {
     max-width: 1520px;
     width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .border_bottom_0 {
@@ -1104,9 +1114,15 @@ section#our_shops img {
         object-position: center;
     }
 
+    .search-input-box>svg {
+        top: 5px;
+    }
+
     .container {
         max-width: 100%;
         width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     section#crafted_for_eternity img {

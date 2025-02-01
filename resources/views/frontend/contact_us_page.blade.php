@@ -134,10 +134,8 @@
                                         <!-- Submit Button -->
                                 <div class="mt-md-4 mt-1 shop_now_button2">
                                     @if (env('MAIL_USERNAME') == null && env('MAIL_PASSWORD') == null)
-                                        <a class=""
-                                            href="javascript:void(1)" onclick="showWarning()" style="background:#1D1A15; color:#fff;">
-                                            {{  translate('Submit') }}
-                                        </a>
+                                      
+                                        <div class="animation_button_1"><a href="javascript:void(1)" onclick="showWarning()" class="animate_button black_buttons">{{  translate('Submit') }}</a></div>  
                                     @else
                                         <button type="submit" class="btn btn-primary fw-700 fs-14 rounded-0 w-200px" >{{  translate('Submit') }}</button>
                                     @endif
