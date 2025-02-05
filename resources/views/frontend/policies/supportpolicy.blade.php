@@ -134,7 +134,7 @@
 <section id="crafted_for_eternity" style="background: #F6F4F2;">
     <div class="row align-items-center">
         <div class="col-md-6 p-0">
-            <img class="w-100" src="{{ static_asset('assets/img/crafted_images.webp') }}" />
+            <img class="w-100" src="{{ static_asset('assets/img/crafted.webp') }}" />
         </div>
         <div class="col-md-6 p-0">
            <div class="text-center shop_box_content">
@@ -217,7 +217,7 @@
             <div class="about_content_sec text-center">
                 <h3 class="follow_heads text_clr_green">FOLLOW OUR INSTAGRAM</h3>
                 
-                <p class="about_content_para2 mb-0">DEMO USER</p>
+                <p class="about_content_para2 mb-0">Username: <b>motiwalajewelsofficial</b></p>
                 <div class="shop_now_button2 text-white"><a target="_blank" href="https://www.instagram.com/motiwalajewelsofficial/">Follow More</a></div>
                 
             </div>

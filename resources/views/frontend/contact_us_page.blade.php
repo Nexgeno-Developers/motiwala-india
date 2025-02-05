@@ -187,7 +187,7 @@
                             <span class="ml-3">
                                 <img class="w100 mb-1" src="{{ static_asset('assets/img/call_icons.svg') }}"/>
                                 <!-- <span class="fs-19 fw-700">{{ translate('Phone') }}</span><br> -->
-                                <span class="fs-24 text_clr_green d-block">{{ $content->phone }}</span>
+                                <span class="font_55  text_clr_green d-block">{{ $content->phone }}</span>
                             </span>
                         </div>
                      </div>
@@ -198,7 +198,7 @@
                             <span class="ml-3">
                                 <img class="w100 mb-1" src="{{ static_asset('assets/img/envelope_icon.svg') }}"/>
                                 <!-- <span class="fs-19 fw-700">{{ translate('Phone') }}</span><br> -->
-                                <span class="fs-24 text_clr_green d-block">{{ $content->email }}</span>
+                                <span class="font_55  text_clr_green d-block">{{ $content->email }}</span>
                             </span>
                         </div>
                      </div>

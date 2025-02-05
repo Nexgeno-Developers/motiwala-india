@@ -176,7 +176,7 @@ header svg path {
 
 
     <div class="banner_video position-relative">
-         <img src="{{ static_asset('assets/img/video/home_banner_video.gif') }}" class="w-100">
+         <img src="{{ static_asset('assets/img/banner_video.gif') }}" class="w-100">
 
          <div class="container position-relative">
             <div class="banner_content">
@@ -195,7 +195,7 @@ header svg path {
                                     </div>
                                     <h3 class="main_heading text_clr_green text-center pt-lg-5 pt-3">A Century of Legacy, Redefined</h3>
                                     <div class="about_content_sec pt-lg-4 pt-1 text-center">
-                                        <p class="mb-md-2 mb-0">we’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
+                                        <p class="mb-md-2 mb-0">We’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
                                     </div>
                                     <div class="col-md-12 text-center pb-md-0 pb-3">
                                     <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">Read More</a></div>  
@@ -203,7 +203,7 @@ header svg path {
                     </div>
                     <div class="col-md-5 order-md-2 order-1 ">
                         <div class="mb-md-0 mb-3">
-                            <img class="w-100" src="{{ static_asset('assets/img/celebrate_image.webp') }}" />
+                            <img class="w-100" src="{{ static_asset('assets/img/redefined_img.webp') }}" />
                         </div>
                     </div>
                 </div>
@@ -335,7 +335,7 @@ header svg path {
                           <div class="signature_box">
                               <a href="/search">
                                  <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img1.webp') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/bridal.webp') }}" />
                                </div>
                                <div class="sign_head">
                                <h4 class="text-center pt-3 text-white">BRIDAL</h4>
@@ -347,7 +347,7 @@ header svg path {
                           <div class="signature_box">
                                <a href="/search">
                                 <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img2.webp') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/solitare.webp') }}" />
                                      
                                </div>
                                <div class="sign_head">
@@ -360,7 +360,7 @@ header svg path {
                           <div class="signature_box">
                             <a href="/search">
                                <div class="signature_image">
-                                     <img class="w-100" src="{{ static_asset('assets/img/signature_img3.webp') }}" />
+                                     <img class="w-100" src="{{ static_asset('assets/img/gold.webp') }}" />
                                </div>
 
                                <div class="sign_head">
@@ -443,7 +443,7 @@ header svg path {
 
 
 <div class="video_section">
-         <img src="{{ static_asset('assets/img/video/middle_video.gif') }}" class="w-100"/>
+         <img src="{{ static_asset('assets/img/middle_video.gif') }}" class="w-100"/>
     </div>
 
 
@@ -753,7 +753,7 @@ header svg path {
 
             <div class="col-md-4">
                 <div class="">
-                    <img class="w-100" src="{{ static_asset('assets/img/crafted_images.webp') }}" />
+                    <img class="w-100" src="{{ static_asset('assets/img/crafted.webp') }}" />
                 </div>
                 <div class="text-center">
                     <h4 class="pt-4 text-uppercase">Crafted for eternity</h4>
@@ -777,8 +777,8 @@ header svg path {
          <h3 class="main_heading text_clr_green pb-md-4 pb-2">Customer Experiences</h3>
        </div>
       
-           <div id="customers-testimonials" class="slick-slider" >
-             <!-- TESTIMONIAL 1 -->
+          <div id="customers-testimonials" class="slick-slider" >
+            
              <div class="item">
                <div class="shadow-effect">
                  <div class="quote_icon">
@@ -791,10 +791,10 @@ header svg path {
                    <i class="las la-star"></i>
                    <i class="las la-star"></i>
                  </div>
-                 <p>I couldn’t be happier with my purchase! The craftsmanship is impeccable, and the attention to detail truly sets this piece apart. Every time I wear my necklace,</p>
-                 <p class="mb-0 pb-0">Petr, Belgium</p>
+                 <p>I got my cartier & versace bracelet & ring made and i absolutely loved their finishing and i was very happy with their designs my sales executive MS DISHA was also extremely helpful !</p>
+                 <p class="mb-0 pb-0">Maria Bootwala</p>
                </div>
-             </div>
+             </div> 
              <!-- TESTIMONIAL 2 -->
              <div class="item">
                <div class="shadow-effect">
@@ -808,8 +808,8 @@ header svg path {
                    <i class="las la-star"></i>
                    <i class="las la-star"></i>
                  </div>
-                 <p>I couldn’t be happier with my purchase! The craftsmanship is impeccable, and the attention to detail truly sets this piece apart. Every time I wear my necklace,</p>
-                 <p class="mb-0 pb-0">Petr, Belgium</p>
+                 <p>Absolutely reliable in purity and most reasonable making charges. I buy when they were in Abdul Rehman Street shop, since last 20 years. Staff service is excellent and making charges is most reasonable. I wish Abdealibhai and his team Very Best of Luck and pray for their prosperity. Ameen</p>
+                 <p class="mb-0 pb-0">Firoz Budhwani</p>
                </div>
              </div>
              <!-- TESTIMONIAL 3 -->
@@ -825,8 +825,8 @@ header svg path {
                    <i class="las la-star"></i>
                    <i class="las la-star"></i>
                  </div>
-                 <p>I couldn’t be happier with my purchase! The craftsmanship is impeccable, and the attention to detail truly sets this piece apart. Every time I wear my necklace,</p>
-                 <p class="mb-0 pb-0">Petr, Belgium</p>
+                 <p>I had a very good experience along with the people of Motiwala n the design of the gold Jwellery was amazing n iam looking forward fair the next visit</p>
+                 <p class="mb-0 pb-0">Shanaz Burhani</p>
                </div>
              </div>
              <div class="item">
@@ -841,12 +841,12 @@ header svg path {
                    <i class="las la-star"></i>
                    <i class="las la-star"></i>
                  </div>
-                 <p>I couldn’t be happier with my purchase! The craftsmanship is impeccable, and the attention to detail truly sets this piece apart. Every time I wear my necklace,</p>
-                 <p class="mb-0 pb-0">Petr, Belgium</p>
+                 <p>Abedali bhai n his staff always ensure customer satisfaction without compromising on quality n service...At Motiwala you can be assured the best designs...they really follow the saying Customer is KING!!!</p>
+                 <p class="mb-0 pb-0">Tasmiya Mehta</p>
                </div>
              </div>
 
-               <div class="item">
+               <!-- <div class="item">
                <div class="shadow-effect">
                  <div class="quote_icon">
                    <img src="{{ static_asset('assets/img/quote.svg') }}">
@@ -858,10 +858,11 @@ header svg path {
                    <i class="las la-star"></i>
                    <i class="las la-star"></i>
                  </div>
-                 <p>I couldn’t be happier with my purchase! The craftsmanship is impeccable, and the attention to detail truly sets this piece apart. Every time I wear my necklace,</p>
-                 <p class="mb-0 pb-0">Petr, Belgium</p>
+                 <p>Motiwala and sons have a very unique and beautiful collection. It was very easy for me to shop jewellery (gold and diamond) for my wedding. It also made it my work very simple because of their staff members. Disha (salesperson) is very kind and sweet. She throughout kept looking for the kind of jewellery I prefer. She also made it sure to handover the jewellery before time and made it deliver at my doorstep.
+</p>
+                 <p class="mb-0 pb-0">Anam Khan</p>
                </div>
-             </div>
+             </div> -->
              <!-- Additional Testimonials as needed -->
            </div>
      </div>
