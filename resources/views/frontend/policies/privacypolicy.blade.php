@@ -30,28 +30,26 @@
 @endsection
 
 @section('content')
-<section class="pt-4 mb-4">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-6 text-center text-lg-left">
-                <h1 class="fw-600 h4">{{ $page->getTranslation('title') }}</h1>
-            </div>
-            <div class="col-lg-6">
-                <ul class="breadcrumb bg-transparent p-0 justify-content-center justify-content-lg-end">
-                    <li class="breadcrumb-item has-transition opacity-50 hov-opacity-100">
-                        <a class="text-reset" href="{{ route('home') }}">{{ translate('Home')}}</a>
-                    </li>
-                    <li class="text-dark fw-600 breadcrumb-item">
-                        "{{ translate('Privacy Policy') }}"
-                    </li>
-                </ul>
-            </div>
-        </div>
+<section class="breadcrums_sedction breacrums_bg" style="background-image: url('{{ static_asset('assets/img/header_bg_img.webp') }}');">
+    <div class="container">
+    <!-- Breadcrumb -->
+     <h4 class="text-white text-center">{{ $page->getTranslation('title') }}</h4>
+        <ul class="breadcrumb bg-transparent py-0 px-1 justify-content-center">
+            <li class="breadcrumb-item fs-18">
+                <a class="text-white" href="{{ route('home') }}">{{ translate('Home')}}</a>
+            </li>
+            <li class="fs-18 text-white fw-400 breadcrumb-item">
+            <span>{{ translate('Privacy Policy') }}</span>
+            </li>
+        </ul>
     </div>
 </section>
+
+
+
 <section class="mb-4">
     <div class="container">
-        <div class="p-4 bg-white rounded shadow-sm overflow-hidden mw-100 text-left">
+        <div class="">
             @php
                 echo $page->getTranslation('content');
             @endphp
