@@ -5,7 +5,7 @@
     <div class="aiz-main-wrapper d-flex flex-column justify-content-md-center bg-white">
         <section class="bg-white overflow-hidden">
             <div class="row">
-                <div class="col-xxl-8 col-xl-9 col-lg-10 col-md-7 mx-auto py-lg-4">
+                <div class="col-xxl-6 col-xl-9 col-lg-10 col-md-7 mx-auto py-lg-4">
                     <div class="card shadow-none rounded-0 border-0">
                         <div class="row no-gutters">
                             <!-- Left Side Image-->
@@ -29,8 +29,8 @@
                                 <!-- Login form -->
                                 <div class="pt-3">
                                     <div class="text-center">
-                                        <a href="{{ route('verification.phone.resend') }}" class="btn btn-link">{{translate('Resend Code')}}</a>
-                                        
+                                        <a href="{{ route('verification.phone.resend') }}" id="resendBtn" class="btn btn-link">{{translate('Resend Code')}}</a>
+                                        <span id="timerText" style="display: none;"></span>
                                         <form class="form-default" role="form" action="{{ route('verification.submit') }}" method="POST">
                                             @csrf
 
@@ -62,5 +62,94 @@
             </div>
         </section>
     </div>
+
+@endsection
+@section('script')
+<script>
+    $(document).ready(function(){
+        var timerDuration = 60; // seconds
+
+        // Function to start or continue the timer
+        function startTimer(seconds) {
+            var $resendBtn = $('#resendBtn');
+            var $timerText = $('#timerText');
+
+            // Calculate the end time (in ms) and save in localStorage
+            var endTime = Date.now() + (seconds * 1000);
+            localStorage.setItem('resendTimerEnd', endTime);
+
+            // Hide the button and show the timer text
+            $resendBtn.hide();
+            $timerText.show().text("Resend in " + seconds + "s");
+
+            // Create an interval that updates every second
+            var interval = setInterval(function(){
+                var remaining = Math.round((endTime - Date.now()) / 1000);
+
+                if(remaining <= 0){
+                    clearInterval(interval);
+                    localStorage.removeItem('resendTimerEnd');
+                    $timerText.hide();
+                    $resendBtn.show();
+                } else {
+                    $timerText.text("Resend in " + remaining + "s");
+                }
+            }, 1000);
+        }
+
+        // Check if a timer is already running (using localStorage)
+        var storedTimer = localStorage.getItem('resendTimerEnd');
+        var timerEnd = parseInt(storedTimer, 10) || 0;
+        if (timerEnd > Date.now()) {
+            var remaining = Math.round((timerEnd - Date.now()) / 1000);
+            startTimer(remaining);
+        } else {
+            // Clear any stale value and start a fresh timer
+            localStorage.removeItem('resendTimerEnd');
+            $('#resendBtn').show();
+            $('#timerText').hide();
+            startTimer(timerDuration);
+        }
+
+        // Check if a timer is already running (using localStorage)
+        // var timerEnd = localStorage.getItem('resendTimerEnd');
+        // if (timerEnd) {
+        //     var remaining = Math.round((timerEnd - Date.now()) / 1000);
+        //     if (remaining > 0) {
+        //         startTimer(remaining);
+        //     } else {
+        //         // Remove stale timer value if time has expired
+        //         localStorage.removeItem('resendTimerEnd');
+
+        //     }
+        // } else {
+        //     // On first load, if OTP has been sent, start the timer.
+        //     // Comment out the next line if you don't want the timer to start automatically.
+        //     startTimer(timerDuration);
+        // }
+        // startTimer(timerDuration);
+        // When the user clicks the resend button:
+        $('#resendBtn').on('click', function(e){
+            e.preventDefault();
+            console.debug("OTP Resent");
+            // (Optional) Send the OTP via AJAX here:
+
+            $.ajax({
+                url: $(this).attr('href'),
+                method: 'GET',
+                success: function(response) {
+                    console.log("OTP Resent");
+                },
+                error: function(error) {
+                    console.error("Error resending OTP:", error);
+                }
+            });
+
+
+            // Restart the timer for 60 seconds
+            startTimer(timerDuration);
+        });
+    });
+  </script>
 @endsection
 
