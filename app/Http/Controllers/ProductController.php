@@ -611,7 +611,7 @@ class ProductController extends Controller
             $colors_active = 0;
         }
 
-        $data = [
+        $goldDiamondData = [
             'gold_carat' => $request->gold_carat,
             'gold_rate' => $request->gold_rate,
             'gold_qty' => $request->gold_qty,
@@ -639,7 +639,7 @@ class ProductController extends Controller
         }
 
         $combinations = (new CombinationService())->generate_combination($options);
-        return view('backend.product.products.sku_combinations', compact('combinations', 'unit_price', 'colors_active', 'product_name', 'data'));
+        return view('backend.product.products.sku_combinations', compact('combinations', 'unit_price', 'colors_active', 'product_name', 'goldDiamondData'));
     }
 
     public function sku_combination_edit(Request $request)

@@ -55,26 +55,26 @@
 				</td>
                 <td>
                     <select name="gold_carat_{{ $str }}" class="form-control gold-carat">
-                        <option value="gold_rate_18_carat" {{ $data['gold_carat'] == 'gold_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
-                        <option value="gold_rate_21_carat" {{ $data['gold_carat'] == 'gold_rate_21_carat' ? 'selected' : '' }}>21 Carat</option>
+                        <option value="gold_rate_18_carat" {{ $goldDiamondData['gold_carat'] == 'gold_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
+                        <option value="gold_rate_21_carat" {{ $goldDiamondData['gold_carat'] == 'gold_rate_21_carat' ? 'selected' : '' }}>21 Carat</option>
                     </select>
-                    <input name="gold_qty_{{ $str }}" type="number" class="form-control gold-qty mt-2" value="{{ $data['gold_qty'] ?? 1 }}" placeholder="Gold Quantity (grams)" min="0" step="0.01">
-                    <input name="gold_rate_{{ $str }}" type="text" class="form-control gold-rate mt-2" value="{{ $data['gold_rate'] ?? '' }}" readonly>
+                    <input name="gold_qty_{{ $str }}" type="number" class="form-control gold-qty mt-2" value="{{ $goldDiamondData['gold_qty'] ?? 1 }}" placeholder="Gold Quantity (grams)" min="0" step="0.01">
+                    <input name="gold_rate_{{ $str }}" type="text" class="form-control gold-rate mt-2" value="{{ $goldDiamondData['gold_rate'] ?? '' }}" readonly>
                     <p class="gold-preview mt-2 text-muted">
-                        Gold Calculation: {{ $data['gold_rate'].'.00' ?? '0.00' }} x {{ $data['gold_qty'].'.00' ?? '0.00' }} =
-                        {{ ($data['gold_rate'] ?? 0) * ($data['gold_qty'] ?? 0) }}
+                        Gold Calculation: {{ $goldDiamondData['gold_rate'].'.00' ?? '0.00' }} x {{ $goldDiamondData['gold_qty'].'.00' ?? '0.00' }} =
+                        {{ ($goldDiamondData['gold_rate'] ?? 0) * ($goldDiamondData['gold_qty'] ?? 0) }}
                     </p>
                 </td>
                 <td>
                     <select name="diamond_carat_{{ $str }}" class="form-control diamond-carat">
-                        <option value="diamond_rate_14_carat" {{ $data['diamond_carat'] == 'diamond_rate_14_carat' ? 'selected' : '' }}>14 Carat</option>
-                        <option value="diamond_rate_18_carat" {{ $data['diamond_carat'] == 'diamond_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
+                        <option value="diamond_rate_14_carat" {{ $goldDiamondData['diamond_carat'] == 'diamond_rate_14_carat' ? 'selected' : '' }}>14 Carat</option>
+                        <option value="diamond_rate_18_carat" {{ $goldDiamondData['diamond_carat'] == 'diamond_rate_18_carat' ? 'selected' : '' }}>18 Carat</option>
                     </select>
-                    <input name="diamond_qty_{{ $str }}" type="number" class="form-control diamond-qty mt-2" value="{{ $data['diamond_qty'] ?? 1 }}" placeholder="Diamond Quantity (grams)" min="0" step="0.01">
-                    <input name="diamond_rate_{{ $str }}" type="text" class="form-control diamond-rate mt-2" value="{{ $data['diamond_rate'] ?? '' }}" readonly>
+                    <input name="diamond_qty_{{ $str }}" type="number" class="form-control diamond-qty mt-2" value="{{ $goldDiamondData['diamond_qty'] ?? 1 }}" placeholder="Diamond Quantity (grams)" min="0" step="0.01">
+                    <input name="diamond_rate_{{ $str }}" type="text" class="form-control diamond-rate mt-2" value="{{ $goldDiamondData['diamond_rate'] ?? '' }}" readonly>
                     <p class="diamond-preview mt-2 text-muted">
-                        Diamond Calculation: {{ $data['diamond_rate'].'.00' ?? '0.00' }} x {{ $data['diamond_qty'].'.00' ?? '0.00' }} =
-                        {{ ($data['diamond_rate'] ?? 0) * ($data['diamond_qty'] ?? 0) }}
+                        Diamond Calculation: {{ $goldDiamondData['diamond_rate'].'.00' ?? '0.00' }} x {{ $goldDiamondData['diamond_qty'].'.00' ?? '0.00' }} =
+                        {{ ($goldDiamondData['diamond_rate'] ?? 0) * ($goldDiamondData['diamond_qty'] ?? 0) }}
                     </p>
                 </td>
 				<td>
