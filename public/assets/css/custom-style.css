@@ -893,7 +893,6 @@ section.contact_us_sec .row_box .w-100 {
 
 .font_55 {
     font-size: 36px;
-    padding: 0 200px !important;
     line-height: 48px;
 }
 
@@ -1127,6 +1126,25 @@ section#our_shops img {
         height: auto;
         object-fit: cover;
         object-position: center;
+    }
+
+    .hide-top-menu-bar {
+        position: absolute;
+        right: 0;
+    }
+
+    span.d-flex.align-items-center.nav-user-info.pl-4 {
+        margin-top: 10px;
+    }
+
+    .mobile_menus li a {
+        font-size: 14px;
+        padding-bottom: 10px;
+        color: #343a40 !important;
+    }
+
+    .search-input-box>input::placeholder {
+        font-size: 16px;
     }
 
     .footer_logo img {

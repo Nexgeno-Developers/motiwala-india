@@ -181,7 +181,7 @@ header svg path {
          <div class="container position-relative">
             <div class="banner_content">
                 <h4>Elegance That Lasts a Lifetime</h4>
-                <p class="text-white pt-md-3 pt-2">Shop the Finest Collection of Diamonds & Precious Gems</p>
+                <p class="text-white pt-md-3 pt-2 mb-md-2 mb-0">Shop the Finest Collection of Diamonds & Precious Gems</p>
                 <div class="animation_button_1"><a href="/search" class="animate_button white_buttons">Shop Now</a></div>  
             </div>
         </div>
@@ -198,7 +198,7 @@ header svg path {
                                         <p class="mb-md-2 mb-0">We’ve shaped the world of fine jewelry, blending heritage with bold innovation. Every piece is a testament to craftsmanship, designed to stand the test of time.</p>
                                     </div>
                                     <div class="col-md-12 text-center pb-md-0 pb-3">
-                                    <div class="animation_button_1"><a href="/search" class="animate_button black_buttons">Read More</a></div>  
+                                    <div class="animation_button_1"><a href="/about-us" class="animate_button black_buttons">Read More</a></div>  
                     </div>
                     </div>
                     <div class="col-md-5 order-md-2 order-1 ">
@@ -735,7 +735,7 @@ header svg path {
                 </div>
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-4 text-uppercase">Our Shop</h4>
-                    <p class="text-center">Motiwala Jewellery has been adorning dreams with precious simplicity for 100 years. Since 1923, our flagship store has stood as a testament...</p>
+                    <p class="text-center mb-md-0 mb-0">Motiwala Jewellery has been adorning dreams with precious simplicity for 100 years. Since 1923, our flagship store has stood as a testament...</p>
                     <div class="animation_button_1"><a href="/about-us#our_shops" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
@@ -746,7 +746,7 @@ header svg path {
                 </div>
                 <div class="text-center mb-md-0 mb-4">
                     <h4 class="pt-4 text-uppercase">Product Care</h4>
-                    <p class="">Your jewelry deserves the utmost care to preserve its beauty and brilliance. Explore our expert guidance on storing, cleaning, and protecting...</p>
+                    <p class="text-center mb-md-0 mb-0">Your jewelry deserves the utmost care to preserve its beauty and brilliance. Explore our expert guidance on storing, cleaning, and protecting...</p>
                     <div class="animation_button_1"><a href="/about-us#prduct_care" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>
@@ -757,7 +757,7 @@ header svg path {
                 </div>
                 <div class="text-center">
                     <h4 class="pt-4 text-uppercase">Crafted for eternity</h4>
-                    <p class="">Every piece of Motiwala Jewellery is a testament to timeless elegance and masterful craftsmanship. Designed to endure and inspire...</p>
+                    <p class="text-center mb-md-0 mb-0">Every piece of Motiwala Jewellery is a testament to timeless elegance and masterful craftsmanship. Designed to endure and inspire...</p>
                     <div class="animation_button_1"><a href="/about-us#crafted_for_eternity" class="animate_button black_buttons">View More</a></div> 
                 </div>
             </div>

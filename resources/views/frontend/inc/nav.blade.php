@@ -127,7 +127,7 @@
                                             </a>
                                         </li>
                                           <li class="list-inline-item mr-0">
-                                            <a href="mailto:care@motiwalasons.in">
+                                            <a href="mailto:motiwalajewels786@gmail.com">
                                                  <img src="{{ static_asset('assets/img/email_icons1.svg') }}" class="w-100">
                                             </a>
                                         </li>
@@ -780,12 +780,12 @@
                 </span>
             @endauth
             <hr>
-            <ul class="mb-0 pl-3 pb-3 h-100">
+            <ul class="mb-0 pl-3 pb-3 h-100 mobile_menus">
                 @if (get_setting('header_menu_labels') != null)
                     @foreach (json_decode(get_setting('header_menu_labels'), true) as $key => $value)
                         <li class="mr-0">
                             <a href="{{ json_decode(get_setting('header_menu_links'), true)[$key] }}"
-                                class="fs-13 px-3 py-3 w-100 d-inline-block fw-700 text-dark header_menu_links
+                                class=" w-100 d-inline-block fw-700 text-dark header_menu_links
                             @if (url()->current() == json_decode(get_setting('header_menu_links'), true)[$key]) active @endif">
                                 {{ translate($value) }}
                             </a>
@@ -797,7 +797,7 @@
                         <hr>
                         <li class="mr-0">
                             <a href="{{ route('admin.dashboard') }}"
-                                class="fs-13 px-3 py-3 w-100 d-inline-block fw-700 text-dark header_menu_links">
+                                class="w-100 d-inline-block fw-700 text-dark header_menu_links">
                                 {{ translate('My Account') }}
                             </a>
                         </li>
@@ -805,7 +805,7 @@
                         <hr>
                         <li class="mr-0">
                             <a href="{{ route('dashboard') }}"
-                                class="fs-13 px-3 py-3 w-100 d-inline-block fw-700 text-dark header_menu_links
+                                class="w-100 d-inline-block fw-700 text-dark header_menu_links
                                 {{ areActiveRoutes(['dashboard'], ' active') }}">
                                 {{ translate('My Account') }}
                             </a>
@@ -814,21 +814,21 @@
                     @if (isCustomer())
                         <li class="mr-0">
                             <a href="{{ route('customer.all-notifications') }}"
-                                class="fs-13 px-3 py-3 w-100 d-inline-block fw-700 text-dark header_menu_links
+                                class="w-100 d-inline-block fw-700 text-dark header_menu_links
                                 {{ areActiveRoutes(['customer.all-notifications'], ' active') }}">
                                 {{ translate('Notifications') }}
                             </a>
                         </li>
                         <li class="mr-0">
                             <a href="{{ route('wishlists.index') }}"
-                                class="fs-13 px-3 py-3 w-100 d-inline-block fw-700 text-dark header_menu_links
+                                class="w-100 d-inline-block fw-700 text-dark header_menu_links
                                 {{ areActiveRoutes(['wishlists.index'], ' active') }}">
                                 {{ translate('Wishlist') }}
                             </a>
                         </li>
                         <li class="mr-0">
                             <a href="{{ route('compare') }}"
-                                class="fs-13 px-3 py-3 w-100 d-inline-block fw-700 text-dark header_menu_links
+                                class="w-100 d-inline-block fw-700 text-dark header_menu_links
                                 {{ areActiveRoutes(['compare'], ' active') }}">
                                 {{ translate('Compare') }}
                             </a>
@@ -837,7 +837,7 @@
                     <hr>
                     <li class="mr-0">
                         <a href="{{ route('logout') }}"
-                            class="fs-13 px-3 py-3 w-100 d-inline-block fw-700 text-primary header_menu_links">
+                            class="w-100 d-inline-block fw-700 text-primary header_menu_links">
                             {{ translate('Logout') }}
                         </a>
                     </li>
