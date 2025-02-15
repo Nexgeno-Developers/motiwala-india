@@ -82,7 +82,7 @@
               <div class="col-md-5 order-md-1 order-2">
                 <div class="pt-md-0 pt-4 pb-md-0 pb-4">
                     <h4 class="main_heading text-white pb-md-2">About <span class="d-md-block">Motiwala & Sons</span></h4>
-                    <p class="text-white mb-md-3 mb-0">-</p>
+                    <p class="text-white mb-md-3 mb-0"></p>
                    
                 </div>
             </div>
