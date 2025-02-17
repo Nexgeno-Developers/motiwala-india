@@ -400,7 +400,7 @@ p.about_content_para1 {
 }
 
 .logo_width {
-    width: 300px !important;
+    width: 250px !important;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -1267,7 +1267,7 @@ section#our_shops img {
     }
 
     .logo_width {
-        width: 170px !important;
+        width: 150px !important;
     }
 
     .front-header-search.active {
@@ -1650,7 +1650,7 @@ section#our_shops img {
     }
 
     .logo_width {
-        width: 230px !important;
+        width: 200px !important;
     }
 
     .header_searchs {

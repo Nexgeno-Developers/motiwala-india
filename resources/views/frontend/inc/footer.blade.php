@@ -759,7 +759,7 @@
         @endif
 
         <!-- Account -->
-        <div class="col">
+        <div class="col d-none">
             @if (Auth::check())
                 @if(isAdmin())
                     <a href="{{ route('admin.dashboard') }}" class="text-secondary d-block text-center pb-2 pt-3">

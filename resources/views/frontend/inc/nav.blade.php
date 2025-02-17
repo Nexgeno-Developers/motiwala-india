@@ -144,7 +144,7 @@
                     </div>
     
                         <!-- Cart -->
-                    <div class="d-none d-lg-block align-self-stretch mr-md-2 ml-2 has-transition"
+                    <div class="d-none align-self-stretch mr-md-2 ml-2 has-transition"
                         data-hover="dropdown">
                         <div class="nav-cart-box dropdown h-100" id="cart_items" style="width: max-content;">
                             @include('frontend.partials.cart.cart')
@@ -152,7 +152,7 @@
                     </div>
                     
                     
-                    <div class="d-none d-xl-block d-md-block d-lg-block mt-23 ">
+                    <div class="d-none mt-23 ">
                         @auth
                             <span
                                 class="d-flex align-items-center nav-user-info @if (isAdmin()) ml-2 @endif"
