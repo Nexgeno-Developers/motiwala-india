@@ -287,7 +287,7 @@
                     <!-- Contents -->
                     <div class="col-xl-9">
                         <div class="text-center my-5">
-                            <h2 style="font-size: 2.5rem; color: #D4AF37; font-weight: bold;">💎 Coming Soon! 💎</h2>
+                            <h2 class="coming_soon_cls">💎 Coming Soon! 💎</h2>
                             <p style="font-size: 1.2rem; color: #555;">We're working hard to bring you exquisite jewelry. Stay tuned for timeless elegance! ✨</p>
                         </div>
                                             
